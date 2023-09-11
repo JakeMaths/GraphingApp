@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[margin=1cm,bottom=2cm,headheight=5\baselineskip,headsep=1\baselineskip,includehead]{geometry}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{multirow}
+
+\renewcommand{\title}{Initial Proposal}
+\renewcommand{\date}{September 13, 2023}
+\newcommand{\authorone}{Jake Mason}
+\newcommand{\authortwo}{Upmanyu Rohit}
+\newcommand{\classname}{n-Dimensional Graphing Calculator}
+\newcommand{\classcode}{CS 4091}
+\newcommand{\makevspace}{\vspace{0.5cm}}
+
+%% set up and width for the tabularx environment to expand and fit to.
+\newlength{\headerwidth}
+\setlength{\headerwidth}{\textwidth}
+\newsavebox{\myheader}
+\begin{lrbox}{\myheader}%
+    \begin{minipage}[b]{\headerwidth}
+    	\renewcommand{\arraystretch}{1.29}%
+    	\begin{tabularx}{\headerwidth}{|c|X|X|} 
+		\hline
+               	\multirow{3}{*}{ \hspace{0.25cm} \includegraphics[height=0.5in]{st.png} \hspace{0.25cm}}
+			  & \multicolumn{2}{c|}{ \textbf{\title} } \\
+		\cline{2-3}
+                	  & \centering\textbf{ \classname } & \centering\arraybackslash\textbf{ \classcode } \\
+		\cline{2-3}
+                	  & \centering\textbf{ \date } & \centering\arraybackslash\textbf{ \authorone \hspace{1pt} \& \authortwo } \\
+		\hline
+    	\end{tabularx}
+    \end{minipage}
+\end{lrbox}
+
+%% Setting up the header
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\lhead{}
+\chead{\usebox{\myheader}}
+\rhead{}
+\lfoot{}
+\cfoot{}
+\rfoot{\Large \thepage}
+
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+\begin{document} {\Large
+
+\section{Problem}
+Consider a real valued function of one variable $f:\mathbb{R} \to \mathbb{R}$. By a 
+graph $G$ of the function $f$, we mean a subset of $\mathbb{R}^2$,
+\[
+	G = \{ (x, y) \in \mathbb{R} \times \mathbb{R} : y = f(x) \}.	
+\]
+There exist many applications for visualizing the graph of single variable functions.
+Several hand held calculators can graph single variable functions. 
+For example, Texas Instruments has a lineup of graphing calculators including
+the leading TI-Inspire. 
+There are also online applications such as Desmos and GeoGebra with similar capabilities.
+
+\makevspace
+
+Now consider a real valued function of $n$ variables $f:\mathbb{R}^n \to \mathbb{R}$.
+The graph $G$ of $f$ is defined similarly to that of single variable functions,
+\[
+	G = \{ (\mathbf{x}, y) \in \mathbb{R}^n \times \mathbb{R} : y = f(\mathbf{x}) \}.	
+\]
+However, this graph is a subset of $\mathbb{R}^{n+1}$.
+It is not obvious how one should visualize this graph.
+A 3 dimensional world offers efficient visualization of two-variable functions at best. 
+There are no well known calculators capable of visualizing a real function of $n$ variables.
+
+\makevspace
+
+The problem is that functions of $n$ variables are common in nature. 
+It is hard to find a system where values are only dependent on one variable. 
+We seek an application capable of visualzing the graph of functions of $n$ variables.
+Such an application will offer details on functions where previously calculations had to 
+be carried out by hand.
+
+\newpage
+\section{Solution}
+
+\newpage
+\section{Milestones \& Tasking}
+
+\newpage
+\section{MOSCOW}
+\begin{tabularx}{\headerwidth}{|c|X|} 
+	\hline
+		  \multirow{5}{*}{ MUST: } 
+		& { Method for displaying graphs of single variable real valued functions on screen } \\
+	\cline{2-2}
+		& { Method for storing real valued functions of $n$ variables } \\
+	\cline{2-2}
+		& { Method for displaying projections $n$ variable functions } \\
+	\cline{2-2}
+		& { Method for user to input $n$ variable functions } \\
+	\cline{2-2}
+		& { Run at stable 60fps with no warnings/errors } \\
+	\hline
+		\multirow{2}{*}{ SHOULD: }
+		& { Parser to allow function input as text } \\
+	\cline{2-2}
+		& { Run on both Windows and Linux } \\
+	\hline
+		\multirow{1}{*}{ COULD: }
+		& { Parser to allow function input as \LaTeX } \\
+	\hline
+		\multirow{1}{*}{ WOULD: }
+		& {  } \\
+	\hline
+\end{tabularx}
+
+} \end{document}

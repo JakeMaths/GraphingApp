@@ -85,35 +85,87 @@ be carried out by hand.
 
 \newpage
 \section{Solution}
+We propose the design of a calculator capable of visualizing the graph of a 
+real valued function of $n$ variables, where $n\geq 1$. Our goal is to first design an
+application with 2 dimensional and 3 dimensional graphing capabilities. We can then 
+implement functions of $n$ variables and view them using projections onto 2 or 3 
+dimensional subspaces. Consider a function of $n$ variables 
+\[
+	f: \mathbb{R}^n \to \mathbb{R}.	
+\]
+We can project this function onto the $x_i, x_j$ plane by setting 
+\[
+	g: \mathbb{R}^2 \to \mathbb{R} \quad 
+	g(x_i, x_j) = f(0, \dots, x_i, \dots, x_j, \dots, 0)	
+\]
+where $x_i$ and $x_j$ fall in the $i^{th}$ and $j^{th}$ positions respectively.
+A similar result holds for projecting onto 3 dimensional space. 
+We may also consider projections onto arbitrary planes. 
+A plane in 3 dimensional space can be obtained through the equation 
+\[
+	ax + by + cz = d 	
+\]
+with $a,b,c,d\in\mathbb{R}$. Projecting a function onto such a plane 
+may involve careful rotation of the coordinate axes. 
+
+With the general idea set, we plan to implement this design with a 
+user interface for entering functions and selecting a graph view.
 
 \newpage
 \section{Milestones \& Tasking}
+\begin{tabularx}{\headerwidth}{|c|X|} 
+	\hline
+	\multirow{3}{*}{ 2D Graphing } & Program Initialization \\
+								   & Draw to the screen \\
+								   & Input functions of 1 variable \\
+	\multirow{3}{*}{ By Sept. 30 } & Store functions of 1 variable \\
+								   & Display graph of function \\
+								   & Allow translation of graph view \\
+	\hline
+	\multirow{2}{*}{ 3D Graphing } & Input functions of 2 variables \\
+								   & Store functions of 2 variables \\
+	\multirow{2}{*}{ By Oct. 31 }  & Display graph (already using projections) \\
+								   & Allow rotation of graph view \\ 
+	\hline
+	\multirow{3}{*}{ nD Graphing } & Input functions of $n$ variables \\
+								   & Store functions of $n$ variables \\
+								   & Allow choice of projective axes \\
+	\multirow{2}{*}{ By Nov. 30 }  & Allow choice of projective plane \\
+								   & Display graph onto projected surface \\
+	\hline
+	\multirow{2}{*}{ Extra } & Calculate properties of functions such as max, min, avg \\
+	                         & Display features of graph view such as range, strecth, axes \\
+	By Nov. 30				 & Allow saving of graphs for later use \\
+	\hline
+	Testing & Verify graphs of well known functions \\
+	\hline
+	\multirow{3}{*}{ Deployment } & Show application to mathematics majors and professors \\
+								  & Take feedback and make necessary adjustments \\
+								  & Continue support for new product \\
+	\hline
+\end{tabularx}
 
 \newpage
 \section{MOSCOW}
 \begin{tabularx}{\headerwidth}{|c|X|} 
 	\hline
-		  \multirow{5}{*}{ MUST: } 
-		& { Method for displaying graphs of single variable real valued functions on screen } \\
-	\cline{2-2}
-		& { Method for storing real valued functions of $n$ variables } \\
-	\cline{2-2}
-		& { Method for displaying projections $n$ variable functions } \\
-	\cline{2-2}
+		  \multirow{5}{*}{ \textbf{M}UST: } 
+		& { Method for displaying graphs of single variable functions on screen } \\
+		& { Method for storing functions of $n$ variables } \\
+		& { Method for displaying projections of $n$ variable functions } \\
 		& { Method for user to input $n$ variable functions } \\
-	\cline{2-2}
 		& { Run at stable 60fps with no warnings/errors } \\
 	\hline
-		\multirow{2}{*}{ SHOULD: }
+		\multirow{2}{*}{ \textbf{S}HOULD: }
 		& { Parser to allow function input as text } \\
-	\cline{2-2}
+		& { Display properties of function such as max, min, avg } \\
+	\hline
+		\multirow{2}{*}{ \textbf{C}OULD: }
 		& { Run on both Windows and Linux } \\
+		& { Allow saving of graphs for later use } \\
 	\hline
-		\multirow{1}{*}{ COULD: }
+		\multirow{1}{*}{ \textbf{W}OULD: }
 		& { Parser to allow function input as \LaTeX } \\
-	\hline
-		\multirow{1}{*}{ WOULD: }
-		& {  } \\
 	\hline
 \end{tabularx}
 

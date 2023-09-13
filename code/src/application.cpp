@@ -1,4 +1,5 @@
 #include "application.h"
+#include "test_funcs.h"
 
 // Private functions
 
@@ -92,7 +93,7 @@ void Application::update() {
             sf::Vector2f euclidean = this->screenToEuclidean(
                 this->gridToScreen( sf::Vector2u(j,i) )
             ); 
-            if (std::abs( euclidean.y - euclidean.x * euclidean.x ) < 0.01) {
+            if (std::abs( euclidean.y - funcB(euclidean.x) ) < 0.01) {
                 this->gridVector[i*gridRows + j].setFillColor(sf::Color::Red);
             }
         }

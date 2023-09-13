@@ -7,8 +7,9 @@ void Application::initializeVariables() {
     this->window = nullptr; 
     this->gridTile.setPosition(sf::Vector2f(W_MIN,H_MIN));
     this->gridTile.setSize(sf::Vector2f(TILE_WIDTH, TILE_HEIGHT));
-    gridRows = (H_MAX - H_MIN) / TILE_HEIGHT;
-    gridCols = (W_MAX - W_MIN) / TILE_WIDTH;
+    this->gridRows = (H_MAX - H_MIN) / TILE_HEIGHT;
+    this->gridCols = (W_MAX - W_MIN) / TILE_WIDTH;
+    this->graphMode = 1;
     for (int i=0; i<this->gridRows; i++) {
         for (int j=0; j<this->gridCols; j++) {
             this->gridTile.setPosition(sf::Vector2f(
@@ -76,8 +77,31 @@ void Application::pollEvents() {
             this->window->close();
             break;
         case sf::Event::KeyPressed:
-            if (this->event.key.code == sf::Keyboard::Escape) {
-                this->window->close();
+            switch (this->event.key.code) {
+                case sf::Keyboard::Escape:
+                    this->window->close();
+                    break;
+                case sf::Keyboard::A:
+                    this->graphMode = 1;
+                    break;
+                case sf::Keyboard::B:
+                    this->graphMode = 2;
+                    break;
+                case sf::Keyboard::C:
+                    this->graphMode = 3;
+                    break;
+                case sf::Keyboard::D:
+                    this->graphMode = 4;
+                    break;
+                case sf::Keyboard::E:
+                    this->graphMode = 5;
+                    break;
+                case sf::Keyboard::F:
+                    this->graphMode = 6;
+                    break;
+                case sf::Keyboard::G:
+                    this->graphMode = 7;
+                    break;
             }
             break;
         }
@@ -93,8 +117,38 @@ void Application::update() {
             sf::Vector2f euclidean = this->screenToEuclidean(
                 this->gridToScreen( sf::Vector2u(j,i) )
             ); 
-            if (std::abs( euclidean.y - funcB(euclidean.x) ) < 0.01) {
+            float fx;
+            switch (this->graphMode) {
+                case 1:
+                    fx = funcA(euclidean.x);
+                    break;
+                case 2:
+                    fx = funcB(euclidean.x);
+                    break;
+                case 3:
+                    fx = funcC(euclidean.x);
+                    break;
+                case 4:
+                    fx = funcD(euclidean.x);
+                    break;
+                case 5:
+                    fx = funcE(euclidean.x);
+                    break;
+                case 6:
+                    fx = funcF(euclidean.x);
+                    break;
+                case 7:
+                    fx = funcG(euclidean.x);
+                    break;
+            }
+            if (std::abs( euclidean.y - fx ) < 0.01) {
                 this->gridVector[i*gridRows + j].setFillColor(sf::Color::Red);
+            } else if ( std::abs( euclidean.y ) < 0.01) {
+                this->gridVector[i*gridRows + j].setFillColor(sf::Color::Black);
+            } else if ( std::abs( euclidean.x ) < 0.01) {
+                this->gridVector[i*gridRows + j].setFillColor(sf::Color::Black);
+            } else {
+                this->gridVector[i*gridRows + j].setFillColor(sf::Color::White);
             }
         }
     }

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "application.h"
+#include "math.h"
 
 float funcA(float);
 float funcB(float);

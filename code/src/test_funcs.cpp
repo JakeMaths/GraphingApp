@@ -17,13 +17,13 @@ float funcD(float x) {
 }
 
 float funcE(float x) {
-    return sin(x);
+    return std::sin(x);
 }
 
 float funcF(float x) {
-    return cos(x);
+    return std::cos(x);
 }
 
 float funcG(float x) {
-    return tan(x);
+    return std::tan(x);
 }

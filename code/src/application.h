@@ -17,10 +17,10 @@
 const float WINDOW_WIDTH = 1920;
 const float WINDOW_HEIGHT = 1080;
 
-const float X_MIN = -5;
-const float X_MAX = 5;
-const float Y_MIN = -1;
-const float Y_MAX = 9;
+const float X_MIN = -2;
+const float X_MAX = 2;
+const float Y_MIN = -2;
+const float Y_MAX = 2;
 
 const float W_MIN = 560;
 const float W_MAX = 1360;
@@ -41,6 +41,7 @@ private:
     std::vector<sf::RectangleShape> gridVector;
     int gridRows;
     int gridCols;
+    int graphMode;
 
     // Private functions
     void initializeVariables();

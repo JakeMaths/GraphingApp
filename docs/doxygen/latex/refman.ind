@@ -1,0 +1,47 @@
+\begin{theindex}
+
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/application.cpp}, 
+		\hyperpage{9}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/application.h}, 
+		\hyperpage{11}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/main.cpp}, 
+		\hyperpage{12}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test\_funcs.cpp}, 
+		\hyperpage{12}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test\_funcs.h}, 
+		\hyperpage{13}
+  \item {\texorpdfstring{$\sim$}{\string~}Application}
+    \subitem {Application}, \hyperpage{5}
+
+  \indexspace
+
+  \item {Application}, \hyperpage{5}
+    \subitem {\texorpdfstring{$\sim$}{\string~}Application}, 
+		\hyperpage{5}
+    \subitem {Application}, \hyperpage{5}
+    \subitem {pollEvents}, \hyperpage{6}
+    \subitem {render}, \hyperpage{6}
+    \subitem {update}, \hyperpage{7}
+    \subitem {windowIsOpen}, \hyperpage{7}
+
+  \indexspace
+
+  \item {pollEvents}
+    \subitem {Application}, \hyperpage{6}
+
+  \indexspace
+
+  \item {render}
+    \subitem {Application}, \hyperpage{6}
+
+  \indexspace
+
+  \item {update}
+    \subitem {Application}, \hyperpage{7}
+
+  \indexspace
+
+  \item {windowIsOpen}
+    \subitem {Application}, \hyperpage{7}
+
+\end{theindex}

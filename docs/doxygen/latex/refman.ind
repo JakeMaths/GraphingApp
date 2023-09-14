@@ -1,47 +1,256 @@
 \begin{theindex}
 
-  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/application.cpp}, 
-		\hyperpage{9}
-  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/application.h}, 
-		\hyperpage{11}
-  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/main.cpp}, 
-		\hyperpage{12}
-  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test\_funcs.cpp}, 
-		\hyperpage{12}
-  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test\_funcs.h}, 
-		\hyperpage{13}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/application.cpp}, 
+		\hyperpage{17}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/application.h}, 
+		\hyperpage{18}, \hyperpage{20}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/graph.cpp}, 
+		\hyperpage{21}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/graph.h}, 
+		\hyperpage{23}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/header.h}, 
+		\hyperpage{24}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/main.cpp}, 
+		\hyperpage{24, 25}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/test\_funcs.cpp}, 
+		\hyperpage{25}, \hyperpage{27}
+  \item {/home/jakemath/Desktop/code/SFML/GraphingApp/src/test\_funcs.h}, 
+		\hyperpage{27}, \hyperpage{29}
   \item {\texorpdfstring{$\sim$}{\string~}Application}
-    \subitem {Application}, \hyperpage{5}
+    \subitem {Application}, \hyperpage{6}
 
   \indexspace
 
   \item {Application}, \hyperpage{5}
     \subitem {\texorpdfstring{$\sim$}{\string~}Application}, 
-		\hyperpage{5}
-    \subitem {Application}, \hyperpage{5}
-    \subitem {pollEvents}, \hyperpage{6}
-    \subitem {render}, \hyperpage{6}
-    \subitem {update}, \hyperpage{7}
-    \subitem {windowIsOpen}, \hyperpage{7}
+		\hyperpage{6}
+    \subitem {Application}, \hyperpage{6}
+    \subitem {event}, \hyperpage{8}
+    \subitem {graph}, \hyperpage{8}
+    \subitem {initializeVariables}, \hyperpage{6}
+    \subitem {initializeWindow}, \hyperpage{6}
+    \subitem {pollEvents}, \hyperpage{7}
+    \subitem {render}, \hyperpage{7}
+    \subitem {update}, \hyperpage{8}
+    \subitem {videoMode}, \hyperpage{8}
+    \subitem {window}, \hyperpage{9}
+    \subitem {windowIsOpen}, \hyperpage{8}
+  \item {application.h}
+    \subitem {DEFAULT\_H\_MAX}, \hyperpage{19}
+    \subitem {DEFAULT\_H\_MIN}, \hyperpage{19}
+    \subitem {DEFAULT\_W\_MAX}, \hyperpage{19}
+    \subitem {DEFAULT\_W\_MIN}, \hyperpage{19}
+    \subitem {DEFAULT\_X\_MAX}, \hyperpage{19}
+    \subitem {DEFAULT\_X\_MIN}, \hyperpage{19}
+    \subitem {DEFAULT\_Y\_MAX}, \hyperpage{20}
+    \subitem {DEFAULT\_Y\_MIN}, \hyperpage{20}
+    \subitem {WINDOW\_HEIGHT}, \hyperpage{20}
+    \subitem {WINDOW\_WIDTH}, \hyperpage{20}
+
+  \indexspace
+
+  \item {background}
+    \subitem {Graph}, \hyperpage{14}
+
+  \indexspace
+
+  \item {decXRange}
+    \subitem {Graph}, \hyperpage{11}
+  \item {decYRange}
+    \subitem {Graph}, \hyperpage{11}
+  \item {DEFAULT\_H\_MAX}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_H\_MIN}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_W\_MAX}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_W\_MIN}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_X\_MAX}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_X\_MIN}
+    \subitem {application.h}, \hyperpage{19}
+  \item {DEFAULT\_Y\_MAX}
+    \subitem {application.h}, \hyperpage{20}
+  \item {DEFAULT\_Y\_MIN}
+    \subitem {application.h}, \hyperpage{20}
+  \item {drawToWindow}
+    \subitem {Graph}, \hyperpage{11}
+
+  \indexspace
+
+  \item {event}
+    \subitem {Application}, \hyperpage{8}
+
+  \indexspace
+
+  \item {funcA}
+    \subitem {test\_funcs.cpp}, \hyperpage{25}
+    \subitem {test\_funcs.h}, \hyperpage{27}
+  \item {funcB}
+    \subitem {test\_funcs.cpp}, \hyperpage{25}
+    \subitem {test\_funcs.h}, \hyperpage{27}
+  \item {funcC}
+    \subitem {test\_funcs.cpp}, \hyperpage{25}
+    \subitem {test\_funcs.h}, \hyperpage{28}
+  \item {funcD}
+    \subitem {test\_funcs.cpp}, \hyperpage{26}
+    \subitem {test\_funcs.h}, \hyperpage{28}
+  \item {funcE}
+    \subitem {test\_funcs.cpp}, \hyperpage{26}
+    \subitem {test\_funcs.h}, \hyperpage{28}
+  \item {funcF}
+    \subitem {test\_funcs.cpp}, \hyperpage{26}
+    \subitem {test\_funcs.h}, \hyperpage{28}
+  \item {funcG}
+    \subitem {test\_funcs.cpp}, \hyperpage{26}
+    \subitem {test\_funcs.h}, \hyperpage{28}
+
+  \indexspace
+
+  \item {Graph}, \hyperpage{9}
+    \subitem {background}, \hyperpage{14}
+    \subitem {decXRange}, \hyperpage{11}
+    \subitem {decYRange}, \hyperpage{11}
+    \subitem {drawToWindow}, \hyperpage{11}
+    \subitem {Graph}, \hyperpage{10}
+    \subitem {graphMode}, \hyperpage{14}
+    \subitem {graphToScreen}, \hyperpage{11}
+    \subitem {gridCols}, \hyperpage{14}
+    \subitem {gridRows}, \hyperpage{14}
+    \subitem {gridTile}, \hyperpage{14}
+    \subitem {gridToScreen}, \hyperpage{12}
+    \subitem {gridVector}, \hyperpage{14}
+    \subitem {hMax}, \hyperpage{14}
+    \subitem {hMin}, \hyperpage{15}
+    \subitem {incXRange}, \hyperpage{12}
+    \subitem {incYRange}, \hyperpage{12}
+    \subitem {screenToGraph}, \hyperpage{12}
+    \subitem {setGraphMode}, \hyperpage{13}
+    \subitem {updateGraph}, \hyperpage{13}
+    \subitem {wMax}, \hyperpage{15}
+    \subitem {wMin}, \hyperpage{15}
+    \subitem {xMax}, \hyperpage{15}
+    \subitem {xMin}, \hyperpage{15}
+    \subitem {yMax}, \hyperpage{15}
+    \subitem {yMin}, \hyperpage{15}
+  \item {graph}
+    \subitem {Application}, \hyperpage{8}
+  \item {graphMode}
+    \subitem {Graph}, \hyperpage{14}
+  \item {graphToScreen}
+    \subitem {Graph}, \hyperpage{11}
+  \item {gridCols}
+    \subitem {Graph}, \hyperpage{14}
+  \item {gridRows}
+    \subitem {Graph}, \hyperpage{14}
+  \item {gridTile}
+    \subitem {Graph}, \hyperpage{14}
+  \item {gridToScreen}
+    \subitem {Graph}, \hyperpage{12}
+  \item {gridVector}
+    \subitem {Graph}, \hyperpage{14}
+
+  \indexspace
+
+  \item {hMax}
+    \subitem {Graph}, \hyperpage{14}
+  \item {hMin}
+    \subitem {Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {incXRange}
+    \subitem {Graph}, \hyperpage{12}
+  \item {incYRange}
+    \subitem {Graph}, \hyperpage{12}
+  \item {initializeVariables}
+    \subitem {Application}, \hyperpage{6}
+  \item {initializeWindow}
+    \subitem {Application}, \hyperpage{6}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{24}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{24}
 
   \indexspace
 
   \item {pollEvents}
-    \subitem {Application}, \hyperpage{6}
+    \subitem {Application}, \hyperpage{7}
 
   \indexspace
 
   \item {render}
-    \subitem {Application}, \hyperpage{6}
+    \subitem {Application}, \hyperpage{7}
+
+  \indexspace
+
+  \item {screenToGraph}
+    \subitem {Graph}, \hyperpage{12}
+  \item {setGraphMode}
+    \subitem {Graph}, \hyperpage{13}
+
+  \indexspace
+
+  \item {test\_funcs.cpp}
+    \subitem {funcA}, \hyperpage{25}
+    \subitem {funcB}, \hyperpage{25}
+    \subitem {funcC}, \hyperpage{25}
+    \subitem {funcD}, \hyperpage{26}
+    \subitem {funcE}, \hyperpage{26}
+    \subitem {funcF}, \hyperpage{26}
+    \subitem {funcG}, \hyperpage{26}
+  \item {test\_funcs.h}
+    \subitem {funcA}, \hyperpage{27}
+    \subitem {funcB}, \hyperpage{27}
+    \subitem {funcC}, \hyperpage{28}
+    \subitem {funcD}, \hyperpage{28}
+    \subitem {funcE}, \hyperpage{28}
+    \subitem {funcF}, \hyperpage{28}
+    \subitem {funcG}, \hyperpage{28}
 
   \indexspace
 
   \item {update}
-    \subitem {Application}, \hyperpage{7}
+    \subitem {Application}, \hyperpage{8}
+  \item {updateGraph}
+    \subitem {Graph}, \hyperpage{13}
 
   \indexspace
 
+  \item {videoMode}
+    \subitem {Application}, \hyperpage{8}
+
+  \indexspace
+
+  \item {window}
+    \subitem {Application}, \hyperpage{9}
+  \item {WINDOW\_HEIGHT}
+    \subitem {application.h}, \hyperpage{20}
+  \item {WINDOW\_WIDTH}
+    \subitem {application.h}, \hyperpage{20}
   \item {windowIsOpen}
-    \subitem {Application}, \hyperpage{7}
+    \subitem {Application}, \hyperpage{8}
+  \item {wMax}
+    \subitem {Graph}, \hyperpage{15}
+  \item {wMin}
+    \subitem {Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {xMax}
+    \subitem {Graph}, \hyperpage{15}
+  \item {xMin}
+    \subitem {Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {yMax}
+    \subitem {Graph}, \hyperpage{15}
+  \item {yMin}
+    \subitem {Graph}, \hyperpage{15}
 
 \end{theindex}

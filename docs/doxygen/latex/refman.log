@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  13 SEP 2023 19:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.29)  13 SEP 2023 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -833,7 +833,7 @@ Package hyperref Info: Option `unicode' set `true' on input line 191.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 12.9599pt on input line 196.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 198.
+(Font)              scaled to size 10.79993pt on input line 197.
  [1
 
 
@@ -844,40 +844,41 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 204.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 204
+(Font)              scaled to size 8.99994pt on input line 205.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 205
 .
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 204
+LaTeX Font Info:    Trying to load font information for U+msb on input line 205
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 20
-4.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 204.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 204.
- [1] [2
+(Font)              scaled to size 6.29996pt on input line 205.
+ [1]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 6.29996pt on input line 205.
+ [2] [3] [4
 
 ]
-Package hyperref Info: Option `pageanchor' set `true' on input line 207.
+Package hyperref Info: Option `pageanchor' set `true' on input line 208.
 
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 209.
+(Font)              scaled to size 18.66588pt on input line 210.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 209.
+(Font)              scaled to size 18.66588pt on input line 210.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 209.
+(Font)              scaled to size 22.39185pt on input line 210.
 (./annotated.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
@@ -892,90 +893,165 @@ Chapter 2.
 ]
 Chapter 3.
 (./classApplication.tex
-LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10
 .
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 6.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 16.
+(Font)              scaled to size 8.99994pt on input line 15.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 28.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 28
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [5] [6]) [7] [8
+(Font)              scaled to size 8.09995pt on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 16.
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 10.79993pt on input line 47.
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 61.
+ [5] [6] [7])
+(./classGraph.tex [8]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 18.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.29996pt on input line 18.
+ [9]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 87.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 87.
+ [10] [11] [12] [13] [14]) [15] [16
 
 ]
 Chapter 4.
-(./application_8cpp_source.tex [9] [10]) (./application_8h_source.tex [11])
-(./main_8cpp_source.tex) (./test__funcs_8cpp_source.tex [12])
-(./test__funcs_8h_source.tex) [13] [14
+(./application_8cpp.tex) (./application_8cpp_source.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+ []
+
+[17]) (./application_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+[18] [19]) (./application_8h_source.tex [20]) (./graph_8cpp.tex)
+(./graph_8cpp_source.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+ []
+
+[21]) (./graph_8h.tex [22]
+Underfull \hbox (badness 10000) in paragraph at lines 3--5
+
+ []
+
+) (./graph_8h_source.tex) (./header_8h.tex) (./header_8h_source.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--1
+
+ []
+
+[23]) (./main_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+) (./main_8cpp_source.tex [24]) (./test__funcs_8cpp.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[25]) (./test__funcs_8cpp_source.tex [26]) (./test__funcs_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[27]) (./test__funcs_8h_source.tex [28]) [29] [30
 
 ] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
-Overfull \hbox (82.23805pt too wide) in paragraph at lines 3--5
-[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/code/src/applicat
-ion.cpp,
+Overfull \hbox (60.22447pt too wide) in paragraph at lines 3--5
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/application.c
+pp,
  []
 
 
-Overfull \hbox (72.73418pt too wide) in paragraph at lines 5--7
-[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/code/src/applicat
-ion.h,
- []
-
-
-Overfull \hbox (58.72156pt too wide) in paragraph at lines 7--9
-[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/code/src/main.cpp
+Overfull \hbox (50.7206pt too wide) in paragraph at lines 5--7
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/application.h
 ,
  []
 
 
-Overfull \hbox (80.10518pt too wide) in paragraph at lines 9--11
-[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test_fun
-cs.cpp,
+Overfull \hbox (40.03787pt too wide) in paragraph at lines 7--9
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/graph.cpp,
  []
 
 
-Overfull \hbox (70.6013pt too wide) in paragraph at lines 11--13
-[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/code/src/test_fun
-cs.h,
+Overfull \hbox (30.534pt too wide) in paragraph at lines 9--11
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/graph.h,
  []
 
-[15
+
+Overfull \hbox (35.26788pt too wide) in paragraph at lines 11--13
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/header.h,
+ []
 
 
+Overfull \hbox (36.70798pt too wide) in paragraph at lines 13--15
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/main.cpp,
+ []
 
-]) (./refman.aux)
+
+Overfull \hbox (58.0916pt too wide) in paragraph at lines 15--17
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/test_funcs.cp
+p,
+ []
+
+
+Overfull \hbox (48.58772pt too wide) in paragraph at lines 17--19
+[]\T1/phv/m/n/10 /home/jakemath/Desktop/code/SFML/GraphingApp/src/test_funcs.h,
+
+ []
+
+[31
+
+
+] [32]) (./refman.aux)
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 11799EA7F147DE07B6FA62D28279619E;3585.
+(rerunfilecheck)             Checksum: B7E0A29036CB4AC679D2D80142C15899;19284.
  ) 
 Here is how much of TeX's memory you used:
- 18226 strings out of 478287
- 298070 string characters out of 5849289
- 611131 words of memory out of 5000000
- 35717 multiletter control sequences out of 15000+600000
- 509572 words of font info for 82 fonts, out of 8000000 for 9000
+ 18674 strings out of 478287
+ 308999 string characters out of 5849289
+ 626039 words of memory out of 5000000
+ 35908 multiletter control sequences out of 15000+600000
+ 517856 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,16n,117p,340b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,16n,117p,657b,545s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/
-uhvr8a.pfb>
-Output written on refman.pdf (19 pages, 87272 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucr
+r8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (38 pages, 202030 bytes).
 PDF statistics:
- 692 PDF objects out of 1000 (max. 8388607)
- 654 compressed objects within 7 object streams
- 374 named destinations out of 1000 (max. 500000)
- 177 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2131 PDF objects out of 2487 (max. 8388607)
+ 2048 compressed objects within 21 object streams
+ 599 named destinations out of 1000 (max. 500000)
+ 793 words of extra memory for PDF output out of 10000 (max. 10000000)
 

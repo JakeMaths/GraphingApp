@@ -5,19 +5,96 @@
 \contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
 \contentsline {chapter}{\numberline {3}Class Documentation}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Application Class Reference}{5}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{5}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}Application()}{5}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $Application()}{5}{subsubsection.3.1.2.2}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{6}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Constructor \& Destructor Documentation}{6}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Application()}{6}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}$\sim $Application()}{6}{subsubsection.3.1.2.2}%
 \contentsline {subsection}{\numberline {3.1.3}Member Function Documentation}{6}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.1}pollEvents()}{6}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.3.2}render()}{6}{subsubsection.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.3.3}update()}{7}{subsubsection.3.1.3.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.4}windowIsOpen()}{7}{subsubsection.3.1.3.4}%
-\contentsline {chapter}{\numberline {4}File Documentation}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{11}{section.4.2}%
-\contentsline {section}{\numberline {4.3}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{12}{section.4.3}%
-\contentsline {section}{\numberline {4.4}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{12}{section.4.4}%
-\contentsline {section}{\numberline {4.5}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{13}{section.4.5}%
-\contentsline {chapter}{Index}{15}{section*.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}initializeVariables()}{6}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}initializeWindow()}{7}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}pollEvents()}{7}{subsubsection.3.1.3.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.4}render()}{8}{subsubsection.3.1.3.4}%
+\contentsline {subsubsection}{\numberline {3.1.3.5}update()}{8}{subsubsection.3.1.3.5}%
+\contentsline {subsubsection}{\numberline {3.1.3.6}windowIsOpen()}{8}{subsubsection.3.1.3.6}%
+\contentsline {subsection}{\numberline {3.1.4}Member Data Documentation}{8}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.4.1}event}{8}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {3.1.4.2}graph}{8}{subsubsection.3.1.4.2}%
+\contentsline {subsubsection}{\numberline {3.1.4.3}videoMode}{9}{subsubsection.3.1.4.3}%
+\contentsline {subsubsection}{\numberline {3.1.4.4}window}{9}{subsubsection.3.1.4.4}%
+\contentsline {section}{\numberline {3.2}Graph Class Reference}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Detailed Description}{10}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Constructor \& Destructor Documentation}{10}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Graph()}{10}{subsubsection.3.2.2.1}%
+\contentsline {subsection}{\numberline {3.2.3}Member Function Documentation}{11}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}decXRange()}{11}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}decYRange()}{11}{subsubsection.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}drawToWindow()}{11}{subsubsection.3.2.3.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.4}graphToScreen()}{12}{subsubsection.3.2.3.4}%
+\contentsline {subsubsection}{\numberline {3.2.3.5}gridToScreen()}{12}{subsubsection.3.2.3.5}%
+\contentsline {subsubsection}{\numberline {3.2.3.6}incXRange()}{12}{subsubsection.3.2.3.6}%
+\contentsline {subsubsection}{\numberline {3.2.3.7}incYRange()}{12}{subsubsection.3.2.3.7}%
+\contentsline {subsubsection}{\numberline {3.2.3.8}screenToGraph()}{13}{subsubsection.3.2.3.8}%
+\contentsline {subsubsection}{\numberline {3.2.3.9}setGraphMode()}{13}{subsubsection.3.2.3.9}%
+\contentsline {subsubsection}{\numberline {3.2.3.10}updateGraph()}{13}{subsubsection.3.2.3.10}%
+\contentsline {subsection}{\numberline {3.2.4}Member Data Documentation}{14}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}background}{14}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}graphMode}{14}{subsubsection.3.2.4.2}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}gridCols}{14}{subsubsection.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}gridRows}{14}{subsubsection.3.2.4.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}gridTile}{14}{subsubsection.3.2.4.5}%
+\contentsline {subsubsection}{\numberline {3.2.4.6}gridVector}{14}{subsubsection.3.2.4.6}%
+\contentsline {subsubsection}{\numberline {3.2.4.7}hMax}{15}{subsubsection.3.2.4.7}%
+\contentsline {subsubsection}{\numberline {3.2.4.8}hMin}{15}{subsubsection.3.2.4.8}%
+\contentsline {subsubsection}{\numberline {3.2.4.9}wMax}{15}{subsubsection.3.2.4.9}%
+\contentsline {subsubsection}{\numberline {3.2.4.10}wMin}{15}{subsubsection.3.2.4.10}%
+\contentsline {subsubsection}{\numberline {3.2.4.11}xMax}{15}{subsubsection.3.2.4.11}%
+\contentsline {subsubsection}{\numberline {3.2.4.12}xMin}{15}{subsubsection.3.2.4.12}%
+\contentsline {subsubsection}{\numberline {3.2.4.13}yMax}{15}{subsubsection.3.2.4.13}%
+\contentsline {subsubsection}{\numberline {3.2.4.14}yMin}{15}{subsubsection.3.2.4.14}%
+\contentsline {chapter}{\numberline {4}File Documentation}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/application.cpp File Reference}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/application.h File Reference}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Variable Documentation}{19}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}DEFAULT\_H\_MAX}{19}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}DEFAULT\_H\_MIN}{19}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}DEFAULT\_W\_MAX}{19}{subsubsection.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.1.4}DEFAULT\_W\_MIN}{19}{subsubsection.4.3.1.4}%
+\contentsline {subsubsection}{\numberline {4.3.1.5}DEFAULT\_X\_MAX}{19}{subsubsection.4.3.1.5}%
+\contentsline {subsubsection}{\numberline {4.3.1.6}DEFAULT\_X\_MIN}{20}{subsubsection.4.3.1.6}%
+\contentsline {subsubsection}{\numberline {4.3.1.7}DEFAULT\_Y\_MAX}{20}{subsubsection.4.3.1.7}%
+\contentsline {subsubsection}{\numberline {4.3.1.8}DEFAULT\_Y\_MIN}{20}{subsubsection.4.3.1.8}%
+\contentsline {subsubsection}{\numberline {4.3.1.9}WINDOW\_HEIGHT}{20}{subsubsection.4.3.1.9}%
+\contentsline {subsubsection}{\numberline {4.3.1.10}WINDOW\_WIDTH}{20}{subsubsection.4.3.1.10}%
+\contentsline {section}{\numberline {4.4}application.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{20}{section.4.4}%
+\contentsline {section}{\numberline {4.5}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/graph.cpp File Reference}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{21}{section.4.6}%
+\contentsline {section}{\numberline {4.7}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/graph.h File Reference}{23}{section.4.7}%
+\contentsline {section}{\numberline {4.8}graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{23}{section.4.8}%
+\contentsline {section}{\numberline {4.9}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/header.h File Reference}{24}{section.4.9}%
+\contentsline {section}{\numberline {4.10}header.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.4.10}%
+\contentsline {section}{\numberline {4.11}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/main.cpp File Reference}{24}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Function Documentation}{24}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}main()}{24}{subsubsection.4.11.1.1}%
+\contentsline {section}{\numberline {4.12}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{25}{section.4.12}%
+\contentsline {section}{\numberline {4.13}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.cpp File Reference}{25}{section.4.13}%
+\contentsline {subsection}{\numberline {4.13.1}Function Documentation}{25}{subsection.4.13.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.1}funcA()}{25}{subsubsection.4.13.1.1}%
+\contentsline {subsubsection}{\numberline {4.13.1.2}funcB()}{25}{subsubsection.4.13.1.2}%
+\contentsline {subsubsection}{\numberline {4.13.1.3}funcC()}{26}{subsubsection.4.13.1.3}%
+\contentsline {subsubsection}{\numberline {4.13.1.4}funcD()}{26}{subsubsection.4.13.1.4}%
+\contentsline {subsubsection}{\numberline {4.13.1.5}funcE()}{26}{subsubsection.4.13.1.5}%
+\contentsline {subsubsection}{\numberline {4.13.1.6}funcF()}{26}{subsubsection.4.13.1.6}%
+\contentsline {subsubsection}{\numberline {4.13.1.7}funcG()}{26}{subsubsection.4.13.1.7}%
+\contentsline {section}{\numberline {4.14}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{27}{section.4.14}%
+\contentsline {section}{\numberline {4.15}/home/jakemath/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Desktop/code/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SFML/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graphing\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App/src/test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.h File Reference}{27}{section.4.15}%
+\contentsline {subsection}{\numberline {4.15.1}Function Documentation}{27}{subsection.4.15.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.1}funcA()}{27}{subsubsection.4.15.1.1}%
+\contentsline {subsubsection}{\numberline {4.15.1.2}funcB()}{28}{subsubsection.4.15.1.2}%
+\contentsline {subsubsection}{\numberline {4.15.1.3}funcC()}{28}{subsubsection.4.15.1.3}%
+\contentsline {subsubsection}{\numberline {4.15.1.4}funcD()}{28}{subsubsection.4.15.1.4}%
+\contentsline {subsubsection}{\numberline {4.15.1.5}funcE()}{28}{subsubsection.4.15.1.5}%
+\contentsline {subsubsection}{\numberline {4.15.1.6}funcF()}{28}{subsubsection.4.15.1.6}%
+\contentsline {subsubsection}{\numberline {4.15.1.7}funcG()}{28}{subsubsection.4.15.1.7}%
+\contentsline {section}{\numberline {4.16}test\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}funcs.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{29}{section.4.16}%
+\contentsline {chapter}{Index}{31}{section*.13}%

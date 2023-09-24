@@ -46,37 +46,260 @@ void Application::pollEvents() {
                     this->window->close();
                     break;
                 case sf::Keyboard::A:
-                    graph->setGraphMode(1);
+                    keyStates.keyA = true;
                     break;
                 case sf::Keyboard::B:
-                    graph->setGraphMode(2);
+                    keyStates.keyB = true;
                     break;
                 case sf::Keyboard::C:
-                    graph->setGraphMode(3);
+                    keyStates.keyC = true;
                     break;
                 case sf::Keyboard::D:
-                    graph->setGraphMode(4);
+                    keyStates.keyD = true;
                     break;
                 case sf::Keyboard::E:
-                    graph->setGraphMode(5);
+                    keyStates.keyE = true;
                     break;
                 case sf::Keyboard::F:
-                    graph->setGraphMode(6);
+                    keyStates.keyF = true;
                     break;
                 case sf::Keyboard::G:
-                    graph->setGraphMode(7);
+                    keyStates.keyG = true;
                     break;
-                case sf::Keyboard::Right:
-                    graph->incXRange(0.1);
+                case sf::Keyboard::H:
+                    keyStates.keyH = true;
                     break;
-                case sf::Keyboard::Left:
-                    graph->decXRange(0.1);
+                case sf::Keyboard::I:
+                    keyStates.keyI = true;
+                    break;
+                case sf::Keyboard::J:
+                    keyStates.keyJ = true;
+                    break;
+                case sf::Keyboard::K:
+                    keyStates.keyK = true;
+                    break;
+                case sf::Keyboard::L:
+                    keyStates.keyL = true;
+                    break;
+                case sf::Keyboard::M:
+                    keyStates.keyM = true;
+                    break;
+                case sf::Keyboard::N:
+                    keyStates.keyN = true;
+                    break;
+                case sf::Keyboard::O:
+                    keyStates.keyO = true;
+                    break;
+                case sf::Keyboard::P:
+                    keyStates.keyP = true;
+                    break;
+                case sf::Keyboard::Q:
+                    keyStates.keyQ = true;
+                    break;
+                case sf::Keyboard::R:
+                    keyStates.keyR = true;
+                    break;
+                case sf::Keyboard::S:
+                    keyStates.keyS = true;
+                    break;
+                case sf::Keyboard::T:
+                    keyStates.keyT = true;
+                    break;
+                case sf::Keyboard::U:
+                    keyStates.keyU = true;
+                    break;
+                case sf::Keyboard::V:
+                    keyStates.keyV = true;
+                    break;
+                case sf::Keyboard::W:
+                    keyStates.keyW = true;
+                    break;
+                case sf::Keyboard::X:
+                    keyStates.keyX = true;
+                    break;
+                case sf::Keyboard::Y:
+                    keyStates.keyY = true;
+                    break;
+                case sf::Keyboard::Z:
+                    keyStates.keyZ = true;
+                    break;
+                case sf::Keyboard::Num1:
+                    keyStates.key1 = true;
+                    break;
+                case sf::Keyboard::Num2:
+                    keyStates.key2 = true;
+                    break;
+                case sf::Keyboard::Num3:
+                    keyStates.key3 = true;
+                    break;
+                case sf::Keyboard::Num4:
+                    keyStates.key4 = true;
+                    break;
+                case sf::Keyboard::Num5:
+                    keyStates.key5 = true;
+                    break;
+                case sf::Keyboard::Num6:
+                    keyStates.key6 = true;
+                    break;
+                case sf::Keyboard::Num7:
+                    keyStates.key7 = true;
+                    break;
+                case sf::Keyboard::Num8:
+                    keyStates.key8 = true;
+                    break;
+                case sf::Keyboard::Num9:
+                    keyStates.key9 = true;
+                    break;
+                case sf::Keyboard::Num0:
+                    keyStates.key0 = true;
                     break;
                 case sf::Keyboard::Up:
-                    graph->incYRange(0.1);
+                    keyStates.keyUp = true;
                     break;
                 case sf::Keyboard::Down:
-                    graph->decYRange(0.1);
+                    keyStates.keyDown = true;
+                    break;
+                case sf::Keyboard::Right:
+                    keyStates.keyRight = true;
+                    break;
+                case sf::Keyboard::Left:
+                    keyStates.keyLeft = true;
+                    break;
+                case sf::Keyboard::Equal:
+                    keyStates.keyEqual = true;
+                    break;
+                case sf::Keyboard::Hyphen:
+                    keyStates.keyHyphen = true;
+                    break;
+            }
+            break;
+        case sf::Event::KeyReleased:
+            switch(this->event.key.code) {
+                case sf::Keyboard::A:
+                    keyStates.keyA = false;
+                    break;
+                case sf::Keyboard::B:
+                    keyStates.keyB = false;
+                    break;
+                case sf::Keyboard::C:
+                    keyStates.keyC = false;
+                    break;
+                case sf::Keyboard::D:
+                    keyStates.keyD = false;
+                    break;
+                case sf::Keyboard::E:
+                    keyStates.keyE = false;
+                    break;
+                case sf::Keyboard::F:
+                    keyStates.keyF = false;
+                    break;
+                case sf::Keyboard::G:
+                    keyStates.keyG = false;
+                    break;
+                case sf::Keyboard::H:
+                    keyStates.keyH = false;
+                    break;
+                case sf::Keyboard::I:
+                    keyStates.keyI = false;
+                    break;
+                case sf::Keyboard::J:
+                    keyStates.keyJ = false;
+                    break;
+                case sf::Keyboard::K:
+                    keyStates.keyK = false;
+                    break;
+                case sf::Keyboard::L:
+                    keyStates.keyL = false;
+                    break;
+                case sf::Keyboard::M:
+                    keyStates.keyM = false;
+                    break;
+                case sf::Keyboard::N:
+                    keyStates.keyN = false;
+                    break;
+                case sf::Keyboard::O:
+                    keyStates.keyO = false;
+                    break;
+                case sf::Keyboard::P:
+                    keyStates.keyP = false;
+                    break;
+                case sf::Keyboard::Q:
+                    keyStates.keyQ = false;
+                    break;
+                case sf::Keyboard::R:
+                    keyStates.keyR = false;
+                    break;
+                case sf::Keyboard::S:
+                    keyStates.keyS = false;
+                    break;
+                case sf::Keyboard::T:
+                    keyStates.keyT = false;
+                    break;
+                case sf::Keyboard::U:
+                    keyStates.keyU = false;
+                    break;
+                case sf::Keyboard::V:
+                    keyStates.keyV = false;
+                    break;
+                case sf::Keyboard::W:
+                    keyStates.keyW = false;
+                    break;
+                case sf::Keyboard::X:
+                    keyStates.keyX = false;
+                    break;
+                case sf::Keyboard::Y:
+                    keyStates.keyY = false;
+                    break;
+                case sf::Keyboard::Z:
+                    keyStates.keyZ = false;
+                    break;
+                case sf::Keyboard::Num1:
+                    keyStates.key1 = false;
+                    break;
+                case sf::Keyboard::Num2:
+                    keyStates.key2 = false;
+                    break;
+                case sf::Keyboard::Num3:
+                    keyStates.key3 = false;
+                    break;
+                case sf::Keyboard::Num4:
+                    keyStates.key4 = false;
+                    break;
+                case sf::Keyboard::Num5:
+                    keyStates.key5 = false;
+                    break;
+                case sf::Keyboard::Num6:
+                    keyStates.key6 = false;
+                    break;
+                case sf::Keyboard::Num7:
+                    keyStates.key7 = false;
+                    break;
+                case sf::Keyboard::Num8:
+                    keyStates.key8 = false;
+                    break;
+                case sf::Keyboard::Num9:
+                    keyStates.key9 = false;
+                    break;
+                case sf::Keyboard::Num0:
+                    keyStates.key0 = false;
+                    break;
+                case sf::Keyboard::Up:
+                    keyStates.keyUp = false;
+                    break;
+                case sf::Keyboard::Down:
+                    keyStates.keyDown = false;
+                    break;
+                case sf::Keyboard::Right:
+                    keyStates.keyRight = false;
+                    break;
+                case sf::Keyboard::Left:
+                    keyStates.keyLeft = false;
+                    break;
+                case sf::Keyboard::Equal:
+                    keyStates.keyEqual = false;
+                    break;
+                case sf::Keyboard::Hyphen:
+                    keyStates.keyHyphen = false;
                     break;
             }
             break;
@@ -86,7 +309,7 @@ void Application::pollEvents() {
 
 void Application::update() {
     pollEvents();
-    graph->updateGraph();
+    graph->updateGraph(keyStates);
     gui->updateGui();
 }
 

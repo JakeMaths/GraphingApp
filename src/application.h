@@ -1,6 +1,7 @@
 #pragma once
 
 #include "header.h"
+#include "keystates.h"
 #include "graph.h"
 #include "gui.h"
 
@@ -13,6 +14,7 @@ private:
     sf::RenderWindow* window;
     sf::VideoMode videoMode;
     sf::Event event;
+    KeyStates keyStates;
     Graph* graph;
     Gui* gui;
 

@@ -1,2 +1,9 @@
 # Visual Studio Code Configuration Files
-.vscode
+*.vscode
+
+# Compiled Object Files
+*.o
+
+# Executeables (Until it is verified that one compilation works on different systems)
+*.exe
+*.out

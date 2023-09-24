@@ -106,8 +106,45 @@ void Graph::setGraphMode(int i)
     return;
 }
 
-void Graph::updateGraph()
+void Graph::updateGraph(const KeyStates &keyStates)
 {
+    if (keyStates.keyUp || keyStates.keyW)
+        incYRange(0.1);
+    if (keyStates.keyDown || keyStates.keyS)
+        decYRange(0.1);
+    if (keyStates.keyRight || keyStates.keyD)
+        incXRange(0.1);
+    if (keyStates.keyLeft || keyStates.keyA)
+        decXRange(0.1);
+    if (keyStates.key1)
+        setGraphMode(1);
+    if (keyStates.key2)
+        setGraphMode(2);
+    if (keyStates.key3)
+        setGraphMode(3);
+    if (keyStates.key4)
+        setGraphMode(4);
+    if (keyStates.key5)
+        setGraphMode(5);
+    if (keyStates.key6)
+        setGraphMode(6);
+    if (keyStates.key7)
+        setGraphMode(7);
+    if (keyStates.keyEqual)
+    {
+        xMax /= 2;
+        xMin /= 2;
+        yMax /= 2;
+        yMin /= 2;
+    }
+    if (keyStates.keyHyphen)
+    {
+        xMax *= 2;
+        xMin *= 2;
+        yMax *= 2;
+        yMin *= 2;
+    }
+
     gridVector.clear();
     textVector.clear();
     

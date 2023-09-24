@@ -1,6 +1,7 @@
 #pragma once
 
 #include "header.h"
+#include "keystates.h"
 #include "test_funcs.h"
 
 /// Manages the graph area on screen.
@@ -61,7 +62,7 @@ public:
     //! Set graphMode
     void setGraphMode(int i);
     //! Update gridVector based on graphMode
-    void updateGraph();
+    void updateGraph(const KeyStates &keyStates);
     //! Draw gridVector to a window
     void drawToWindow(sf::RenderWindow* window);
     //! Decrement xMin and xMax by xDec

@@ -1,0 +1,191 @@
+\doxysection{Gui Class Reference}
+\hypertarget{classGui}{}\label{classGui}\index{Gui@{Gui}}
+
+
+Manages the gui for the application.  
+
+
+
+
+{\ttfamily \#include $<$gui.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGui_ab2655dbb6d3a91d7e90cb83dad6c0450}{Gui}} ()
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGui_a837355b0043111e07f0ac43498f349a5}{update\+Gui}} ()
+\begin{DoxyCompactList}\small\item\em Update \doxylink{classGui}{Gui}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGui_aa501c841f56f858b7efd04bcdaf963e7}{draw\+To\+Window}} (sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}window)
+\begin{DoxyCompactList}\small\item\em Draw \doxylink{classGui}{Gui} to a window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classGui_aea36c5372e9b569b86c7cd7297aa7356}{ibw\+Min}}
+\begin{DoxyCompactList}\small\item\em Input Region Background Min Width. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGui_a7979397cf0544895aa811d7e2cfa7bf1}{ibw\+Max}}
+\begin{DoxyCompactList}\small\item\em Input Region Background Max Width. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0}{ibh\+Min}}
+\begin{DoxyCompactList}\small\item\em Input Region Background Min Height. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classGui_a2483462544e89e7bf2ef982632673b23}{ibh\+Max}}
+\begin{DoxyCompactList}\small\item\em Input Region Background Max Height. \end{DoxyCompactList}\item 
+sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classGui_a229fb25e01b2ab49825a37894754f1e6}{input\+Background}}
+\begin{DoxyCompactList}\small\item\em Input Region Background. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the gui for the application. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00008}{8}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGui_ab2655dbb6d3a91d7e90cb83dad6c0450}\label{classGui_ab2655dbb6d3a91d7e90cb83dad6c0450} 
+\index{Gui@{Gui}!Gui@{Gui}}
+\index{Gui@{Gui}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{Gui()}{Gui()}}
+{\footnotesize\ttfamily Gui\+::\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Constructor. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{gui_8cpp_source}{gui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \mbox{\hyperlink{classGui_aea36c5372e9b569b86c7cd7297aa7356}{ibwMin}}\ =\ 100;}
+\DoxyCodeLine{00005\ \ \ \ \ \mbox{\hyperlink{classGui_a7979397cf0544895aa811d7e2cfa7bf1}{ibwMax}}\ =\ 500;}
+\DoxyCodeLine{00006\ \ \ \ \ \mbox{\hyperlink{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0}{ibhMin}}\ =\ 100;}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classGui_a2483462544e89e7bf2ef982632673b23}{ibhMax}}\ =\ 980;}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classGui_a229fb25e01b2ab49825a37894754f1e6}{inputBackground}}.setSize(sf::Vector2f(\mbox{\hyperlink{classGui_a7979397cf0544895aa811d7e2cfa7bf1}{ibwMax}}-\/\mbox{\hyperlink{classGui_aea36c5372e9b569b86c7cd7297aa7356}{ibwMin}},\ \mbox{\hyperlink{classGui_a2483462544e89e7bf2ef982632673b23}{ibhMax}}-\/\mbox{\hyperlink{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0}{ibhMin}}));}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classGui_a229fb25e01b2ab49825a37894754f1e6}{inputBackground}}.setPosition(sf::Vector2f(\mbox{\hyperlink{classGui_aea36c5372e9b569b86c7cd7297aa7356}{ibwMin}},\ \mbox{\hyperlink{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0}{ibhMin}}));}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classGui_a229fb25e01b2ab49825a37894754f1e6}{inputBackground}}.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGui_aa501c841f56f858b7efd04bcdaf963e7}\label{classGui_aa501c841f56f858b7efd04bcdaf963e7} 
+\index{Gui@{Gui}!drawToWindow@{drawToWindow}}
+\index{drawToWindow@{drawToWindow}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{drawToWindow()}{drawToWindow()}}
+{\footnotesize\ttfamily void Gui\+::draw\+To\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+
+
+Draw \doxylink{classGui}{Gui} to a window. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{gui_8cpp_source}{gui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \ \ window-\/>draw(\mbox{\hyperlink{classGui_a229fb25e01b2ab49825a37894754f1e6}{inputBackground}});}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classGui_a837355b0043111e07f0ac43498f349a5}\label{classGui_a837355b0043111e07f0ac43498f349a5} 
+\index{Gui@{Gui}!updateGui@{updateGui}}
+\index{updateGui@{updateGui}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{updateGui()}{updateGui()}}
+{\footnotesize\ttfamily void Gui\+::update\+Gui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update \doxylink{classGui}{Gui}. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{gui_8cpp_source}{gui.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classGui_a2483462544e89e7bf2ef982632673b23}\label{classGui_a2483462544e89e7bf2ef982632673b23} 
+\index{Gui@{Gui}!ibhMax@{ibhMax}}
+\index{ibhMax@{ibhMax}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{ibhMax}{ibhMax}}
+{\footnotesize\ttfamily float Gui\+::ibh\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input Region Background Max Height. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00019}{19}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+\Hypertarget{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0}\label{classGui_ac23e843a93faf7c94a0b4fa0510f6fa0} 
+\index{Gui@{Gui}!ibhMin@{ibhMin}}
+\index{ibhMin@{ibhMin}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{ibhMin}{ibhMin}}
+{\footnotesize\ttfamily float Gui\+::ibh\+Min\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input Region Background Min Height. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00017}{17}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+\Hypertarget{classGui_a7979397cf0544895aa811d7e2cfa7bf1}\label{classGui_a7979397cf0544895aa811d7e2cfa7bf1} 
+\index{Gui@{Gui}!ibwMax@{ibwMax}}
+\index{ibwMax@{ibwMax}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{ibwMax}{ibwMax}}
+{\footnotesize\ttfamily float Gui\+::ibw\+Max\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input Region Background Max Width. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00015}{15}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+\Hypertarget{classGui_aea36c5372e9b569b86c7cd7297aa7356}\label{classGui_aea36c5372e9b569b86c7cd7297aa7356} 
+\index{Gui@{Gui}!ibwMin@{ibwMin}}
+\index{ibwMin@{ibwMin}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{ibwMin}{ibwMin}}
+{\footnotesize\ttfamily float Gui\+::ibw\+Min\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input Region Background Min Width. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00013}{13}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+
+\Hypertarget{classGui_a229fb25e01b2ab49825a37894754f1e6}\label{classGui_a229fb25e01b2ab49825a37894754f1e6} 
+\index{Gui@{Gui}!inputBackground@{inputBackground}}
+\index{inputBackground@{inputBackground}!Gui@{Gui}}
+\doxysubsubsection{\texorpdfstring{inputBackground}{inputBackground}}
+{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Gui\+::input\+Background\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Input Region Background. 
+
+
+
+Definition at line \mbox{\hyperlink{gui_8h_source_l00021}{21}} of file \mbox{\hyperlink{gui_8h_source}{gui.\+h}}.
+

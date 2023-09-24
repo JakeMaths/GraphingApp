@@ -86,6 +86,7 @@ Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::
     hMax = hRange.y;
     gridRows = hMax-hMin;
     gridCols = wMax-wMin;
+    axisTickLength = DEFAULT_AXIS_TICK_LENGTH;
     graphMode = 1;
 
     background.setSize(sf::Vector2f(wMax-wMin, hMax-hMin));
@@ -130,11 +131,20 @@ void Graph::updateGraph()
         }
     }
 
-    // draw x axis tick numbers
+    // draw x axis tick marks and numbers numbers
     for (int i=static_cast<int>(ceil(xMin)); i<static_cast<int>(ceil(xMax)); i++)
     {
+        sf::Vector2f tick_position = graphToScreen(sf::Vector2f(i,0));
+        sf::Vertex vertex;
+        for (int j=-axisTickLength; j<=axisTickLength; j++)
+        {
+            vertex.position = sf::Vector2f(tick_position.x, tick_position.y + j);
+            vertex.color = sf::Color::Black;
+            gridVector.append(vertex);
+
+        }
         text.setString(std::to_string(i));
-        text.setPosition(graphToScreen(sf::Vector2f(i, 0)));
+        text.setPosition(tick_position);
         textVector.push_back(text);
     } 
 
@@ -155,8 +165,17 @@ void Graph::updateGraph()
     // draw y axis tick numbers
     for (int i=static_cast<int>(ceil(yMin)); i<static_cast<int>(ceil(yMax)); i++)
     {
+        sf::Vector2f tick_position = graphToScreen(sf::Vector2f(0,i));
+        sf::Vertex vertex;
+        for (int j=-axisTickLength; j<=axisTickLength; j++)
+        {
+            vertex.position = sf::Vector2f(tick_position.x + j, tick_position.y);
+            vertex.color = sf::Color::Black;
+            gridVector.append(vertex);
+
+        }
         text.setString(std::to_string(i));
-        text.setPosition(graphToScreen(sf::Vector2f(0, i)));
+        text.setPosition(tick_position);
         textVector.push_back(text);
     } 
 

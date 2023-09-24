@@ -1,4 +1,4 @@
 var graph_8h =
 [
-    [ "Graph", "classGraph.html", "classGraph" ]
+    [ "Graph", "class_graph.html", "class_graph" ]
 ];

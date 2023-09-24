@@ -1,4 +1,4 @@
 var gui_8h =
 [
-    [ "Gui", "classGui.html", "classGui" ]
+    [ "Gui", "class_gui.html", "class_gui" ]
 ];

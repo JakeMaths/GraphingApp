@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['background_0',['background',['../classGraph.html#aa691ac7db5988a7d5de7e941eddc5149',1,'Graph']]]
+  ['axisticklength_0',['axisTickLength',['../class_graph.html#a9afb632994ad66be00e589f889c6ad1d',1,'Graph']]]
 ];

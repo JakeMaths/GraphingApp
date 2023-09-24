@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['graph_0',['Graph',['../classGraph.html',1,'']]],
-  ['gui_1',['Gui',['../classGui.html',1,'']]]
+  ['graph_0',['Graph',['../class_graph.html',1,'']]],
+  ['gui_1',['Gui',['../class_gui.html',1,'']]]
 ];

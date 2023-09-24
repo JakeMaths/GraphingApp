@@ -30,18 +30,21 @@ private:
     int gridRows;
     //! Columns in rectangle grid
     int gridCols;
+    //! Axis tick marker length in pixels
+    int axisTickLength;
     //! Collection of points to be drawn
     sf::VertexArray gridVector;
     //! Background rectangle
     sf::RectangleShape background;
-    //! Temp variable for declaring graph type
-    int graphMode;
     //! Text for drawing on graph
     sf::Text text;
     //! Collect of texts to be drawn
     std::vector<sf::Text> textVector;
     //! Font for drawing text
     sf::Font font;
+
+    //! Temp variable for declaring graph type
+    int graphMode;
 
     // Private Member Functions
     //! Convert grid (i,j) coordinates to screen (w,h) coordinates

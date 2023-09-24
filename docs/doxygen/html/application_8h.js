@@ -1,4 +1,4 @@
 var application_8h =
 [
-    [ "Application", "classApplication.html", "classApplication" ]
+    [ "Application", "class_application.html", "class_application" ]
 ];

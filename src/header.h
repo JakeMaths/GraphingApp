@@ -39,3 +39,6 @@ const float DEFAULT_H_MAX = 940;
 
 //! Default Zero Threshold, values below are zero
 const float DEFAULT_ZERO_THRESH = 0.01f;
+
+//! Default Graph Axis Tick Marker Length in pixels
+const int DEFAULT_AXIS_TICK_LENGTH = 10;

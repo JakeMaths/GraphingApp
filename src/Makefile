@@ -5,11 +5,11 @@ compile:
 	mv *.o ../build
 
 link:
-	g++ ../build/*.o -o program -lsfml-graphics -lsfml-window -lsfml-system
-	mv program ../build
+	g++ ../build/*.o -o program.out -lsfml-graphics -lsfml-window -lsfml-system
+	mv program.out ../build
 
 clean:
 	rm ../build/*.o
 
 run:
-	../build/program
+	../build/program.out

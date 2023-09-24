@@ -24,34 +24,9 @@ sf::Vector2f Graph::graphToScreen(sf::Vector2f graph_pos)
     return screen_pos;
 }
 
-Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange)
+sf::VertexArray Graph::functionVertices()
 {
-    xMin = xRange.x;
-    xMax = xRange.y;
-    yMin = yRange.x;
-    yMax = yRange.y;
-    wMin = wRange.x;
-    wMax = wRange.y;
-    hMin = hRange.x;
-    hMax = hRange.y;
-    gridRows = 1000;
-    gridCols = 1000;
-    graphMode = 1;
-    gridTile.setSize(sf::Vector2f((wMax-wMin)/gridCols, (hMax-hMin)/gridRows));
-    background.setSize(sf::Vector2f(wMax-wMin, hMax-hMin));
-    background.setPosition(sf::Vector2f(wMin, hMin));
-    background.setFillColor(sf::Color::White);
-}
-
-void Graph::setGraphMode(int i)
-{
-    graphMode = i;
-    return;
-}
-
-void Graph::updateGraph()
-{
-    gridVector.clear();
+    sf::VertexArray vertices;
     for (int i=0; i<gridRows; i++)
     {
         for (int j=0; j<gridCols; j++)
@@ -61,6 +36,7 @@ void Graph::updateGraph()
             float x = graphC.x;
             float y = graphC.y;
             float fx = 0;
+            // determine the function 
             switch (graphMode)
             {
                 case 1:
@@ -85,34 +61,123 @@ void Graph::updateGraph()
                     fx = funcG(x);
                     break;
             }
-            if (std::abs(y-fx) < 0.01)
+            // graph vertices 
+            if (std::abs(y-fx) < DEFAULT_ZERO_THRESH)
             {
-                gridTile.setPosition(screenC);
-                gridTile.setFillColor(sf::Color::Red);
-                gridVector.push_back(gridTile);
-            }
-            else if (std::abs(y) < 0.01)
-            {
-                gridTile.setPosition(screenC);
-                gridTile.setFillColor(sf::Color::Black);
-                gridVector.push_back(gridTile);
-            }
-            else if (std::abs(x) < 0.01)
-            {
-                gridTile.setPosition(screenC);
-                gridTile.setFillColor(sf::Color::Black);
-                gridVector.push_back(gridTile);
+                sf::Vertex vertex;
+                vertex.position = screenC;
+                vertex.color = sf::Color::Red;
+                vertices.append(vertex);
             }
         }
     }
+    return vertices;
+}
+
+Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange)
+{
+    xMin = xRange.x;
+    xMax = xRange.y;
+    yMin = yRange.x;
+    yMax = yRange.y;
+    wMin = wRange.x;
+    wMax = wRange.y;
+    hMin = hRange.x;
+    hMax = hRange.y;
+    gridRows = hMax-hMin;
+    gridCols = wMax-wMin;
+    graphMode = 1;
+
+    background.setSize(sf::Vector2f(wMax-wMin, hMax-hMin));
+    background.setPosition(sf::Vector2f(wMin, hMin));
+    background.setFillColor(sf::Color::White);
+
+    font.loadFromFile("res/arial.ttf");
+    text.setFont(font);
+    // pixels, not points
+    text.setCharacterSize(24);
+    text.setFillColor(sf::Color::Black);
+}
+
+void Graph::setGraphMode(int i)
+{
+    graphMode = i;
+    return;
+}
+
+void Graph::updateGraph()
+{
+    gridVector.clear();
+    textVector.clear();
+    
+    sf::VertexArray graphVertices = functionVertices();
+    for (int i=0; i<graphVertices.getVertexCount(); i++)
+    {
+        gridVector.append(graphVertices[i]);
+    }    
+
+    // draw x axis
+    if (yMax > 0 && yMin < 0)
+    {
+        float screenY = graphToScreen(sf::Vector2f(xMin, 0)).y;
+        for (int i=0; i<gridCols; i++)
+        {
+            sf::Vertex vertex;
+            float screenX = gridToScreen(sf::Vector2u(i, 0)).x;
+            vertex.position = sf::Vector2f(screenX, screenY);
+            vertex.color = sf::Color::Black;
+            gridVector.append(vertex);
+        }
+    }
+
+    // draw x axis tick numbers
+    for (int i=static_cast<int>(ceil(xMin)); i<static_cast<int>(ceil(xMax)); i++)
+    {
+        text.setString(std::to_string(i));
+        text.setPosition(graphToScreen(sf::Vector2f(i, 0)));
+        textVector.push_back(text);
+    } 
+
+    // draw y axis
+    if (xMax > 0 && xMin < 0)
+    {
+        float screenX = graphToScreen(sf::Vector2f(0, yMin)).x;
+        for (int i=0; i<gridRows; i++)
+        {
+            sf::Vertex vertex;
+            float screenY = gridToScreen(sf::Vector2u(0, i)).y;
+            vertex.position = sf::Vector2f(screenX, screenY);
+            vertex.color = sf::Color::Black;
+            gridVector.append(vertex);
+        }
+    }
+
+    // draw y axis tick numbers
+    for (int i=static_cast<int>(ceil(yMin)); i<static_cast<int>(ceil(yMax)); i++)
+    {
+        text.setString(std::to_string(i));
+        text.setPosition(graphToScreen(sf::Vector2f(0, i)));
+        textVector.push_back(text);
+    } 
+
+    return;
 }
 
 void Graph::drawToWindow(sf::RenderWindow* window)
 {
     window->draw(background);
+
+    /*
     for (auto r : gridVector)
     {
         window->draw(r);
+    }
+    */
+   window->draw(gridVector);
+
+    for (auto t: textVector)
+    {
+        window->draw(t);
     }
     return;
 }

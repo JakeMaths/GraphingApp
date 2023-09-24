@@ -13,7 +13,7 @@ Manages the graph area on screen.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classGraph_abfe6255ca4a43307808e20d9dd1d6714}{Graph}} (sf\+::\+Vector2f x\+Range, sf\+::\+Vector2f y\+Range, sf\+::\+Vector2f w\+Range, sf\+::\+Vector2f h\+Range)
-\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Default Constructor. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGraph_af1c87aa04a4d5f35bb964a96ad89b642}{set\+Graph\+Mode}} (int i)
 \begin{DoxyCompactList}\small\item\em Set graph\+Mode. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classGraph_a187472c9e3721253d55ea716e6ebd2af}{update\+Graph}} ()
@@ -36,7 +36,9 @@ sf\+::\+Vector2f \mbox{\hyperlink{classGraph_ae11a67107230f8ff8e731ccbcc9d89fc}{
 sf\+::\+Vector2f \mbox{\hyperlink{classGraph_a1ff5995640d2f464ffe7fd9a1c94f8ed}{screen\+To\+Graph}} (sf\+::\+Vector2f screen\+\_\+pos)
 \begin{DoxyCompactList}\small\item\em Convert screen (w,h) coordinates to graph (x,y) coordinates. \end{DoxyCompactList}\item 
 sf\+::\+Vector2f \mbox{\hyperlink{classGraph_a09fa174875d230c1608743a93e300a0a}{graph\+To\+Screen}} (sf\+::\+Vector2f graph\+\_\+pos)
-\begin{DoxyCompactList}\small\item\em Convert graph (x,y) coordinates to screen (w,h) coordinates. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Convert graph (x,y) coordinates to screen (w,h) coordinates. \end{DoxyCompactList}\item 
+sf\+::\+Vertex\+Array \mbox{\hyperlink{classGraph_a0eaaed19d885b62b312be3121df4358f}{function\+Vertices}} ()
+\begin{DoxyCompactList}\small\item\em Create verticies for a function. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -60,14 +62,18 @@ int \mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{grid\+Rows}}
 \begin{DoxyCompactList}\small\item\em Rows in rectangle grid. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{grid\+Cols}}
 \begin{DoxyCompactList}\small\item\em Columns in rectangle grid. \end{DoxyCompactList}\item 
-sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classGraph_a4637ef99e6d70a27754381c981fb7993}{grid\+Tile}}
-\begin{DoxyCompactList}\small\item\em Rectangle prefab. \end{DoxyCompactList}\item 
-std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$ \mbox{\hyperlink{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c}{grid\+Vector}}
-\begin{DoxyCompactList}\small\item\em Collection of rectangles to be drawn. \end{DoxyCompactList}\item 
+sf\+::\+Vertex\+Array \mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{grid\+Vector}}
+\begin{DoxyCompactList}\small\item\em Collection of points to be drawn. \end{DoxyCompactList}\item 
 sf\+::\+Rectangle\+Shape \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}
 \begin{DoxyCompactList}\small\item\em Background rectangle. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graph\+Mode}}
-\begin{DoxyCompactList}\small\item\em Temp variable for declaring graph type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Temp variable for declaring graph type. \end{DoxyCompactList}\item 
+sf\+::\+Text \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}
+\begin{DoxyCompactList}\small\item\em Text for drawing on graph. \end{DoxyCompactList}\item 
+std\+::vector$<$ sf\+::\+Text $>$ \mbox{\hyperlink{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}{text\+Vector}}
+\begin{DoxyCompactList}\small\item\em Collect of texts to be drawn. \end{DoxyCompactList}\item 
+sf\+::\+Font \mbox{\hyperlink{classGraph_ac65e357d39b4d14d5a87ab100ea3a840}{font}}
+\begin{DoxyCompactList}\small\item\em Font for drawing text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -88,31 +94,37 @@ Definition at line \mbox{\hyperlink{graph_8h_source_l00009}{9}} of file \mbox{\h
 
 
 
-Default constructor. 
+Default Constructor. 
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00077}{77}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00028\ \{}
-\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ =\ xRange.x;}
-\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ =\ xRange.y;}
-\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ =\ yRange.x;}
-\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ =\ yRange.y;}
-\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}}\ =\ wRange.x;}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}\ =\ wRange.y;}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}\ =\ hRange.x;}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}\ =\ hRange.y;}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}}\ =\ 1000;}
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}}\ =\ 1000;}
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}}\ =\ 1;}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classGraph_a4637ef99e6d70a27754381c981fb7993}{gridTile}}.setSize(sf::Vector2f((\mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}-\/\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}})/\mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}},\ (\mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}-\/\mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}})/\mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}}));}
-\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setSize(sf::Vector2f(\mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}-\/\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}},\ \mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}-\/\mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}));}
-\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setPosition(sf::Vector2f(\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}},\ \mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}));}
-\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setFillColor(sf::Color::White);}
-\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00078\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ =\ xRange.x;}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ =\ xRange.y;}
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ =\ yRange.x;}
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ =\ yRange.y;}
+\DoxyCodeLine{00083\ \ \ \ \ \mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}}\ =\ wRange.x;}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}\ =\ wRange.y;}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}\ =\ hRange.x;}
+\DoxyCodeLine{00086\ \ \ \ \ \mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}\ =\ hRange.y;}
+\DoxyCodeLine{00087\ \ \ \ \ \mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}}\ =\ \mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}-\/\mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}};}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}}\ =\ \mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}-\/\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}};}
+\DoxyCodeLine{00089\ \ \ \ \ \mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}}\ =\ 1;}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setSize(sf::Vector2f(\mbox{\hyperlink{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}{wMax}}-\/\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}},\ \mbox{\hyperlink{classGraph_a6472a2461564c54bbc07ddf5ab66d769}{hMax}}-\/\mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}));}
+\DoxyCodeLine{00092\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setPosition(sf::Vector2f(\mbox{\hyperlink{classGraph_aa79d2612da7e110ac8acf20a9026efb9}{wMin}},\ \mbox{\hyperlink{classGraph_a93f1f34e8db79aca7bd302371a487bc5}{hMin}}));}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}}.setFillColor(sf::Color::White);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classGraph_ac65e357d39b4d14d5a87ab100ea3a840}{font}}.loadFromFile(\textcolor{stringliteral}{"{}res/arial.ttf"{}});}
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setFont(\mbox{\hyperlink{classGraph_ac65e357d39b4d14d5a87ab100ea3a840}{font}});}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{comment}{//\ pixels,\ not\ points}}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setCharacterSize(24);}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setFillColor(sf::Color::Black);}
+\DoxyCodeLine{00100\ \}}
 
 \end{DoxyCode}
 
@@ -130,15 +142,15 @@ Decrement x\+Min and x\+Max by x\+Dec.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00185}{185}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00109\ \{}
-\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ -\/=\ xDec;}
-\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ -\/=\ xDec;}
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00186\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ -\/=\ xDec;}
+\DoxyCodeLine{00188\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ -\/=\ xDec;}
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00190\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_a504166a6c4f9aa34fe9c6efab7e3d641}\label{classGraph_a504166a6c4f9aa34fe9c6efab7e3d641} 
@@ -153,15 +165,15 @@ Decrement y\+Min and y\+Max by y\+Dec.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00192}{192}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00116\ \{}
-\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ -\/=\ yDec;}
-\DoxyCodeLine{00118\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ -\/=\ yDec;}
-\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00120\ \}}
+\DoxyCodeLine{00193\ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ -\/=\ yDec;}
+\DoxyCodeLine{00195\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ -\/=\ yDec;}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00197\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_aa6749d6301ebf265f8b8f8240f35839a}\label{classGraph_aa6749d6301ebf265f8b8f8240f35839a} 
@@ -176,18 +188,93 @@ Draw grid\+Vector to a window.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00099\ \{}
-\DoxyCodeLine{00100\ \ \ \ \ window-\/>draw(\mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}});}
-\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ r\ :\ \mbox{\hyperlink{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c}{gridVector}})}
-\DoxyCodeLine{00102\ \ \ \ \ \{}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ window-\/>draw(r);}
-\DoxyCodeLine{00104\ \ \ \ \ \}}
-\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00106\ \}}
+\DoxyCodeLine{00167\ \{}
+\DoxyCodeLine{00168\ \ \ \ \ window-\/>draw(\mbox{\hyperlink{classGraph_aa691ac7db5988a7d5de7e941eddc5149}{background}});}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00171\ \textcolor{comment}{\ \ \ \ for\ (auto\ r\ :\ gridVector)}}
+\DoxyCodeLine{00172\ \textcolor{comment}{\ \ \ \ \{}}
+\DoxyCodeLine{00173\ \textcolor{comment}{\ \ \ \ \ \ \ \ window-\/>draw(r);}}
+\DoxyCodeLine{00174\ \textcolor{comment}{\ \ \ \ \}}}
+\DoxyCodeLine{00175\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00176\ \ \ \ window-\/>draw(\mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{gridVector}});}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ t:\ \mbox{\hyperlink{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}{textVector}})}
+\DoxyCodeLine{00179\ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ window-\/>draw(t);}
+\DoxyCodeLine{00181\ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classGraph_a0eaaed19d885b62b312be3121df4358f}\label{classGraph_a0eaaed19d885b62b312be3121df4358f} 
+\index{Graph@{Graph}!functionVertices@{functionVertices}}
+\index{functionVertices@{functionVertices}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{functionVertices()}{functionVertices()}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array Graph\+::function\+Vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Create verticies for a function. 
+
+
+
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ sf::VertexArray\ vertices;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}};\ i++)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}};\ j++)}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ screenC\ =\ \mbox{\hyperlink{classGraph_ae11a67107230f8ff8e731ccbcc9d89fc}{gridToScreen}}(sf::Vector2u(i,\ j));}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ graphC\ =\ \mbox{\hyperlink{classGraph_a1ff5995640d2f464ffe7fd9a1c94f8ed}{screenToGraph}}(screenC);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ graphC.x;}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ graphC.y;}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fx\ =\ 0;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ determine\ the\ function\ }}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}})}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a325b9c92315a0642839ecd8373efe812}{funcA}}(x);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_ac2a7b2443a2f29cf226b397be267e490}{funcB}}(x);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_ad617009d9814d60d4c999ab9205a5432}{funcC}}(x);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a545ce7cf956017f1775137e0d1c464ff}{funcD}}(x);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a05efc6dc314317a82b2f48fda949dab0}{funcE}}(x);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a4a1cb7697120d0124bfbbf303d9048dc}{funcF}}(x);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_acba0bc22c836f2f60c590d2cd5557f03}{funcG}}(x);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ graph\ vertices\ }}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::abs(y-\/fx)\ <\ \mbox{\hyperlink{header_8h_a29009bd622c1a22e4e2aa1e19eaf80db}{DEFAULT\_ZERO\_THRESH}})}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vertex\ vertex;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vertex.position\ =\ screenC;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vertex.color\ =\ sf::Color::Red;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vertices.append(vertex);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{return}\ vertices;}
+\DoxyCodeLine{00075\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_a09fa174875d230c1608743a93e300a0a}\label{classGraph_a09fa174875d230c1608743a93e300a0a} 
@@ -250,15 +337,15 @@ Increment x\+Min and x\+Max by x\+Inc.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00123\ \{}
-\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ +=\ xInc;}
-\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ +=\ xInc;}
-\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00200\ \{}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ +=\ xInc;}
+\DoxyCodeLine{00202\ \ \ \ \ \mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ +=\ xInc;}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00204\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_ab3adf389549556eb195274fd5cf65d84}\label{classGraph_ab3adf389549556eb195274fd5cf65d84} 
@@ -273,15 +360,15 @@ Increment y\+Min and y\+Max by y\+Inc.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00206}{206}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00130\ \{}
-\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ +=\ yInc;}
-\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ +=\ yInc;}
-\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00134\ \}}
+\DoxyCodeLine{00207\ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ +=\ yInc;}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ +=\ yInc;}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00211\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_a1ff5995640d2f464ffe7fd9a1c94f8ed}\label{classGraph_a1ff5995640d2f464ffe7fd9a1c94f8ed} 
@@ -320,14 +407,14 @@ Set graph\+Mode.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00102}{102}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}}\ =\ i;}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00050\ \}}
+\DoxyCodeLine{00103\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}}\ =\ i;}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00106\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classGraph_a187472c9e3721253d55ea716e6ebd2af}\label{classGraph_a187472c9e3721253d55ea716e6ebd2af} 
@@ -342,54 +429,66 @@ Update grid\+Vector based on graph\+Mode.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
+Definition at line \mbox{\hyperlink{graph_8cpp_source_l00108}{108}} of file \mbox{\hyperlink{graph_8cpp_source}{graph.\+cpp}}.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00053\ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c}{gridVector}}.clear();}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}};\ i++)}
-\DoxyCodeLine{00056\ \ \ \ \ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=0;\ j<\mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}};\ j++)}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ screenC\ =\ \mbox{\hyperlink{classGraph_ae11a67107230f8ff8e731ccbcc9d89fc}{gridToScreen}}(sf::Vector2u(i,\ j));}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vector2f\ graphC\ =\ \mbox{\hyperlink{classGraph_a1ff5995640d2f464ffe7fd9a1c94f8ed}{screenToGraph}}(screenC);}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ x\ =\ graphC.x;}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ y\ =\ graphC.y;}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ fx\ =\ 0;}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\mbox{\hyperlink{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}{graphMode}})}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a325b9c92315a0642839ecd8373efe812}{funcA}}(x);}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_ac2a7b2443a2f29cf226b397be267e490}{funcB}}(x);}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_ad617009d9814d60d4c999ab9205a5432}{funcC}}(x);}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a545ce7cf956017f1775137e0d1c464ff}{funcD}}(x);}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a05efc6dc314317a82b2f48fda949dab0}{funcE}}(x);}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_a4a1cb7697120d0124bfbbf303d9048dc}{funcF}}(x);}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fx\ =\ \mbox{\hyperlink{test__funcs_8cpp_acba0bc22c836f2f60c590d2cd5557f03}{funcG}}(x);}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::abs(y-\/fx)\ <\ 0.01)}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a4637ef99e6d70a27754381c981fb7993}{gridTile}}.setPosition(screenC);}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a4637ef99e6d70a27754381c981fb7993}{gridTile}}.setFillColor(sf::Color::Red);}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c}{gridVector}}.push\_back(\mbox{\hyperlink{classGraph_a4637ef99e6d70a27754381c981fb7993}{gridTile}});}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00095\ \ \ \ \ \}}
-\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00109\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{gridVector}}.clear();}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}{textVector}}.clear();}
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ sf::VertexArray\ graphVertices\ =\ \mbox{\hyperlink{classGraph_a0eaaed19d885b62b312be3121df4358f}{functionVertices}}();}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<graphVertices.getVertexCount();\ i++)}
+\DoxyCodeLine{00115\ \ \ \ \ \{}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{gridVector}}.append(graphVertices[i]);}
+\DoxyCodeLine{00117\ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ draw\ x\ axis}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}\ >\ 0\ \&\&\ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}\ <\ 0)}
+\DoxyCodeLine{00121\ \ \ \ \ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ screenY\ =\ \mbox{\hyperlink{classGraph_a09fa174875d230c1608743a93e300a0a}{graphToScreen}}(sf::Vector2f(\mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}},\ 0)).y;}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classGraph_a623921257bffb831fc07335181ff015b}{gridCols}};\ i++)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vertex\ vertex;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ screenX\ =\ \mbox{\hyperlink{classGraph_ae11a67107230f8ff8e731ccbcc9d89fc}{gridToScreen}}(sf::Vector2u(i,\ 0)).x;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ vertex.position\ =\ sf::Vector2f(screenX,\ screenY);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ vertex.color\ =\ sf::Color::Black;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{gridVector}}.append(vertex);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \}}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{comment}{//\ draw\ x\ axis\ tick\ numbers}}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceil(\mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}));\ i<static\_cast<int>(ceil(\mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}));\ i++)}
+\DoxyCodeLine{00135\ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setString(std::to\_string(i));}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setPosition(\mbox{\hyperlink{classGraph_a09fa174875d230c1608743a93e300a0a}{graphToScreen}}(sf::Vector2f(i,\ 0)));}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}{textVector}}.push\_back(\mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}});}
+\DoxyCodeLine{00139\ \ \ \ \ \}\ }
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \ \ \ \ \textcolor{comment}{//\ draw\ y\ axis}}
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGraph_a569e7314a3318ab20cea9d314d0f9999}{xMax}}\ >\ 0\ \&\&\ \mbox{\hyperlink{classGraph_af590534c0dee8ca6a5a1458eabc6381b}{xMin}}\ <\ 0)}
+\DoxyCodeLine{00143\ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ screenX\ =\ \mbox{\hyperlink{classGraph_a09fa174875d230c1608743a93e300a0a}{graphToScreen}}(sf::Vector2f(0,\ \mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}})).x;}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classGraph_ad7d88ddf6837ccb8ed3893f3598a6274}{gridRows}};\ i++)}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ sf::Vertex\ vertex;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ screenY\ =\ \mbox{\hyperlink{classGraph_ae11a67107230f8ff8e731ccbcc9d89fc}{gridToScreen}}(sf::Vector2u(0,\ i)).y;}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ vertex.position\ =\ sf::Vector2f(screenX,\ screenY);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ vertex.color\ =\ sf::Color::Black;}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}{gridVector}}.append(vertex);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ draw\ y\ axis\ tick\ numbers}}
+\DoxyCodeLine{00156\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(ceil(\mbox{\hyperlink{classGraph_a1c013c12031515c0a4b4fab261910ef1}{yMin}}));\ i<static\_cast<int>(ceil(\mbox{\hyperlink{classGraph_af31c5f97f92f7c5c8d7fc70338afb6a4}{yMax}}));\ i++)}
+\DoxyCodeLine{00157\ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setString(std::to\_string(i));}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}}.setPosition(\mbox{\hyperlink{classGraph_a09fa174875d230c1608743a93e300a0a}{graphToScreen}}(sf::Vector2f(0,\ i)));}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}{textVector}}.push\_back(\mbox{\hyperlink{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}{text}});}
+\DoxyCodeLine{00161\ \ \ \ \ \}\ }
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00164\ \}}
 
 \end{DoxyCode}
 
@@ -407,7 +506,21 @@ Background rectangle.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8h_source_l00038}{38}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
+Definition at line \mbox{\hyperlink{graph_8h_source_l00036}{36}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
+
+\Hypertarget{classGraph_ac65e357d39b4d14d5a87ab100ea3a840}\label{classGraph_ac65e357d39b4d14d5a87ab100ea3a840} 
+\index{Graph@{Graph}!font@{font}}
+\index{font@{font}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Graph\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Font for drawing text. 
+
+
+
+Definition at line \mbox{\hyperlink{graph_8h_source_l00044}{44}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
 
 \Hypertarget{classGraph_ad0ed48cc57c7a3284eceec21d632bf20}\label{classGraph_ad0ed48cc57c7a3284eceec21d632bf20} 
 \index{Graph@{Graph}!graphMode@{graphMode}}
@@ -421,7 +534,7 @@ Temp variable for declaring graph type.
 
 
 
-Definition at line \mbox{\hyperlink{graph_8h_source_l00040}{40}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
+Definition at line \mbox{\hyperlink{graph_8h_source_l00038}{38}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
 
 \Hypertarget{classGraph_a623921257bffb831fc07335181ff015b}\label{classGraph_a623921257bffb831fc07335181ff015b} 
 \index{Graph@{Graph}!gridCols@{gridCols}}
@@ -451,33 +564,19 @@ Rows in rectangle grid.
 
 Definition at line \mbox{\hyperlink{graph_8h_source_l00030}{30}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
 
-\Hypertarget{classGraph_a4637ef99e6d70a27754381c981fb7993}\label{classGraph_a4637ef99e6d70a27754381c981fb7993} 
-\index{Graph@{Graph}!gridTile@{gridTile}}
-\index{gridTile@{gridTile}!Graph@{Graph}}
-\doxysubsubsection{\texorpdfstring{gridTile}{gridTile}}
-{\footnotesize\ttfamily sf\+::\+Rectangle\+Shape Graph\+::grid\+Tile\hspace{0.3cm}{\ttfamily [private]}}
+\Hypertarget{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499}\label{classGraph_ab6fbb53c819e1eee7d9c203c8f8fb499} 
+\index{Graph@{Graph}!gridVector@{gridVector}}
+\index{gridVector@{gridVector}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{gridVector}{gridVector}}
+{\footnotesize\ttfamily sf\+::\+Vertex\+Array Graph\+::grid\+Vector\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Rectangle prefab. 
+Collection of points to be drawn. 
 
 
 
 Definition at line \mbox{\hyperlink{graph_8h_source_l00034}{34}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
-
-\Hypertarget{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c}\label{classGraph_a59bc7a2b544f234037122c2c1c1ecb6c} 
-\index{Graph@{Graph}!gridVector@{gridVector}}
-\index{gridVector@{gridVector}!Graph@{Graph}}
-\doxysubsubsection{\texorpdfstring{gridVector}{gridVector}}
-{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Rectangle\+Shape$>$ Graph\+::grid\+Vector\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Collection of rectangles to be drawn. 
-
-
-
-Definition at line \mbox{\hyperlink{graph_8h_source_l00036}{36}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
 
 \Hypertarget{classGraph_a6472a2461564c54bbc07ddf5ab66d769}\label{classGraph_a6472a2461564c54bbc07ddf5ab66d769} 
 \index{Graph@{Graph}!hMax@{hMax}}
@@ -506,6 +605,34 @@ Minimum y value (screen)
 
 
 Definition at line \mbox{\hyperlink{graph_8h_source_l00026}{26}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
+
+\Hypertarget{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f}\label{classGraph_a773f1fc15d8a1bec271ca24a76d07c3f} 
+\index{Graph@{Graph}!text@{text}}
+\index{text@{text}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text Graph\+::text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Text for drawing on graph. 
+
+
+
+Definition at line \mbox{\hyperlink{graph_8h_source_l00040}{40}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
+
+\Hypertarget{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f}\label{classGraph_ac253d3cd241c7d2e1ed320a26fb7924f} 
+\index{Graph@{Graph}!textVector@{textVector}}
+\index{textVector@{textVector}!Graph@{Graph}}
+\doxysubsubsection{\texorpdfstring{textVector}{textVector}}
+{\footnotesize\ttfamily std\+::vector$<$sf\+::\+Text$>$ Graph\+::text\+Vector\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Collect of texts to be drawn. 
+
+
+
+Definition at line \mbox{\hyperlink{graph_8h_source_l00042}{42}} of file \mbox{\hyperlink{graph_8h_source}{graph.\+h}}.
 
 \Hypertarget{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225}\label{classGraph_a95ea8e22fba2df1eeb4c14c18eebf225} 
 \index{Graph@{Graph}!wMax@{wMax}}

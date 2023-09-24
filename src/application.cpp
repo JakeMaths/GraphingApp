@@ -7,6 +7,7 @@ void Application::initializeVariables() {
     sf::Vector2f wRange(DEFAULT_W_MIN, DEFAULT_W_MAX);
     sf::Vector2f hRange(DEFAULT_H_MIN, DEFAULT_H_MAX);
     this->graph = new Graph(xRange, yRange, wRange, hRange);
+    this->gui = new Gui();
 }
 
 void Application::initializeWindow() {
@@ -26,6 +27,7 @@ Application::Application() {
 Application::~Application() {
     delete this->window;
     delete this->graph;
+    delete this->gui;
 }
 
 const bool Application::windowIsOpen() const {
@@ -85,12 +87,14 @@ void Application::pollEvents() {
 void Application::update() {
     pollEvents();
     graph->updateGraph();
+    gui->updateGui();
 }
 
 void Application::render()
 {
     window->clear();
     graph->drawToWindow(window);
+    gui->drawToWindow(window);
     window->display();
 }
 

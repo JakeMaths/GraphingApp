@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['xmax_0',['xMax',['../classGraph.html#a569e7314a3318ab20cea9d314d0f9999',1,'Graph']]],
-  ['xmin_1',['xMin',['../classGraph.html#af590534c0dee8ca6a5a1458eabc6381b',1,'Graph']]]
+  ['text_0',['text',['../classGraph.html#a773f1fc15d8a1bec271ca24a76d07c3f',1,'Graph']]],
+  ['textvector_1',['textVector',['../classGraph.html#ac253d3cd241c7d2e1ed320a26fb7924f',1,'Graph']]]
 ];

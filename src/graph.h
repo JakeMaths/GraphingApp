@@ -30,14 +30,18 @@ private:
     int gridRows;
     //! Columns in rectangle grid
     int gridCols;
-    //! Rectangle prefab
-    sf::RectangleShape gridTile;
-    //! Collection of rectangles to be drawn
-    std::vector<sf::RectangleShape> gridVector;
+    //! Collection of points to be drawn
+    sf::VertexArray gridVector;
     //! Background rectangle
     sf::RectangleShape background;
     //! Temp variable for declaring graph type
     int graphMode;
+    //! Text for drawing on graph
+    sf::Text text;
+    //! Collect of texts to be drawn
+    std::vector<sf::Text> textVector;
+    //! Font for drawing text
+    sf::Font font;
 
     // Private Member Functions
     //! Convert grid (i,j) coordinates to screen (w,h) coordinates
@@ -46,8 +50,10 @@ private:
     sf::Vector2f screenToGraph(sf::Vector2f screen_pos);
     //! Convert graph (x,y) coordinates to screen (w,h) coordinates
     sf::Vector2f graphToScreen(sf::Vector2f graph_pos);
+    //! Create verticies for a function
+    sf::VertexArray functionVertices();
 public:
-    //! Default constructor
+    //! Default Constructor
     Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange);
     //! Set graphMode
     void setGraphMode(int i);

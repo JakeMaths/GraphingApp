@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['window_0',['window',['../classApplication.html#a8c12135c949c9b58ea5b47fd94243452',1,'Application']]],
-  ['window_5fheight_1',['WINDOW_HEIGHT',['../application_8h.html#a36b29bdd874d894993341ce9abae7323',1,'application.h']]],
-  ['window_5fwidth_2',['WINDOW_WIDTH',['../application_8h.html#ad1b43a781bbe7c5dede313062106cf8e',1,'application.h']]],
-  ['wmax_3',['wMax',['../classGraph.html#a95ea8e22fba2df1eeb4c14c18eebf225',1,'Graph']]],
-  ['wmin_4',['wMin',['../classGraph.html#aa79d2612da7e110ac8acf20a9026efb9',1,'Graph']]]
+  ['ibhmax_0',['ibhMax',['../classGui.html#a2483462544e89e7bf2ef982632673b23',1,'Gui']]],
+  ['ibhmin_1',['ibhMin',['../classGui.html#ac23e843a93faf7c94a0b4fa0510f6fa0',1,'Gui']]],
+  ['ibwmax_2',['ibwMax',['../classGui.html#a7979397cf0544895aa811d7e2cfa7bf1',1,'Gui']]],
+  ['ibwmin_3',['ibwMin',['../classGui.html#aea36c5372e9b569b86c7cd7297aa7356',1,'Gui']]],
+  ['inputbackground_4',['inputBackground',['../classGui.html#a229fb25e01b2ab49825a37894754f1e6',1,'Gui']]]
 ];

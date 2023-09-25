@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['update_0',['update',['../class_application.html#a051023103d00b96b1e5e7437fd8e2e7c',1,'Application']]],
-  ['updategraph_1',['updateGraph',['../class_graph.html#a187472c9e3721253d55ea716e6ebd2af',1,'Graph']]],
-  ['updategui_2',['updateGui',['../class_gui.html#a837355b0043111e07f0ac43498f349a5',1,'Gui']]]
+  ['test_5ffuncs_2ecpp_0',['test_funcs.cpp',['../test__funcs_8cpp.html',1,'']]],
+  ['test_5ffuncs_2eh_1',['test_funcs.h',['../test__funcs_8h.html',1,'']]],
+  ['text_2',['text',['../class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f',1,'Graph']]],
+  ['textvector_3',['textVector',['../class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f',1,'Graph']]]
 ];

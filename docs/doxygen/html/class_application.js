@@ -11,6 +11,7 @@ var class_application =
     [ "event", "class_application.html#adc3e8de07eff926b70d3a5fbe7834a6b", null ],
     [ "graph", "class_application.html#a6656bad3f1fdc8333e20bef86f75acd2", null ],
     [ "gui", "class_application.html#aefa6938a2bf0e3d58b5d36bce926de1a", null ],
+    [ "keyStates", "class_application.html#a4501eb6d8b10345a651766db6229ae71", null ],
     [ "videoMode", "class_application.html#a4528e3543a259b868f20545497900b18", null ],
     [ "window", "class_application.html#a8c12135c949c9b58ea5b47fd94243452", null ]
 ];

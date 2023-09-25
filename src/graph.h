@@ -33,8 +33,10 @@ private:
     int gridCols;
     //! Axis tick marker length in pixels
     int axisTickLength;
-    //! Collection of points to be drawn
+    //! Collection of points to be drawn (axes, tick marks)
     sf::VertexArray gridVector;
+    //! Lines used to draw graph of a function
+    std::vector<sf::VertexArray> graphLines;
     //! Background rectangle
     sf::RectangleShape background;
     //! Text for drawing on graph
@@ -54,6 +56,8 @@ private:
     sf::Vector2f screenToGraph(sf::Vector2f screen_pos);
     //! Convert graph (x,y) coordinates to screen (w,h) coordinates
     sf::Vector2f graphToScreen(sf::Vector2f graph_pos);
+    //! Create lines for a function
+    std::vector<sf::VertexArray> functionLines();
     //! Create verticies for a function
     sf::VertexArray functionVertices();
 public:

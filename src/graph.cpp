@@ -24,6 +24,78 @@ sf::Vector2f Graph::graphToScreen(sf::Vector2f graph_pos)
     return screen_pos;
 }
 
+std::vector<sf::VertexArray> Graph::functionLines()
+{
+    std::vector<sf::VertexArray> lines;
+    for (int i=0; i<gridCols-1; i++)
+    {
+        sf::VertexArray buffer;
+        buffer.setPrimitiveType(sf::Lines);
+
+        sf::Vector2f screenC = gridToScreen(sf::Vector2u(i, 0));
+        sf::Vector2f screenC2 = gridToScreen(sf::Vector2u(i+1, 0));
+        sf::Vector2f graphC = screenToGraph(screenC);
+        sf::Vector2f graphC2 = screenToGraph(screenC2);
+        float x = graphC.x;
+        float x2 = graphC2.x;
+        float fx = 0;
+        float fx2 = 0;
+        // determine the function 
+        switch (graphMode)
+        {
+            case 1:
+                fx = funcA(x);
+                fx2 = funcA(x2);
+                break;
+            case 2:
+                fx = funcB(x);
+                fx2 = funcB(x2);
+                break;
+            case 3:
+                fx = funcC(x);
+                fx2 = funcC(x2);
+                break;
+            case 4:
+                fx = funcD(x);
+                fx2 = funcD(x2);
+                break;
+            case 5:
+                fx = funcE(x);
+                fx2 = funcE(x2);
+                break;
+            case 6:
+                fx = funcF(x);
+                fx2 = funcF(x2);
+                break;
+            case 7:
+                fx = funcG(x);
+                fx2 = funcG(x2);
+                break;
+        }
+        if (std::abs(fx-fx2) < yMax - yMin)
+        {
+            if (fx > yMax)
+                fx = yMax;
+            if (fx < yMin)
+                fx = yMin;
+            if (fx2 > yMax)
+                fx2 = yMax;
+            if (fx2 < yMin)
+                fx2 = yMin;
+            screenC = graphToScreen(sf::Vector2f(x, fx));
+            screenC2 = graphToScreen(sf::Vector2f(x2, fx2));
+            sf::Vertex vertex;
+            vertex.color = sf::Color::Red;
+            vertex.position = screenC;
+            buffer.append(vertex);
+            vertex.position = screenC2;
+            buffer.append(vertex);
+            lines.push_back(buffer);
+        }
+    }
+    return lines;
+}
+
 sf::VertexArray Graph::functionVertices()
 {
     sf::VertexArray vertices;
@@ -89,6 +161,8 @@ Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::
     axisTickLength = DEFAULT_AXIS_TICK_LENGTH;
     graphMode = 1;
 
+    gridVector.setPrimitiveType(sf::Points);
+
     background.setSize(sf::Vector2f(wMax-wMin, hMax-hMin));
     background.setPosition(sf::Vector2f(wMin, hMin));
     background.setFillColor(sf::Color::White);
@@ -132,27 +206,24 @@ void Graph::updateGraph(const KeyStates &keyStates)
         setGraphMode(7);
     if (keyStates.keyEqual)
     {
-        xMax /= 2;
-        xMin /= 2;
-        yMax /= 2;
-        yMin /= 2;
+        xMax -= 2;
+        xMin += 2;
+        yMax -= 2;
+        yMin += 2;
     }
     if (keyStates.keyHyphen)
     {
-        xMax *= 2;
-        xMin *= 2;
-        yMax *= 2;
-        yMin *= 2;
+        xMax += 2;
+        xMin -= 2;
+        yMax += 2;
+        yMin -= 2;
     }
 
     gridVector.clear();
     textVector.clear();
+    graphLines.clear();
     
-    sf::VertexArray graphVertices = functionVertices();
-    for (int i=0; i<graphVertices.getVertexCount(); i++)
-    {
-        gridVector.append(graphVertices[i]);
-    }    
+    graphLines = functionLines();
 
     // draw x axis
     if (yMax > 0 && yMin < 0)
@@ -215,7 +286,6 @@ void Graph::updateGraph(const KeyStates &keyStates)
         text.setPosition(tick_position);
         textVector.push_back(text);
     } 
-
     return;
 }
 
@@ -223,13 +293,12 @@ void Graph::drawToWindow(sf::RenderWindow* window)
 {
     window->draw(background);
 
-    /*
-    for (auto r : gridVector)
+    window->draw(gridVector);
+
+    for (auto b: graphLines)
     {
-        window->draw(r);
+        window->draw(b);
     }
-    */
-   window->draw(gridVector);
 
     for (auto t: textVector)
     {

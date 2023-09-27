@@ -124,18 +124,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6749d6301ebf265f8b8f8240f35839a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aa6749d6301ebf265f8b8f8240f35839a">drawToWindow</a> (sf::RenderWindow *window)</td></tr>
 <tr class="memdesc:aa6749d6301ebf265f8b8f8240f35839a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw gridVector to a window.  <br /></td></tr>
 <tr class="separator:aa6749d6301ebf265f8b8f8240f35839a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c16787d38b6ca262c3d053b6e6e0019"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a1c16787d38b6ca262c3d053b6e6e0019">decXRange</a> (float xDec)</td></tr>
-<tr class="memdesc:a1c16787d38b6ca262c3d053b6e6e0019"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement xMin and xMax by xDec.  <br /></td></tr>
-<tr class="separator:a1c16787d38b6ca262c3d053b6e6e0019"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a504166a6c4f9aa34fe9c6efab7e3d641"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a504166a6c4f9aa34fe9c6efab7e3d641">decYRange</a> (float yDec)</td></tr>
-<tr class="memdesc:a504166a6c4f9aa34fe9c6efab7e3d641"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrement yMin and yMax by yDec.  <br /></td></tr>
-<tr class="separator:a504166a6c4f9aa34fe9c6efab7e3d641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a606c0291a1c50c09a380a18353663b35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a606c0291a1c50c09a380a18353663b35">incXRange</a> (float xInc)</td></tr>
-<tr class="memdesc:a606c0291a1c50c09a380a18353663b35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment xMin and xMax by xInc.  <br /></td></tr>
-<tr class="separator:a606c0291a1c50c09a380a18353663b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3adf389549556eb195274fd5cf65d84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ab3adf389549556eb195274fd5cf65d84">incYRange</a> (float yInc)</td></tr>
-<tr class="memdesc:ab3adf389549556eb195274fd5cf65d84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increment yMin and yMax by yInc.  <br /></td></tr>
-<tr class="separator:ab3adf389549556eb195274fd5cf65d84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -151,9 +139,18 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:a8fc227f882be3a9ed503bb5f1fba7866"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::VertexArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8fc227f882be3a9ed503bb5f1fba7866">functionLines</a> ()</td></tr>
 <tr class="memdesc:a8fc227f882be3a9ed503bb5f1fba7866"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create lines for a function.  <br /></td></tr>
 <tr class="separator:a8fc227f882be3a9ed503bb5f1fba7866"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0eaaed19d885b62b312be3121df4358f"><td class="memItemLeft" align="right" valign="top">sf::VertexArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a0eaaed19d885b62b312be3121df4358f">functionVertices</a> ()</td></tr>
-<tr class="memdesc:a0eaaed19d885b62b312be3121df4358f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create verticies for a function.  <br /></td></tr>
-<tr class="separator:a0eaaed19d885b62b312be3121df4358f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea35c6bc78863e1a97ff16e95f52611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aeea35c6bc78863e1a97ff16e95f52611">zoomIn</a> ()</td></tr>
+<tr class="memdesc:aeea35c6bc78863e1a97ff16e95f52611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform xMax, xMin, yMax, yMin to zoom in.  <br /></td></tr>
+<tr class="separator:aeea35c6bc78863e1a97ff16e95f52611"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ba35b896626d934914109de508f23c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a93ba35b896626d934914109de508f23c">zoomOut</a> ()</td></tr>
+<tr class="memdesc:a93ba35b896626d934914109de508f23c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform xMax, xMin, yMax, yMin to zoom out.  <br /></td></tr>
+<tr class="separator:a93ba35b896626d934914109de508f23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee16e901ee878527c932837b1e389b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aee16e901ee878527c932837b1e389b13">moveX</a> (float x)</td></tr>
+<tr class="memdesc:aee16e901ee878527c932837b1e389b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform xMax, xMin to move along x axis.  <br /></td></tr>
+<tr class="separator:aee16e901ee878527c932837b1e389b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a84f25841851e21bd4e209d02d1c028"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a8a84f25841851e21bd4e209d02d1c028">moveY</a> (float y)</td></tr>
+<tr class="memdesc:a8a84f25841851e21bd4e209d02d1c028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transform yMax, yMin to move along y axis.  <br /></td></tr>
+<tr class="separator:a8a84f25841851e21bd4e209d02d1c028"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -193,9 +190,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ab6fbb53c819e1eee7d9c203c8f8fb499"><td class="memItemLeft" align="right" valign="top">sf::VertexArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a></td></tr>
 <tr class="memdesc:ab6fbb53c819e1eee7d9c203c8f8fb499"><td class="mdescLeft">&#160;</td><td class="mdescRight">Collection of points to be drawn (axes, tick marks)  <br /></td></tr>
 <tr class="separator:ab6fbb53c819e1eee7d9c203c8f8fb499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39836253c2c76fd0040796b22d8957c7"><td class="memItemLeft" align="right" valign="top">std::vector&lt; sf::VertexArray &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a39836253c2c76fd0040796b22d8957c7">graphLines</a></td></tr>
-<tr class="memdesc:a39836253c2c76fd0040796b22d8957c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lines used to draw graph of a function.  <br /></td></tr>
-<tr class="separator:a39836253c2c76fd0040796b22d8957c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58eee7bc32dd6df83fc79ad07dfdccbe"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::vector&lt; sf::VertexArray &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a58eee7bc32dd6df83fc79ad07dfdccbe">graphsToDraw</a></td></tr>
+<tr class="memdesc:a58eee7bc32dd6df83fc79ad07dfdccbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector: each element is a vector of lines to be drawn.  <br /></td></tr>
+<tr class="separator:a58eee7bc32dd6df83fc79ad07dfdccbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa691ac7db5988a7d5de7e941eddc5149"><td class="memItemLeft" align="right" valign="top">sf::RectangleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a></td></tr>
 <tr class="memdesc:aa691ac7db5988a7d5de7e941eddc5149"><td class="mdescLeft">&#160;</td><td class="mdescRight">Background rectangle.  <br /></td></tr>
 <tr class="separator:aa691ac7db5988a7d5de7e941eddc5149"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +205,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ac65e357d39b4d14d5a87ab100ea3a840"><td class="memItemLeft" align="right" valign="top">sf::Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">font</a></td></tr>
 <tr class="memdesc:ac65e357d39b4d14d5a87ab100ea3a840"><td class="mdescLeft">&#160;</td><td class="mdescRight">Font for drawing text.  <br /></td></tr>
 <tr class="separator:ac65e357d39b4d14d5a87ab100ea3a840"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73e783caf256df5c591f1c02e6377ca0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#a73e783caf256df5c591f1c02e6377ca0">showDebug</a></td></tr>
+<tr class="memdesc:a73e783caf256df5c591f1c02e6377ca0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display debug information.  <br /></td></tr>
+<tr class="separator:a73e783caf256df5c591f1c02e6377ca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0ed48cc57c7a3284eceec21d632bf20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a></td></tr>
 <tr class="memdesc:ad0ed48cc57c7a3284eceec21d632bf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temp variable for declaring graph type.  <br /></td></tr>
 <tr class="separator:ad0ed48cc57c7a3284eceec21d632bf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -257,37 +257,40 @@ Private Attributes</h2></td></tr>
 
 <p>Default Constructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00149">149</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  150</span>{</div>
-<div class="line"><span class="lineno">  151</span>    <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> = xRange.x;</div>
-<div class="line"><span class="lineno">  152</span>    <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> = xRange.y;</div>
-<div class="line"><span class="lineno">  153</span>    <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> = yRange.x;</div>
-<div class="line"><span class="lineno">  154</span>    <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> = yRange.y;</div>
-<div class="line"><span class="lineno">  155</span>    <a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a> = wRange.x;</div>
-<div class="line"><span class="lineno">  156</span>    <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a> = wRange.y;</div>
-<div class="line"><span class="lineno">  157</span>    <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a> = hRange.x;</div>
-<div class="line"><span class="lineno">  158</span>    <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a> = hRange.y;</div>
-<div class="line"><span class="lineno">  159</span>    <a class="code hl_variable" href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">gridRows</a> = <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>-<a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>;</div>
-<div class="line"><span class="lineno">  160</span>    <a class="code hl_variable" href="class_graph.html#a623921257bffb831fc07335181ff015b">gridCols</a> = <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a>-<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>;</div>
-<div class="line"><span class="lineno">  161</span>    <a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a> = <a class="code hl_variable" href="header_8h.html#a3262739488b12690e8c998f17e93432d">DEFAULT_AXIS_TICK_LENGTH</a>;</div>
-<div class="line"><span class="lineno">  162</span>    <a class="code hl_variable" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a> = 1;</div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00137">137</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>{</div>
+<div class="line"><span class="lineno">  139</span>    <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> = xRange.x;</div>
+<div class="line"><span class="lineno">  140</span>    <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> = xRange.y;</div>
+<div class="line"><span class="lineno">  141</span>    <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> = yRange.x;</div>
+<div class="line"><span class="lineno">  142</span>    <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> = yRange.y;</div>
+<div class="line"><span class="lineno">  143</span>    <a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a> = wRange.x;</div>
+<div class="line"><span class="lineno">  144</span>    <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a> = wRange.y;</div>
+<div class="line"><span class="lineno">  145</span>    <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a> = hRange.x;</div>
+<div class="line"><span class="lineno">  146</span>    <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a> = hRange.y;</div>
+<div class="line"><span class="lineno">  147</span>    <a class="code hl_variable" href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">gridRows</a> = <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>-<a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>;</div>
+<div class="line"><span class="lineno">  148</span>    <a class="code hl_variable" href="class_graph.html#a623921257bffb831fc07335181ff015b">gridCols</a> = <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a>-<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>;</div>
+<div class="line"><span class="lineno">  149</span>    <a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a> = <a class="code hl_variable" href="header_8h.html#a3262739488b12690e8c998f17e93432d">DEFAULT_AXIS_TICK_LENGTH</a>;</div>
+<div class="line"><span class="lineno">  150</span>    <a class="code hl_variable" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a> = 1;</div>
+<div class="line"><span class="lineno">  151</span> </div>
+<div class="line"><span class="lineno">  152</span>    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.setPrimitiveType(sf::Points);</div>
+<div class="line"><span class="lineno">  153</span> </div>
+<div class="line"><span class="lineno">  154</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setSize(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a>-<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>, <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>-<a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>));</div>
+<div class="line"><span class="lineno">  155</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setPosition(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>, <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>));</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setFillColor(sf::Color(100, 100, 100, 255));</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    <a class="code hl_variable" href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">font</a>.loadFromFile(<span class="stringliteral">&quot;res/arial.ttf&quot;</span>);</div>
+<div class="line"><span class="lineno">  159</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFont(<a class="code hl_variable" href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">font</a>);</div>
+<div class="line"><span class="lineno">  160</span>    <span class="comment">// pixels, not points</span></div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setCharacterSize(24);</div>
+<div class="line"><span class="lineno">  162</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFillColor(sf::Color::Black);</div>
 <div class="line"><span class="lineno">  163</span> </div>
-<div class="line"><span class="lineno">  164</span>    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.setPrimitiveType(sf::Points);</div>
-<div class="line"><span class="lineno">  165</span> </div>
-<div class="line"><span class="lineno">  166</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setSize(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a>-<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>, <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>-<a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>));</div>
-<div class="line"><span class="lineno">  167</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setPosition(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a>, <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a>));</div>
-<div class="line"><span class="lineno">  168</span>    <a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>.setFillColor(sf::Color::White);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>    <a class="code hl_variable" href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">font</a>.loadFromFile(<span class="stringliteral">&quot;res/arial.ttf&quot;</span>);</div>
-<div class="line"><span class="lineno">  171</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFont(<a class="code hl_variable" href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">font</a>);</div>
-<div class="line"><span class="lineno">  172</span>    <span class="comment">// pixels, not points</span></div>
-<div class="line"><span class="lineno">  173</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setCharacterSize(24);</div>
-<div class="line"><span class="lineno">  174</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFillColor(sf::Color::Black);</div>
-<div class="line"><span class="lineno">  175</span>}</div>
+<div class="line"><span class="lineno">  164</span>    <a class="code hl_variable" href="class_graph.html#a73e783caf256df5c591f1c02e6377ca0">showDebug</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  165</span>}</div>
 <div class="ttc" id="aclass_graph_html_a1c013c12031515c0a4b4fab261910ef1"><div class="ttname"><a href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">Graph::yMin</a></div><div class="ttdeci">float yMin</div><div class="ttdoc">Minimum y value (graph)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00019">graph.h:19</a></div></div>
 <div class="ttc" id="aclass_graph_html_a569e7314a3318ab20cea9d314d0f9999"><div class="ttname"><a href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">Graph::xMax</a></div><div class="ttdeci">float xMax</div><div class="ttdoc">Maximum x value (graph)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00017">graph.h:17</a></div></div>
 <div class="ttc" id="aclass_graph_html_a623921257bffb831fc07335181ff015b"><div class="ttname"><a href="class_graph.html#a623921257bffb831fc07335181ff015b">Graph::gridCols</a></div><div class="ttdeci">int gridCols</div><div class="ttdoc">Columns in rectangle grid.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00033">graph.h:33</a></div></div>
 <div class="ttc" id="aclass_graph_html_a6472a2461564c54bbc07ddf5ab66d769"><div class="ttname"><a href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">Graph::hMax</a></div><div class="ttdeci">float hMax</div><div class="ttdoc">Maximum y value (screen)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00029">graph.h:29</a></div></div>
+<div class="ttc" id="aclass_graph_html_a73e783caf256df5c591f1c02e6377ca0"><div class="ttname"><a href="class_graph.html#a73e783caf256df5c591f1c02e6377ca0">Graph::showDebug</a></div><div class="ttdeci">bool showDebug</div><div class="ttdoc">Display debug information.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00049">graph.h:49</a></div></div>
 <div class="ttc" id="aclass_graph_html_a773f1fc15d8a1bec271ca24a76d07c3f"><div class="ttname"><a href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">Graph::text</a></div><div class="ttdeci">sf::Text text</div><div class="ttdoc">Text for drawing on graph.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00043">graph.h:43</a></div></div>
 <div class="ttc" id="aclass_graph_html_a93f1f34e8db79aca7bd302371a487bc5"><div class="ttname"><a href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">Graph::hMin</a></div><div class="ttdeci">float hMin</div><div class="ttdoc">Minimum y value (screen)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00027">graph.h:27</a></div></div>
 <div class="ttc" id="aclass_graph_html_a95ea8e22fba2df1eeb4c14c18eebf225"><div class="ttname"><a href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">Graph::wMax</a></div><div class="ttdeci">float wMax</div><div class="ttdoc">Maximum x value (screen)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00025">graph.h:25</a></div></div>
@@ -296,69 +299,15 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="aclass_graph_html_aa79d2612da7e110ac8acf20a9026efb9"><div class="ttname"><a href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">Graph::wMin</a></div><div class="ttdeci">float wMin</div><div class="ttdoc">Minimum x value (screen)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00023">graph.h:23</a></div></div>
 <div class="ttc" id="aclass_graph_html_ab6fbb53c819e1eee7d9c203c8f8fb499"><div class="ttname"><a href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">Graph::gridVector</a></div><div class="ttdeci">sf::VertexArray gridVector</div><div class="ttdoc">Collection of points to be drawn (axes, tick marks)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00037">graph.h:37</a></div></div>
 <div class="ttc" id="aclass_graph_html_ac65e357d39b4d14d5a87ab100ea3a840"><div class="ttname"><a href="class_graph.html#ac65e357d39b4d14d5a87ab100ea3a840">Graph::font</a></div><div class="ttdeci">sf::Font font</div><div class="ttdoc">Font for drawing text.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00047">graph.h:47</a></div></div>
-<div class="ttc" id="aclass_graph_html_ad0ed48cc57c7a3284eceec21d632bf20"><div class="ttname"><a href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">Graph::graphMode</a></div><div class="ttdeci">int graphMode</div><div class="ttdoc">Temp variable for declaring graph type.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00050">graph.h:50</a></div></div>
+<div class="ttc" id="aclass_graph_html_ad0ed48cc57c7a3284eceec21d632bf20"><div class="ttname"><a href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">Graph::graphMode</a></div><div class="ttdeci">int graphMode</div><div class="ttdoc">Temp variable for declaring graph type.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00052">graph.h:52</a></div></div>
 <div class="ttc" id="aclass_graph_html_ad7d88ddf6837ccb8ed3893f3598a6274"><div class="ttname"><a href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">Graph::gridRows</a></div><div class="ttdeci">int gridRows</div><div class="ttdoc">Rows in rectangle grid.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00031">graph.h:31</a></div></div>
 <div class="ttc" id="aclass_graph_html_af31c5f97f92f7c5c8d7fc70338afb6a4"><div class="ttname"><a href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">Graph::yMax</a></div><div class="ttdeci">float yMax</div><div class="ttdoc">Maximum y value (graph)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00021">graph.h:21</a></div></div>
 <div class="ttc" id="aclass_graph_html_af590534c0dee8ca6a5a1458eabc6381b"><div class="ttname"><a href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">Graph::xMin</a></div><div class="ttdeci">float xMin</div><div class="ttdoc">Minimum x value (graph)</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00015">graph.h:15</a></div></div>
-<div class="ttc" id="aheader_8h_html_a3262739488b12690e8c998f17e93432d"><div class="ttname"><a href="header_8h.html#a3262739488b12690e8c998f17e93432d">DEFAULT_AXIS_TICK_LENGTH</a></div><div class="ttdeci">const int DEFAULT_AXIS_TICK_LENGTH</div><div class="ttdoc">Default Graph Axis Tick Marker Length in pixels.</div><div class="ttdef"><b>Definition</b> <a href="header_8h_source.html#l00044">header.h:44</a></div></div>
+<div class="ttc" id="aheader_8h_html_a3262739488b12690e8c998f17e93432d"><div class="ttname"><a href="header_8h.html#a3262739488b12690e8c998f17e93432d">DEFAULT_AXIS_TICK_LENGTH</a></div><div class="ttdeci">const int DEFAULT_AXIS_TICK_LENGTH</div><div class="ttdoc">Default Graph Axis Tick Marker Length in pixels.</div><div class="ttdef"><b>Definition</b> <a href="header_8h_source.html#l00046">header.h:46</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1c16787d38b6ca262c3d053b6e6e0019" name="a1c16787d38b6ca262c3d053b6e6e0019"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c16787d38b6ca262c3d053b6e6e0019">&#9670;&#160;</a></span>decXRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Graph::decXRange </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>xDec</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decrement xMin and xMax by xDec. </p>
-
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00310">310</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  311</span>{</div>
-<div class="line"><span class="lineno">  312</span>    <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> -= xDec;</div>
-<div class="line"><span class="lineno">  313</span>    <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> -= xDec;</div>
-<div class="line"><span class="lineno">  314</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  315</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a504166a6c4f9aa34fe9c6efab7e3d641" name="a504166a6c4f9aa34fe9c6efab7e3d641"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a504166a6c4f9aa34fe9c6efab7e3d641">&#9670;&#160;</a></span>decYRange()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Graph::decYRange </td>
-          <td>(</td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>yDec</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Decrement yMin and yMax by yDec. </p>
-
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00317">317</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  318</span>{</div>
-<div class="line"><span class="lineno">  319</span>    <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> -= yDec;</div>
-<div class="line"><span class="lineno">  320</span>    <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> -= yDec;</div>
-<div class="line"><span class="lineno">  321</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  322</span>}</div>
-</div><!-- fragment -->
-</div>
-</div>
 <a id="aa6749d6301ebf265f8b8f8240f35839a" name="aa6749d6301ebf265f8b8f8240f35839a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa6749d6301ebf265f8b8f8240f35839a">&#9670;&#160;</a></span>drawToWindow()</h2>
 
@@ -377,24 +326,27 @@ Private Attributes</h2></td></tr>
 
 <p>Draw gridVector to a window. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00292">292</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  293</span>{</div>
-<div class="line"><span class="lineno">  294</span>    window-&gt;draw(<a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>);</div>
-<div class="line"><span class="lineno">  295</span> </div>
-<div class="line"><span class="lineno">  296</span>    window-&gt;draw(<a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>);</div>
-<div class="line"><span class="lineno">  297</span> </div>
-<div class="line"><span class="lineno">  298</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> b: <a class="code hl_variable" href="class_graph.html#a39836253c2c76fd0040796b22d8957c7">graphLines</a>)</div>
-<div class="line"><span class="lineno">  299</span>    {</div>
-<div class="line"><span class="lineno">  300</span>        window-&gt;draw(b);</div>
-<div class="line"><span class="lineno">  301</span>    }</div>
-<div class="line"><span class="lineno">  302</span> </div>
-<div class="line"><span class="lineno">  303</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> t: <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>)</div>
-<div class="line"><span class="lineno">  304</span>    {</div>
-<div class="line"><span class="lineno">  305</span>        window-&gt;draw(t);</div>
-<div class="line"><span class="lineno">  306</span>    }</div>
-<div class="line"><span class="lineno">  307</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  308</span>}</div>
-<div class="ttc" id="aclass_graph_html_a39836253c2c76fd0040796b22d8957c7"><div class="ttname"><a href="class_graph.html#a39836253c2c76fd0040796b22d8957c7">Graph::graphLines</a></div><div class="ttdeci">std::vector&lt; sf::VertexArray &gt; graphLines</div><div class="ttdoc">Lines used to draw graph of a function.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00039">graph.h:39</a></div></div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00329">329</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  330</span>{</div>
+<div class="line"><span class="lineno">  331</span>    window-&gt;draw(<a class="code hl_variable" href="class_graph.html#aa691ac7db5988a7d5de7e941eddc5149">background</a>);</div>
+<div class="line"><span class="lineno">  332</span> </div>
+<div class="line"><span class="lineno">  333</span>    window-&gt;draw(<a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>);</div>
+<div class="line"><span class="lineno">  334</span> </div>
+<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> graph: <a class="code hl_variable" href="class_graph.html#a58eee7bc32dd6df83fc79ad07dfdccbe">graphsToDraw</a>)</div>
+<div class="line"><span class="lineno">  336</span>    {</div>
+<div class="line"><span class="lineno">  337</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> line: graph)</div>
+<div class="line"><span class="lineno">  338</span>        {</div>
+<div class="line"><span class="lineno">  339</span>            window-&gt;draw(line);</div>
+<div class="line"><span class="lineno">  340</span>        }</div>
+<div class="line"><span class="lineno">  341</span>    }</div>
+<div class="line"><span class="lineno">  342</span> </div>
+<div class="line"><span class="lineno">  343</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> t: <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>)</div>
+<div class="line"><span class="lineno">  344</span>    {</div>
+<div class="line"><span class="lineno">  345</span>        window-&gt;draw(t);</div>
+<div class="line"><span class="lineno">  346</span>    }</div>
+<div class="line"><span class="lineno">  347</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  348</span>}</div>
+<div class="ttc" id="aclass_graph_html_a58eee7bc32dd6df83fc79ad07dfdccbe"><div class="ttname"><a href="class_graph.html#a58eee7bc32dd6df83fc79ad07dfdccbe">Graph::graphsToDraw</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; sf::VertexArray &gt; &gt; graphsToDraw</div><div class="ttdoc">Vector: each element is a vector of lines to be drawn.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00039">graph.h:39</a></div></div>
 <div class="ttc" id="aclass_graph_html_ac253d3cd241c7d2e1ed320a26fb7924f"><div class="ttname"><a href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">Graph::textVector</a></div><div class="ttdeci">std::vector&lt; sf::Text &gt; textVector</div><div class="ttdoc">Collect of texts to be drawn.</div><div class="ttdef"><b>Definition</b> <a href="graph_8h_source.html#l00045">graph.h:45</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -474,27 +426,22 @@ Private Attributes</h2></td></tr>
 <div class="line"><span class="lineno">   74</span>        }</div>
 <div class="line"><span class="lineno">   75</span>        <span class="keywordflow">if</span> (std::abs(fx-fx2) &lt; <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> - <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)</div>
 <div class="line"><span class="lineno">   76</span>        {</div>
-<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (fx &gt; <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>)</div>
-<div class="line"><span class="lineno">   78</span>                fx = <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>;</div>
-<div class="line"><span class="lineno">   79</span>            <span class="keywordflow">if</span> (fx &lt; <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)</div>
-<div class="line"><span class="lineno">   80</span>                fx = <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>;</div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (fx2 &gt; <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>)</div>
-<div class="line"><span class="lineno">   82</span>                fx2 = <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>;</div>
-<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (fx2 &lt; <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)</div>
-<div class="line"><span class="lineno">   84</span>                fx2 = <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>;</div>
-<div class="line"><span class="lineno">   85</span>            screenC = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(x, fx));</div>
-<div class="line"><span class="lineno">   86</span>            screenC2 = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(x2, fx2));</div>
-<div class="line"><span class="lineno">   87</span>            sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">   88</span>            vertex.color = sf::Color::Red;</div>
-<div class="line"><span class="lineno">   89</span>            vertex.position = screenC;</div>
-<div class="line"><span class="lineno">   90</span>            buffer.append(vertex);</div>
-<div class="line"><span class="lineno">   91</span>            vertex.position = screenC2;</div>
-<div class="line"><span class="lineno">   92</span>            buffer.append(vertex);</div>
-<div class="line"><span class="lineno">   93</span>            lines.push_back(buffer);</div>
-<div class="line"><span class="lineno">   94</span>        }</div>
-<div class="line"><span class="lineno">   95</span>    }</div>
-<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">return</span> lines;</div>
-<div class="line"><span class="lineno">   97</span>}</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordflow">if</span> (fx &lt;= yMax &amp;&amp; fx &gt;= <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> &amp;&amp; fx2 &lt;= yMax &amp;&amp; fx2 &gt;= <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)</div>
+<div class="line"><span class="lineno">   78</span>            {</div>
+<div class="line"><span class="lineno">   79</span>                screenC = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(x, fx));</div>
+<div class="line"><span class="lineno">   80</span>                screenC2 = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(x2, fx2));</div>
+<div class="line"><span class="lineno">   81</span>                sf::Vertex vertex;</div>
+<div class="line"><span class="lineno">   82</span>                vertex.color = sf::Color::Red;</div>
+<div class="line"><span class="lineno">   83</span>                vertex.position = screenC;</div>
+<div class="line"><span class="lineno">   84</span>                buffer.append(vertex);</div>
+<div class="line"><span class="lineno">   85</span>                vertex.position = screenC2;</div>
+<div class="line"><span class="lineno">   86</span>                buffer.append(vertex);</div>
+<div class="line"><span class="lineno">   87</span>                lines.push_back(buffer);</div>
+<div class="line"><span class="lineno">   88</span>            }</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+<div class="line"><span class="lineno">   90</span>    }</div>
+<div class="line"><span class="lineno">   91</span>    <span class="keywordflow">return</span> lines;</div>
+<div class="line"><span class="lineno">   92</span>}</div>
 <div class="ttc" id="aclass_graph_html_a09fa174875d230c1608743a93e300a0a"><div class="ttname"><a href="class_graph.html#a09fa174875d230c1608743a93e300a0a">Graph::graphToScreen</a></div><div class="ttdeci">sf::Vector2f graphToScreen(sf::Vector2f graph_pos)</div><div class="ttdoc">Convert graph (x,y) coordinates to screen (w,h) coordinates.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00019">graph.cpp:19</a></div></div>
 <div class="ttc" id="aclass_graph_html_a1ff5995640d2f464ffe7fd9a1c94f8ed"><div class="ttname"><a href="class_graph.html#a1ff5995640d2f464ffe7fd9a1c94f8ed">Graph::screenToGraph</a></div><div class="ttdeci">sf::Vector2f screenToGraph(sf::Vector2f screen_pos)</div><div class="ttdoc">Convert screen (w,h) coordinates to graph (x,y) coordinates.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00011">graph.cpp:11</a></div></div>
 <div class="ttc" id="aclass_graph_html_ae11a67107230f8ff8e731ccbcc9d89fc"><div class="ttname"><a href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">Graph::gridToScreen</a></div><div class="ttdeci">sf::Vector2f gridToScreen(sf::Vector2u grid_pos)</div><div class="ttdoc">Convert grid (i,j) coordinates to screen (w,h) coordinates.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00003">graph.cpp:3</a></div></div>
@@ -505,84 +452,6 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="atest__funcs_8cpp_html_ac2a7b2443a2f29cf226b397be267e490"><div class="ttname"><a href="test__funcs_8cpp.html#ac2a7b2443a2f29cf226b397be267e490">funcB</a></div><div class="ttdeci">float funcB(float x)</div><div class="ttdef"><b>Definition</b> <a href="test__funcs_8cpp_source.html#l00007">test_funcs.cpp:7</a></div></div>
 <div class="ttc" id="atest__funcs_8cpp_html_acba0bc22c836f2f60c590d2cd5557f03"><div class="ttname"><a href="test__funcs_8cpp.html#acba0bc22c836f2f60c590d2cd5557f03">funcG</a></div><div class="ttdeci">float funcG(float x)</div><div class="ttdef"><b>Definition</b> <a href="test__funcs_8cpp_source.html#l00027">test_funcs.cpp:27</a></div></div>
 <div class="ttc" id="atest__funcs_8cpp_html_ad617009d9814d60d4c999ab9205a5432"><div class="ttname"><a href="test__funcs_8cpp.html#ad617009d9814d60d4c999ab9205a5432">funcC</a></div><div class="ttdeci">float funcC(float x)</div><div class="ttdef"><b>Definition</b> <a href="test__funcs_8cpp_source.html#l00011">test_funcs.cpp:11</a></div></div>
-</div><!-- fragment -->
-</div>
-</div>
-<a id="a0eaaed19d885b62b312be3121df4358f" name="a0eaaed19d885b62b312be3121df4358f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0eaaed19d885b62b312be3121df4358f">&#9670;&#160;</a></span>functionVertices()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">sf::VertexArray Graph::functionVertices </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Create verticies for a function. </p>
-
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00099">99</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  100</span>{</div>
-<div class="line"><span class="lineno">  101</span>    sf::VertexArray vertices;</div>
-<div class="line"><span class="lineno">  102</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">gridRows</a>; i++)</div>
-<div class="line"><span class="lineno">  103</span>    {</div>
-<div class="line"><span class="lineno">  104</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;<a class="code hl_variable" href="class_graph.html#a623921257bffb831fc07335181ff015b">gridCols</a>; j++)</div>
-<div class="line"><span class="lineno">  105</span>        {</div>
-<div class="line"><span class="lineno">  106</span>            sf::Vector2f screenC = <a class="code hl_function" href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">gridToScreen</a>(sf::Vector2u(i, j));</div>
-<div class="line"><span class="lineno">  107</span>            sf::Vector2f graphC = <a class="code hl_function" href="class_graph.html#a1ff5995640d2f464ffe7fd9a1c94f8ed">screenToGraph</a>(screenC);</div>
-<div class="line"><span class="lineno">  108</span>            <span class="keywordtype">float</span> x = graphC.x;</div>
-<div class="line"><span class="lineno">  109</span>            <span class="keywordtype">float</span> y = graphC.y;</div>
-<div class="line"><span class="lineno">  110</span>            <span class="keywordtype">float</span> fx = 0;</div>
-<div class="line"><span class="lineno">  111</span>            <span class="comment">// determine the function </span></div>
-<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">switch</span> (<a class="code hl_variable" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a>)</div>
-<div class="line"><span class="lineno">  113</span>            {</div>
-<div class="line"><span class="lineno">  114</span>                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><span class="lineno">  115</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#a325b9c92315a0642839ecd8373efe812">funcA</a>(x);</div>
-<div class="line"><span class="lineno">  116</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><span class="lineno">  118</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#ac2a7b2443a2f29cf226b397be267e490">funcB</a>(x);</div>
-<div class="line"><span class="lineno">  119</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><span class="lineno">  121</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#ad617009d9814d60d4c999ab9205a5432">funcC</a>(x);</div>
-<div class="line"><span class="lineno">  122</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  123</span>                <span class="keywordflow">case</span> 4:</div>
-<div class="line"><span class="lineno">  124</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#a545ce7cf956017f1775137e0d1c464ff">funcD</a>(x);</div>
-<div class="line"><span class="lineno">  125</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">case</span> 5:</div>
-<div class="line"><span class="lineno">  127</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#a05efc6dc314317a82b2f48fda949dab0">funcE</a>(x);</div>
-<div class="line"><span class="lineno">  128</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  129</span>                <span class="keywordflow">case</span> 6:</div>
-<div class="line"><span class="lineno">  130</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#a4a1cb7697120d0124bfbbf303d9048dc">funcF</a>(x);</div>
-<div class="line"><span class="lineno">  131</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  132</span>                <span class="keywordflow">case</span> 7:</div>
-<div class="line"><span class="lineno">  133</span>                    fx = <a class="code hl_function" href="test__funcs_8cpp.html#acba0bc22c836f2f60c590d2cd5557f03">funcG</a>(x);</div>
-<div class="line"><span class="lineno">  134</span>                    <span class="keywordflow">break</span>;</div>
-<div class="line"><span class="lineno">  135</span>            }</div>
-<div class="line"><span class="lineno">  136</span>            <span class="comment">// graph vertices </span></div>
-<div class="line"><span class="lineno">  137</span>            <span class="keywordflow">if</span> (std::abs(y-fx) &lt; <a class="code hl_variable" href="header_8h.html#a29009bd622c1a22e4e2aa1e19eaf80db">DEFAULT_ZERO_THRESH</a>)</div>
-<div class="line"><span class="lineno">  138</span>            {</div>
-<div class="line"><span class="lineno">  139</span>                sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">  140</span>                vertex.position = screenC;</div>
-<div class="line"><span class="lineno">  141</span>                vertex.color = sf::Color::Red;</div>
-<div class="line"><span class="lineno">  142</span>                vertices.append(vertex);</div>
-<div class="line"><span class="lineno">  143</span>            }</div>
-<div class="line"><span class="lineno">  144</span>        }</div>
-<div class="line"><span class="lineno">  145</span>    }</div>
-<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> vertices;</div>
-<div class="line"><span class="lineno">  147</span>}</div>
-<div class="ttc" id="aheader_8h_html_a29009bd622c1a22e4e2aa1e19eaf80db"><div class="ttname"><a href="header_8h.html#a29009bd622c1a22e4e2aa1e19eaf80db">DEFAULT_ZERO_THRESH</a></div><div class="ttdeci">const float DEFAULT_ZERO_THRESH</div><div class="ttdoc">Default Zero Threshold, values below are zero.</div><div class="ttdef"><b>Definition</b> <a href="header_8h_source.html#l00041">header.h:41</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -658,57 +527,74 @@ Private Attributes</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a606c0291a1c50c09a380a18353663b35" name="a606c0291a1c50c09a380a18353663b35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a606c0291a1c50c09a380a18353663b35">&#9670;&#160;</a></span>incXRange()</h2>
+<a id="aee16e901ee878527c932837b1e389b13" name="aee16e901ee878527c932837b1e389b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee16e901ee878527c932837b1e389b13">&#9670;&#160;</a></span>moveX()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Graph::incXRange </td>
+          <td class="memname">void Graph::moveX </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>xInc</em></td><td>)</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Increment xMin and xMax by xInc. </p>
+<p>Transform xMax, xMin to move along x axis. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00324">324</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  325</span>{</div>
-<div class="line"><span class="lineno">  326</span>    <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> += xInc;</div>
-<div class="line"><span class="lineno">  327</span>    <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> += xInc;</div>
-<div class="line"><span class="lineno">  328</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  329</span>}</div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00122">122</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>{</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordtype">float</span> dx = (<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>)/100;</div>
+<div class="line"><span class="lineno">  125</span>    <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> += x*dx;</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> += x*dx;</div>
+<div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  128</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ab3adf389549556eb195274fd5cf65d84" name="ab3adf389549556eb195274fd5cf65d84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3adf389549556eb195274fd5cf65d84">&#9670;&#160;</a></span>incYRange()</h2>
+<a id="a8a84f25841851e21bd4e209d02d1c028" name="a8a84f25841851e21bd4e209d02d1c028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a84f25841851e21bd4e209d02d1c028">&#9670;&#160;</a></span>moveY()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Graph::incYRange </td>
+          <td class="memname">void Graph::moveY </td>
           <td>(</td>
           <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>yInc</em></td><td>)</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Increment yMin and yMax by yInc. </p>
+<p>Transform yMax, yMin to move along y axis. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00331">331</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  332</span>{</div>
-<div class="line"><span class="lineno">  333</span>    <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> += yInc;</div>
-<div class="line"><span class="lineno">  334</span>    <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> += yInc;</div>
-<div class="line"><span class="lineno">  335</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  336</span>}</div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00130">130</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  131</span>{</div>
+<div class="line"><span class="lineno">  132</span>    <span class="keywordtype">float</span> dy = (<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)/100;</div>
+<div class="line"><span class="lineno">  133</span>    <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> += y*dy;</div>
+<div class="line"><span class="lineno">  134</span>    <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> += y*dy;</div>
+<div class="line"><span class="lineno">  135</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -766,11 +652,11 @@ Private Attributes</h2></td></tr>
 
 <p>Set graphMode. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00177">177</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  178</span>{</div>
-<div class="line"><span class="lineno">  179</span>    <a class="code hl_variable" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a> = i;</div>
-<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  181</span>}</div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00167">167</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  168</span>{</div>
+<div class="line"><span class="lineno">  169</span>    <a class="code hl_variable" href="class_graph.html#ad0ed48cc57c7a3284eceec21d632bf20">graphMode</a> = i;</div>
+<div class="line"><span class="lineno">  170</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  171</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -792,120 +678,167 @@ Private Attributes</h2></td></tr>
 
 <p>Update gridVector based on graphMode. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00183">183</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>{</div>
-<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a130cb00a1ffdac1a4e4758d4e0fed036">keyUp</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#a72994507203f7fab6bbfc3ecdcfdf0c0">keyW</a>)</div>
-<div class="line"><span class="lineno">  186</span>        <a class="code hl_function" href="class_graph.html#ab3adf389549556eb195274fd5cf65d84">incYRange</a>(0.1);</div>
-<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a0d673ae0d285eee5e3aa7a9bc92511bd">keyDown</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#abb2952e6029b5bb6e06dcdad72e1cf40">keyS</a>)</div>
-<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="class_graph.html#a504166a6c4f9aa34fe9c6efab7e3d641">decYRange</a>(0.1);</div>
-<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#afd50bf90b14e27538980932da4b23938">keyRight</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#a7d0bdb556136c4929f100557220e47a6">keyD</a>)</div>
-<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="class_graph.html#a606c0291a1c50c09a380a18353663b35">incXRange</a>(0.1);</div>
-<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aae7a9249d51d6596496bcf24578b858d">keyLeft</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#ab658a9db39dd042a164de9019fa41f37">keyA</a>)</div>
-<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="class_graph.html#a1c16787d38b6ca262c3d053b6e6e0019">decXRange</a>(0.1);</div>
-<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aafc84771da0695b425a497c94db86836">key1</a>)</div>
-<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(1);</div>
-<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aaa5da95a5042861663949fd2a7c0bae4">key2</a>)</div>
-<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(2);</div>
-<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ad2e3e274a64f8301534b94268372be54">key3</a>)</div>
-<div class="line"><span class="lineno">  198</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(3);</div>
-<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a56cd5c763d90678612201de7ca2505bb">key4</a>)</div>
-<div class="line"><span class="lineno">  200</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(4);</div>
-<div class="line"><span class="lineno">  201</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#acc2fd9658c7fffcb7ac7f940139eed61">key5</a>)</div>
-<div class="line"><span class="lineno">  202</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(5);</div>
-<div class="line"><span class="lineno">  203</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a112c9f612708a9b98938fccfe86bf8f6">key6</a>)</div>
-<div class="line"><span class="lineno">  204</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(6);</div>
-<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ae10d2ddb37243df14735116853d4f0da">key7</a>)</div>
-<div class="line"><span class="lineno">  206</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(7);</div>
-<div class="line"><span class="lineno">  207</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a75aa892404e5e0e2b5018c307501dc4c">keyEqual</a>)</div>
-<div class="line"><span class="lineno">  208</span>    {</div>
-<div class="line"><span class="lineno">  209</span>        <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> -= 2;</div>
-<div class="line"><span class="lineno">  210</span>        <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> += 2;</div>
-<div class="line"><span class="lineno">  211</span>        <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> -= 2;</div>
-<div class="line"><span class="lineno">  212</span>        <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> += 2;</div>
-<div class="line"><span class="lineno">  213</span>    }</div>
-<div class="line"><span class="lineno">  214</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ae089144991b4df171be89d579c84fec0">keyHyphen</a>)</div>
-<div class="line"><span class="lineno">  215</span>    {</div>
-<div class="line"><span class="lineno">  216</span>        <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> += 2;</div>
-<div class="line"><span class="lineno">  217</span>        <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> -= 2;</div>
-<div class="line"><span class="lineno">  218</span>        <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> += 2;</div>
-<div class="line"><span class="lineno">  219</span>        <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> -= 2;</div>
-<div class="line"><span class="lineno">  220</span>    }</div>
-<div class="line"><span class="lineno">  221</span> </div>
-<div class="line"><span class="lineno">  222</span>    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.clear();</div>
-<div class="line"><span class="lineno">  223</span>    <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.clear();</div>
-<div class="line"><span class="lineno">  224</span>    <a class="code hl_variable" href="class_graph.html#a39836253c2c76fd0040796b22d8957c7">graphLines</a>.clear();</div>
-<div class="line"><span class="lineno">  225</span>    </div>
-<div class="line"><span class="lineno">  226</span>    <a class="code hl_variable" href="class_graph.html#a39836253c2c76fd0040796b22d8957c7">graphLines</a> = <a class="code hl_function" href="class_graph.html#a8fc227f882be3a9ed503bb5f1fba7866">functionLines</a>();</div>
-<div class="line"><span class="lineno">  227</span> </div>
-<div class="line"><span class="lineno">  228</span>    <span class="comment">// draw x axis</span></div>
-<div class="line"><span class="lineno">  229</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  230</span>    {</div>
-<div class="line"><span class="lineno">  231</span>        <span class="keywordtype">float</span> screenY = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>, 0)).y;</div>
-<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_graph.html#a623921257bffb831fc07335181ff015b">gridCols</a>; i++)</div>
-<div class="line"><span class="lineno">  233</span>        {</div>
-<div class="line"><span class="lineno">  234</span>            sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">  235</span>            <span class="keywordtype">float</span> screenX = <a class="code hl_function" href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">gridToScreen</a>(sf::Vector2u(i, 0)).x;</div>
-<div class="line"><span class="lineno">  236</span>            vertex.position = sf::Vector2f(screenX, screenY);</div>
-<div class="line"><span class="lineno">  237</span>            vertex.color = sf::Color::Black;</div>
-<div class="line"><span class="lineno">  238</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
-<div class="line"><span class="lineno">  239</span>        }</div>
-<div class="line"><span class="lineno">  240</span>    }</div>
-<div class="line"><span class="lineno">  241</span> </div>
-<div class="line"><span class="lineno">  242</span>    <span class="comment">// draw x axis tick marks and numbers numbers</span></div>
-<div class="line"><span class="lineno">  243</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ceil(<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>)); i&lt;static_cast&lt;int&gt;(ceil(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>)); i++)</div>
-<div class="line"><span class="lineno">  244</span>    {</div>
-<div class="line"><span class="lineno">  245</span>        sf::Vector2f tick_position = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(i,0));</div>
-<div class="line"><span class="lineno">  246</span>        sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">  247</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=-<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j&lt;=<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j++)</div>
-<div class="line"><span class="lineno">  248</span>        {</div>
-<div class="line"><span class="lineno">  249</span>            vertex.position = sf::Vector2f(tick_position.x, tick_position.y + j);</div>
-<div class="line"><span class="lineno">  250</span>            vertex.color = sf::Color::Black;</div>
-<div class="line"><span class="lineno">  251</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
-<div class="line"><span class="lineno">  252</span> </div>
-<div class="line"><span class="lineno">  253</span>        }</div>
-<div class="line"><span class="lineno">  254</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(std::to_string(i));</div>
-<div class="line"><span class="lineno">  255</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(tick_position);</div>
-<div class="line"><span class="lineno">  256</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
-<div class="line"><span class="lineno">  257</span>    } </div>
-<div class="line"><span class="lineno">  258</span> </div>
-<div class="line"><span class="lineno">  259</span>    <span class="comment">// draw y axis</span></div>
-<div class="line"><span class="lineno">  260</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> &lt; 0)</div>
-<div class="line"><span class="lineno">  261</span>    {</div>
-<div class="line"><span class="lineno">  262</span>        <span class="keywordtype">float</span> screenX = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(0, <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)).x;</div>
-<div class="line"><span class="lineno">  263</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">gridRows</a>; i++)</div>
-<div class="line"><span class="lineno">  264</span>        {</div>
-<div class="line"><span class="lineno">  265</span>            sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">  266</span>            <span class="keywordtype">float</span> screenY = <a class="code hl_function" href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">gridToScreen</a>(sf::Vector2u(0, i)).y;</div>
-<div class="line"><span class="lineno">  267</span>            vertex.position = sf::Vector2f(screenX, screenY);</div>
-<div class="line"><span class="lineno">  268</span>            vertex.color = sf::Color::Black;</div>
-<div class="line"><span class="lineno">  269</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
-<div class="line"><span class="lineno">  270</span>        }</div>
-<div class="line"><span class="lineno">  271</span>    }</div>
-<div class="line"><span class="lineno">  272</span> </div>
-<div class="line"><span class="lineno">  273</span>    <span class="comment">// draw y axis tick numbers</span></div>
-<div class="line"><span class="lineno">  274</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(ceil(<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)); i&lt;static_cast&lt;int&gt;(ceil(<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>)); i++)</div>
-<div class="line"><span class="lineno">  275</span>    {</div>
-<div class="line"><span class="lineno">  276</span>        sf::Vector2f tick_position = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(0,i));</div>
-<div class="line"><span class="lineno">  277</span>        sf::Vertex vertex;</div>
-<div class="line"><span class="lineno">  278</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=-<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j&lt;=<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j++)</div>
-<div class="line"><span class="lineno">  279</span>        {</div>
-<div class="line"><span class="lineno">  280</span>            vertex.position = sf::Vector2f(tick_position.x + j, tick_position.y);</div>
-<div class="line"><span class="lineno">  281</span>            vertex.color = sf::Color::Black;</div>
-<div class="line"><span class="lineno">  282</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
-<div class="line"><span class="lineno">  283</span> </div>
-<div class="line"><span class="lineno">  284</span>        }</div>
-<div class="line"><span class="lineno">  285</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(std::to_string(i));</div>
-<div class="line"><span class="lineno">  286</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(tick_position);</div>
-<div class="line"><span class="lineno">  287</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
-<div class="line"><span class="lineno">  288</span>    } </div>
-<div class="line"><span class="lineno">  289</span>    <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">  290</span>}</div>
-<div class="ttc" id="aclass_graph_html_a1c16787d38b6ca262c3d053b6e6e0019"><div class="ttname"><a href="class_graph.html#a1c16787d38b6ca262c3d053b6e6e0019">Graph::decXRange</a></div><div class="ttdeci">void decXRange(float xDec)</div><div class="ttdoc">Decrement xMin and xMax by xDec.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00310">graph.cpp:310</a></div></div>
-<div class="ttc" id="aclass_graph_html_a504166a6c4f9aa34fe9c6efab7e3d641"><div class="ttname"><a href="class_graph.html#a504166a6c4f9aa34fe9c6efab7e3d641">Graph::decYRange</a></div><div class="ttdeci">void decYRange(float yDec)</div><div class="ttdoc">Decrement yMin and yMax by yDec.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00317">graph.cpp:317</a></div></div>
-<div class="ttc" id="aclass_graph_html_a606c0291a1c50c09a380a18353663b35"><div class="ttname"><a href="class_graph.html#a606c0291a1c50c09a380a18353663b35">Graph::incXRange</a></div><div class="ttdeci">void incXRange(float xInc)</div><div class="ttdoc">Increment xMin and xMax by xInc.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00324">graph.cpp:324</a></div></div>
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00173">173</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  174</span>{</div>
+<div class="line"><span class="lineno">  175</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a130cb00a1ffdac1a4e4758d4e0fed036">keyUp</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#a72994507203f7fab6bbfc3ecdcfdf0c0">keyW</a>)</div>
+<div class="line"><span class="lineno">  176</span>        <a class="code hl_function" href="class_graph.html#a8a84f25841851e21bd4e209d02d1c028">moveY</a>(1);</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a0d673ae0d285eee5e3aa7a9bc92511bd">keyDown</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#abb2952e6029b5bb6e06dcdad72e1cf40">keyS</a>)</div>
+<div class="line"><span class="lineno">  178</span>        <a class="code hl_function" href="class_graph.html#a8a84f25841851e21bd4e209d02d1c028">moveY</a>(-1);</div>
+<div class="line"><span class="lineno">  179</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#afd50bf90b14e27538980932da4b23938">keyRight</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#a7d0bdb556136c4929f100557220e47a6">keyD</a>)</div>
+<div class="line"><span class="lineno">  180</span>        <a class="code hl_function" href="class_graph.html#aee16e901ee878527c932837b1e389b13">moveX</a>(1);</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aae7a9249d51d6596496bcf24578b858d">keyLeft</a> || keyStates.<a class="code hl_variable" href="struct_key_states.html#ab658a9db39dd042a164de9019fa41f37">keyA</a>)</div>
+<div class="line"><span class="lineno">  182</span>        <a class="code hl_function" href="class_graph.html#aee16e901ee878527c932837b1e389b13">moveX</a>(-1);</div>
+<div class="line"><span class="lineno">  183</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aafc84771da0695b425a497c94db86836">key1</a>)</div>
+<div class="line"><span class="lineno">  184</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(1);</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#aaa5da95a5042861663949fd2a7c0bae4">key2</a>)</div>
+<div class="line"><span class="lineno">  186</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(2);</div>
+<div class="line"><span class="lineno">  187</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ad2e3e274a64f8301534b94268372be54">key3</a>)</div>
+<div class="line"><span class="lineno">  188</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(3);</div>
+<div class="line"><span class="lineno">  189</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a56cd5c763d90678612201de7ca2505bb">key4</a>)</div>
+<div class="line"><span class="lineno">  190</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(4);</div>
+<div class="line"><span class="lineno">  191</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#acc2fd9658c7fffcb7ac7f940139eed61">key5</a>)</div>
+<div class="line"><span class="lineno">  192</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(5);</div>
+<div class="line"><span class="lineno">  193</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a112c9f612708a9b98938fccfe86bf8f6">key6</a>)</div>
+<div class="line"><span class="lineno">  194</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(6);</div>
+<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ae10d2ddb37243df14735116853d4f0da">key7</a>)</div>
+<div class="line"><span class="lineno">  196</span>        <a class="code hl_function" href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">setGraphMode</a>(7);</div>
+<div class="line"><span class="lineno">  197</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#a75aa892404e5e0e2b5018c307501dc4c">keyEqual</a>)</div>
+<div class="line"><span class="lineno">  198</span>        <a class="code hl_function" href="class_graph.html#aeea35c6bc78863e1a97ff16e95f52611">zoomIn</a>();</div>
+<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">if</span> (keyStates.<a class="code hl_variable" href="struct_key_states.html#ae089144991b4df171be89d579c84fec0">keyHyphen</a>)</div>
+<div class="line"><span class="lineno">  200</span>        <a class="code hl_function" href="class_graph.html#a93ba35b896626d934914109de508f23c">zoomOut</a>();</div>
+<div class="line"><span class="lineno">  201</span> </div>
+<div class="line"><span class="lineno">  202</span>    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.clear();</div>
+<div class="line"><span class="lineno">  203</span>    <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.clear();</div>
+<div class="line"><span class="lineno">  204</span>    <a class="code hl_variable" href="class_graph.html#a58eee7bc32dd6df83fc79ad07dfdccbe">graphsToDraw</a>.clear();</div>
+<div class="line"><span class="lineno">  205</span> </div>
+<div class="line"><span class="lineno">  206</span>    <span class="comment">// add graphs to graphsToDraw</span></div>
+<div class="line"><span class="lineno">  207</span>    <a class="code hl_variable" href="class_graph.html#a58eee7bc32dd6df83fc79ad07dfdccbe">graphsToDraw</a>.push_back(<a class="code hl_function" href="class_graph.html#a8fc227f882be3a9ed503bb5f1fba7866">functionLines</a>());</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFillColor(sf::Color::Black);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>    <span class="comment">// draw x axis</span></div>
+<div class="line"><span class="lineno">  212</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> &lt; 0)</div>
+<div class="line"><span class="lineno">  213</span>    {</div>
+<div class="line"><span class="lineno">  214</span>        <span class="keywordtype">float</span> screenY = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>, 0)).y;</div>
+<div class="line"><span class="lineno">  215</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_graph.html#a623921257bffb831fc07335181ff015b">gridCols</a>; i++)</div>
+<div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            sf::Vertex vertex;</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordtype">float</span> screenX = <a class="code hl_function" href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">gridToScreen</a>(sf::Vector2u(i, 0)).x;</div>
+<div class="line"><span class="lineno">  219</span>            vertex.position = sf::Vector2f(screenX, screenY);</div>
+<div class="line"><span class="lineno">  220</span>            vertex.color = sf::Color::Black;</div>
+<div class="line"><span class="lineno">  221</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
+<div class="line"><span class="lineno">  222</span>        }</div>
+<div class="line"><span class="lineno">  223</span>    }</div>
+<div class="line"><span class="lineno">  224</span> </div>
+<div class="line"><span class="lineno">  225</span>    <span class="comment">// draw x axis tick marks and numbers</span></div>
+<div class="line"><span class="lineno">  226</span>    {</div>
+<div class="line"><span class="lineno">  227</span>        <span class="keywordtype">int</span> precision = -1 * <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::floor(std::log10(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>)));</div>
+<div class="line"><span class="lineno">  228</span>        <span class="keywordtype">float</span> start = std::floor(std::pow(10,precision) * <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>) / std::pow(10,precision);</div>
+<div class="line"><span class="lineno">  229</span>        <span class="keywordtype">float</span> stop = std::ceil(std::pow(10,precision) * <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>) / std::pow(10,precision);</div>
+<div class="line"><span class="lineno">  230</span>        <span class="keywordtype">float</span> current = start;</div>
+<div class="line"><span class="lineno">  231</span>        <span class="keywordflow">while</span> (current &lt;= stop)</div>
+<div class="line"><span class="lineno">  232</span>        {</div>
+<div class="line"><span class="lineno">  233</span>            sf::Vector2f tick_position = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(current,0));</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">if</span> (tick_position.x &gt;= <a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a> &amp;&amp; tick_position.x &lt;= <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a></div>
+<div class="line"><span class="lineno">  235</span>             &amp;&amp; tick_position.y &gt;= <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a> &amp;&amp; tick_position.y &lt;= <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>)</div>
+<div class="line"><span class="lineno">  236</span>            {</div>
+<div class="line"><span class="lineno">  237</span>                sf::Vertex vertex;</div>
+<div class="line"><span class="lineno">  238</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=-<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j&lt;=<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j++)</div>
+<div class="line"><span class="lineno">  239</span>                {</div>
+<div class="line"><span class="lineno">  240</span>                    vertex.position = sf::Vector2f(tick_position.x, tick_position.y + j);</div>
+<div class="line"><span class="lineno">  241</span>                    vertex.color = sf::Color::Black;</div>
+<div class="line"><span class="lineno">  242</span>                    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>                }</div>
+<div class="line"><span class="lineno">  245</span>                std::ostringstream oss;</div>
+<div class="line"><span class="lineno">  246</span>                oss &lt;&lt; std::setprecision(std::abs(precision)+3) &lt;&lt; std::noshowpoint &lt;&lt; current;</div>
+<div class="line"><span class="lineno">  247</span>                <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(oss.str());</div>
+<div class="line"><span class="lineno">  248</span>                <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(tick_position);</div>
+<div class="line"><span class="lineno">  249</span>                <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  250</span>            }</div>
+<div class="line"><span class="lineno">  251</span>            current += std::pow(10, -1 * precision) / 2;</div>
+<div class="line"><span class="lineno">  252</span>        }</div>
+<div class="line"><span class="lineno">  253</span>    }</div>
+<div class="line"><span class="lineno">  254</span> </div>
+<div class="line"><span class="lineno">  255</span>    <span class="comment">// draw y axis</span></div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> &gt; 0 &amp;&amp; <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> &lt; 0)</div>
+<div class="line"><span class="lineno">  257</span>    {</div>
+<div class="line"><span class="lineno">  258</span>        <span class="keywordtype">float</span> screenX = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(0, <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)).x;</div>
+<div class="line"><span class="lineno">  259</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code hl_variable" href="class_graph.html#ad7d88ddf6837ccb8ed3893f3598a6274">gridRows</a>; i++)</div>
+<div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            sf::Vertex vertex;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordtype">float</span> screenY = <a class="code hl_function" href="class_graph.html#ae11a67107230f8ff8e731ccbcc9d89fc">gridToScreen</a>(sf::Vector2u(0, i)).y;</div>
+<div class="line"><span class="lineno">  263</span>            vertex.position = sf::Vector2f(screenX, screenY);</div>
+<div class="line"><span class="lineno">  264</span>            vertex.color = sf::Color::Black;</div>
+<div class="line"><span class="lineno">  265</span>            <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
+<div class="line"><span class="lineno">  266</span>        }</div>
+<div class="line"><span class="lineno">  267</span>    }</div>
+<div class="line"><span class="lineno">  268</span> </div>
+<div class="line"><span class="lineno">  269</span>    <span class="comment">// draw y axis tick marks and numbers</span></div>
+<div class="line"><span class="lineno">  270</span>    {</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keywordtype">int</span> precision = -1 * <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::floor(std::log10(<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)));</div>
+<div class="line"><span class="lineno">  272</span>        <span class="keywordtype">float</span> start = std::floor(std::pow(10,precision) * <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>) / std::pow(10,precision);</div>
+<div class="line"><span class="lineno">  273</span>        <span class="keywordtype">float</span> stop = std::ceil(std::pow(10,precision) * <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>) / std::pow(10,precision);</div>
+<div class="line"><span class="lineno">  274</span>        <span class="keywordtype">float</span> current = start;</div>
+<div class="line"><span class="lineno">  275</span>        <span class="keywordflow">while</span> (current &lt;= stop)</div>
+<div class="line"><span class="lineno">  276</span>        {</div>
+<div class="line"><span class="lineno">  277</span>            sf::Vector2f tick_position = <a class="code hl_function" href="class_graph.html#a09fa174875d230c1608743a93e300a0a">graphToScreen</a>(sf::Vector2f(0,current));</div>
+<div class="line"><span class="lineno">  278</span>            <span class="keywordflow">if</span> (tick_position.x &gt;= <a class="code hl_variable" href="class_graph.html#aa79d2612da7e110ac8acf20a9026efb9">wMin</a> &amp;&amp; tick_position.x &lt;= <a class="code hl_variable" href="class_graph.html#a95ea8e22fba2df1eeb4c14c18eebf225">wMax</a></div>
+<div class="line"><span class="lineno">  279</span>             &amp;&amp; tick_position.y &gt;= <a class="code hl_variable" href="class_graph.html#a93f1f34e8db79aca7bd302371a487bc5">hMin</a> &amp;&amp; tick_position.y &lt;= <a class="code hl_variable" href="class_graph.html#a6472a2461564c54bbc07ddf5ab66d769">hMax</a>)</div>
+<div class="line"><span class="lineno">  280</span>            {</div>
+<div class="line"><span class="lineno">  281</span>                sf::Vertex vertex;</div>
+<div class="line"><span class="lineno">  282</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=-<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j&lt;=<a class="code hl_variable" href="class_graph.html#a9afb632994ad66be00e589f889c6ad1d">axisTickLength</a>; j++)</div>
+<div class="line"><span class="lineno">  283</span>                {</div>
+<div class="line"><span class="lineno">  284</span>                    vertex.position = sf::Vector2f(tick_position.x + j, tick_position.y);</div>
+<div class="line"><span class="lineno">  285</span>                    vertex.color = sf::Color::Black;</div>
+<div class="line"><span class="lineno">  286</span>                    <a class="code hl_variable" href="class_graph.html#ab6fbb53c819e1eee7d9c203c8f8fb499">gridVector</a>.append(vertex);</div>
+<div class="line"><span class="lineno">  287</span> </div>
+<div class="line"><span class="lineno">  288</span>                }</div>
+<div class="line"><span class="lineno">  289</span>                std::ostringstream oss;</div>
+<div class="line"><span class="lineno">  290</span>                oss &lt;&lt; std::noshowpoint &lt;&lt; current;</div>
+<div class="line"><span class="lineno">  291</span>                <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(oss.str());</div>
+<div class="line"><span class="lineno">  292</span>                <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(tick_position);</div>
+<div class="line"><span class="lineno">  293</span>                <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  294</span>            }</div>
+<div class="line"><span class="lineno">  295</span>            current += std::pow(10, -1 * precision) / 2;</div>
+<div class="line"><span class="lineno">  296</span>        }</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="line"><span class="lineno">  298</span> </div>
+<div class="line"><span class="lineno">  299</span>    <span class="comment">// show debugging information</span></div>
+<div class="line"><span class="lineno">  300</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_graph.html#a73e783caf256df5c591f1c02e6377ca0">showDebug</a>)</div>
+<div class="line"><span class="lineno">  301</span>    {</div>
+<div class="line"><span class="lineno">  302</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFillColor(sf::Color::Blue);</div>
+<div class="line"><span class="lineno">  303</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;Debug Info&quot;</span>);</div>
+<div class="line"><span class="lineno">  304</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 75));</div>
+<div class="line"><span class="lineno">  305</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  306</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setFillColor(sf::Color::Green);</div>
+<div class="line"><span class="lineno">  307</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;xMin: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>));</div>
+<div class="line"><span class="lineno">  308</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 100));</div>
+<div class="line"><span class="lineno">  309</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  310</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;xMax: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>));</div>
+<div class="line"><span class="lineno">  311</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 125));</div>
+<div class="line"><span class="lineno">  312</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  313</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;yMin: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>));</div>
+<div class="line"><span class="lineno">  314</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 150));</div>
+<div class="line"><span class="lineno">  315</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);</div>
+<div class="line"><span class="lineno">  316</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;yMax: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>));</div>
+<div class="line"><span class="lineno">  317</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 175));</div>
+<div class="line"><span class="lineno">  318</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);  </div>
+<div class="line"><span class="lineno">  319</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;xDelta: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>));</div>
+<div class="line"><span class="lineno">  320</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 200));</div>
+<div class="line"><span class="lineno">  321</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>); </div>
+<div class="line"><span class="lineno">  322</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setString(<span class="stringliteral">&quot;yDelta: &quot;</span> + std::to_string(<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>));</div>
+<div class="line"><span class="lineno">  323</span>        <a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>.setPosition(sf::Vector2f(1600, 225));</div>
+<div class="line"><span class="lineno">  324</span>        <a class="code hl_variable" href="class_graph.html#ac253d3cd241c7d2e1ed320a26fb7924f">textVector</a>.push_back(<a class="code hl_variable" href="class_graph.html#a773f1fc15d8a1bec271ca24a76d07c3f">text</a>);          </div>
+<div class="line"><span class="lineno">  325</span>    }</div>
+<div class="line"><span class="lineno">  326</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  327</span>}</div>
+<div class="ttc" id="aclass_graph_html_a8a84f25841851e21bd4e209d02d1c028"><div class="ttname"><a href="class_graph.html#a8a84f25841851e21bd4e209d02d1c028">Graph::moveY</a></div><div class="ttdeci">void moveY(float y)</div><div class="ttdoc">Transform yMax, yMin to move along y axis.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00130">graph.cpp:130</a></div></div>
 <div class="ttc" id="aclass_graph_html_a8fc227f882be3a9ed503bb5f1fba7866"><div class="ttname"><a href="class_graph.html#a8fc227f882be3a9ed503bb5f1fba7866">Graph::functionLines</a></div><div class="ttdeci">std::vector&lt; sf::VertexArray &gt; functionLines()</div><div class="ttdoc">Create lines for a function.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00027">graph.cpp:27</a></div></div>
-<div class="ttc" id="aclass_graph_html_ab3adf389549556eb195274fd5cf65d84"><div class="ttname"><a href="class_graph.html#ab3adf389549556eb195274fd5cf65d84">Graph::incYRange</a></div><div class="ttdeci">void incYRange(float yInc)</div><div class="ttdoc">Increment yMin and yMax by yInc.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00331">graph.cpp:331</a></div></div>
-<div class="ttc" id="aclass_graph_html_af1c87aa04a4d5f35bb964a96ad89b642"><div class="ttname"><a href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">Graph::setGraphMode</a></div><div class="ttdeci">void setGraphMode(int i)</div><div class="ttdoc">Set graphMode.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00177">graph.cpp:177</a></div></div>
+<div class="ttc" id="aclass_graph_html_a93ba35b896626d934914109de508f23c"><div class="ttname"><a href="class_graph.html#a93ba35b896626d934914109de508f23c">Graph::zoomOut</a></div><div class="ttdeci">void zoomOut()</div><div class="ttdoc">Transform xMax, xMin, yMax, yMin to zoom out.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00108">graph.cpp:108</a></div></div>
+<div class="ttc" id="aclass_graph_html_aee16e901ee878527c932837b1e389b13"><div class="ttname"><a href="class_graph.html#aee16e901ee878527c932837b1e389b13">Graph::moveX</a></div><div class="ttdeci">void moveX(float x)</div><div class="ttdoc">Transform xMax, xMin to move along x axis.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00122">graph.cpp:122</a></div></div>
+<div class="ttc" id="aclass_graph_html_aeea35c6bc78863e1a97ff16e95f52611"><div class="ttname"><a href="class_graph.html#aeea35c6bc78863e1a97ff16e95f52611">Graph::zoomIn</a></div><div class="ttdeci">void zoomIn()</div><div class="ttdoc">Transform xMax, xMin, yMax, yMin to zoom in.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00094">graph.cpp:94</a></div></div>
+<div class="ttc" id="aclass_graph_html_af1c87aa04a4d5f35bb964a96ad89b642"><div class="ttname"><a href="class_graph.html#af1c87aa04a4d5f35bb964a96ad89b642">Graph::setGraphMode</a></div><div class="ttdeci">void setGraphMode(int i)</div><div class="ttdoc">Set graphMode.</div><div class="ttdef"><b>Definition</b> <a href="graph_8cpp_source.html#l00167">graph.cpp:167</a></div></div>
 <div class="ttc" id="astruct_key_states_html_a0d673ae0d285eee5e3aa7a9bc92511bd"><div class="ttname"><a href="struct_key_states.html#a0d673ae0d285eee5e3aa7a9bc92511bd">KeyStates::keyDown</a></div><div class="ttdeci">bool keyDown</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00041">keystates.h:41</a></div></div>
 <div class="ttc" id="astruct_key_states_html_a112c9f612708a9b98938fccfe86bf8f6"><div class="ttname"><a href="struct_key_states.html#a112c9f612708a9b98938fccfe86bf8f6">KeyStates::key6</a></div><div class="ttdeci">bool key6</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00035">keystates.h:35</a></div></div>
 <div class="ttc" id="astruct_key_states_html_a130cb00a1ffdac1a4e4758d4e0fed036"><div class="ttname"><a href="struct_key_states.html#a130cb00a1ffdac1a4e4758d4e0fed036">KeyStates::keyUp</a></div><div class="ttdeci">bool keyUp</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00040">keystates.h:40</a></div></div>
@@ -923,6 +856,88 @@ Private Attributes</h2></td></tr>
 <div class="ttc" id="astruct_key_states_html_ae089144991b4df171be89d579c84fec0"><div class="ttname"><a href="struct_key_states.html#ae089144991b4df171be89d579c84fec0">KeyStates::keyHyphen</a></div><div class="ttdeci">bool keyHyphen</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00045">keystates.h:45</a></div></div>
 <div class="ttc" id="astruct_key_states_html_ae10d2ddb37243df14735116853d4f0da"><div class="ttname"><a href="struct_key_states.html#ae10d2ddb37243df14735116853d4f0da">KeyStates::key7</a></div><div class="ttdeci">bool key7</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00036">keystates.h:36</a></div></div>
 <div class="ttc" id="astruct_key_states_html_afd50bf90b14e27538980932da4b23938"><div class="ttname"><a href="struct_key_states.html#afd50bf90b14e27538980932da4b23938">KeyStates::keyRight</a></div><div class="ttdeci">bool keyRight</div><div class="ttdef"><b>Definition</b> <a href="keystates_8h_source.html#l00042">keystates.h:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeea35c6bc78863e1a97ff16e95f52611" name="aeea35c6bc78863e1a97ff16e95f52611"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea35c6bc78863e1a97ff16e95f52611">&#9670;&#160;</a></span>zoomIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::zoomIn </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transform xMax, xMin, yMax, yMin to zoom in. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00094">94</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>{</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span> (std::min(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>, <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>) &gt; std::pow(10, -3)) </div>
+<div class="line"><span class="lineno">   97</span>    {</div>
+<div class="line"><span class="lineno">   98</span>        <span class="keywordtype">float</span> dx = (<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>)/10;</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordtype">float</span> dy = (<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)/10;</div>
+<div class="line"><span class="lineno">  100</span>        <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> -= dx;</div>
+<div class="line"><span class="lineno">  101</span>        <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> += dx;</div>
+<div class="line"><span class="lineno">  102</span>        <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> -= dy;</div>
+<div class="line"><span class="lineno">  103</span>        <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> += dy;</div>
+<div class="line"><span class="lineno">  104</span>    }</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a93ba35b896626d934914109de508f23c" name="a93ba35b896626d934914109de508f23c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ba35b896626d934914109de508f23c">&#9670;&#160;</a></span>zoomOut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Graph::zoomOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Transform xMax, xMin, yMax, yMin to zoom out. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8cpp_source.html#l00108">108</a> of file <a class="el" href="graph_8cpp_source.html">graph.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  109</span>{</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">if</span> (std::max(<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>, <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>) &lt; std::pow(10, 8)) </div>
+<div class="line"><span class="lineno">  111</span>    {</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">float</span> dx = (<a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a>-<a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a>)/10;</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordtype">float</span> dy = (<a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a>-<a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a>)/10;</div>
+<div class="line"><span class="lineno">  114</span>        <a class="code hl_variable" href="class_graph.html#a569e7314a3318ab20cea9d314d0f9999">xMax</a> += dx;</div>
+<div class="line"><span class="lineno">  115</span>        <a class="code hl_variable" href="class_graph.html#af590534c0dee8ca6a5a1458eabc6381b">xMin</a> -= dx;</div>
+<div class="line"><span class="lineno">  116</span>        <a class="code hl_variable" href="class_graph.html#af31c5f97f92f7c5c8d7fc70338afb6a4">yMax</a> += dy;</div>
+<div class="line"><span class="lineno">  117</span>        <a class="code hl_variable" href="class_graph.html#a1c013c12031515c0a4b4fab261910ef1">yMin</a> -= dy;</div>
+<div class="line"><span class="lineno">  118</span>    }</div>
+<div class="line"><span class="lineno">  119</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  120</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1005,32 +1020,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a39836253c2c76fd0040796b22d8957c7" name="a39836253c2c76fd0040796b22d8957c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39836253c2c76fd0040796b22d8957c7">&#9670;&#160;</a></span>graphLines</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;sf::VertexArray&gt; Graph::graphLines</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Lines used to draw graph of a function. </p>
-
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00039">39</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
-
-</div>
-</div>
 <a id="ad0ed48cc57c7a3284eceec21d632bf20" name="ad0ed48cc57c7a3284eceec21d632bf20"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad0ed48cc57c7a3284eceec21d632bf20">&#9670;&#160;</a></span>graphMode</h2>
 
@@ -1053,7 +1042,33 @@ Private Attributes</h2></td></tr>
 
 <p>Temp variable for declaring graph type. </p>
 
-<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00050">50</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00052">52</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+
+</div>
+</div>
+<a id="a58eee7bc32dd6df83fc79ad07dfdccbe" name="a58eee7bc32dd6df83fc79ad07dfdccbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58eee7bc32dd6df83fc79ad07dfdccbe">&#9670;&#160;</a></span>graphsToDraw</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;std::vector&lt;sf::VertexArray&gt; &gt; Graph::graphsToDraw</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Vector: each element is a vector of lines to be drawn. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00039">39</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>
@@ -1184,6 +1199,32 @@ Private Attributes</h2></td></tr>
 <p>Minimum y value (screen) </p>
 
 <p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00027">27</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
+
+</div>
+</div>
+<a id="a73e783caf256df5c591f1c02e6377ca0" name="a73e783caf256df5c591f1c02e6377ca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73e783caf256df5c591f1c02e6377ca0">&#9670;&#160;</a></span>showDebug</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Graph::showDebug</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display debug information. </p>
+
+<p class="definition">Definition at line <a class="el" href="graph_8h_source.html#l00049">49</a> of file <a class="el" href="graph_8h_source.html">graph.h</a>.</p>
 
 </div>
 </div>

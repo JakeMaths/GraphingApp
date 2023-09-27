@@ -1,0 +1,40 @@
+Changelog:
+
+Version 0.0.2 
+9/26/2023
+
+	Graph zoom functionality moved into separate functions:
+		+ Graph::zoomIn()
+		+ Graph::zoomOut()
+	Zoom amount scales linearly with graph (x,y) range.
+
+	Removed drawing functions as collection of vertecies:
+		- Graph::functionVertices()
+
+	Changed axis tick mark generation to allow float values.
+
+	Changed graph movement speed to scale with viewing range.
+
+	Added debug info display for testing. Can be disabled on last line in Graph::Graph() constructor.
+
+	However, there is a bug currently: 
+	The viewing range can be adjusted for unexpected behavior.
+	After some zooms and moves, an axis may become frozen, and only one will react to zooms/moves.
+	After some zooms and moves, the program may stop responding and crash.
+	This appears to be occuring due to the 7 decimal point precision of floats. 
+	I will see what I can do about this bug later.
+
+
+Version 0.0.1 
+9/25/2023
+
+	Added axis tick marks and labels.
+
+	Improved hotkey input using KeyStates struct.
+
+	Connected lines for graphing instead of individual vertices.
+		+ Graph::funtionLines()
+
+	Windows build support and build procedures.
+
+	Documentation via Doxygen. See docs/doxygen/html/index.html.

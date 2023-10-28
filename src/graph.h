@@ -74,13 +74,15 @@ private:
     void moveX(float x);
     //! Transform yMax, yMin to move along y axis
     void moveY(float y);
+    //! Reset position to default
+    void resetGraph();
 public:
     //! Default Constructor
     Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange);
     //! Set graphMode
     void setGraphMode(int i);
     //! Update gridVector based on graphMode
-    void updateGraph(const KeyStates &keyStates);
+    void updateGraph(const KeyStates &keyStates, int &inputMode);
     //! Draw gridVector to a window
     void drawToWindow(sf::RenderWindow* window);
 };

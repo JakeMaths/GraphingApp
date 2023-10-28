@@ -19,6 +19,65 @@ void Application::initializeWindow() {
     this->window->setFramerateLimit(60);
 }
 
+void Application::resetKeyStates() {
+    keyStates.keyA = false;
+    keyStates.keyB = false;
+    keyStates.keyC = false;
+    keyStates.keyD = false;
+    keyStates.keyE = false;
+    keyStates.keyF = false;
+    keyStates.keyG = false;
+    keyStates.keyH = false;
+    keyStates.keyI = false;
+    keyStates.keyJ = false;
+    keyStates.keyK = false;
+    keyStates.keyL = false;
+    keyStates.keyM = false;
+    keyStates.keyN = false;
+    keyStates.keyO = false;
+    keyStates.keyP = false;
+    keyStates.keyQ = false;
+    keyStates.keyR = false;
+    keyStates.keyS = false;
+    keyStates.keyT = false;
+    keyStates.keyU = false;
+    keyStates.keyV = false;
+    keyStates.keyW = false;
+    keyStates.keyX = false;
+    keyStates.keyY = false;
+    keyStates.keyZ = false;
+    keyStates.key1 = false;
+    keyStates.key2 = false;
+    keyStates.key3 = false;
+    keyStates.key4 = false;
+    keyStates.key5 = false;
+    keyStates.key6 = false;
+    keyStates.key7 = false;
+    keyStates.key8 = false;
+    keyStates.key9 = false;
+    keyStates.key0 = false;
+    keyStates.keyPeriod = false;
+    keyStates.keySlash = false;
+    keyStates.keyComma = false;
+    keyStates.keyBackSpace = false;
+    keyStates.keySpace = false;
+    keyStates.keyUp = false;
+    keyStates.keyDown = false;
+    keyStates.keyRight = false;
+    keyStates.keyLeft = false;
+    keyStates.keyEqual = false;
+    keyStates.keyHyphen = false;
+    // don't reset shift
+    // keyStates.keyShift = false;
+    keyStates.mouse1press = false;
+    keyStates.mouse2press = false;
+    keyStates.mouse3press = false;
+    keyStates.clickposx = 0;
+    keyStates.clickposy = 0;
+    keyStates.mousescrolldelta = 0;
+    return;
+}
+
 Application::Application() {
     this->initializeVariables();
     this->initializeWindow();
@@ -153,6 +212,21 @@ void Application::pollEvents() {
                 case sf::Keyboard::Num0:
                     keyStates.key0 = true;
                     break;
+                case sf::Keyboard::Period:
+                    keyStates.keyPeriod = true;
+                    break;
+                case sf::Keyboard::Slash:
+                    keyStates.keySlash = true;
+                    break;
+                case sf::Keyboard::Comma:
+                    keyStates.keyComma = true;
+                    break;
+                case sf::Keyboard::Backspace:
+                    keyStates.keyBackSpace = true;
+                    break;
+                case sf::Keyboard::Space:
+                    keyStates.keySpace = true;
+                    break;
                 case sf::Keyboard::Up:
                     keyStates.keyUp = true;
                     break;
@@ -170,6 +244,12 @@ void Application::pollEvents() {
                     break;
                 case sf::Keyboard::Hyphen:
                     keyStates.keyHyphen = true;
+                    break;
+                case sf::Keyboard::LShift:
+                    keyStates.keyShift = true;
+                    break;
+                case sf::Keyboard::RShift:
+                    keyStates.keyShift = true;
                     break;
             }
             break;
@@ -283,6 +363,21 @@ void Application::pollEvents() {
                 case sf::Keyboard::Num0:
                     keyStates.key0 = false;
                     break;
+                case sf::Keyboard::Period:
+                    keyStates.keyPeriod = false;
+                    break;
+                case sf::Keyboard::Slash:
+                    keyStates.keySlash = false;
+                    break;
+                case sf::Keyboard::Comma:
+                    keyStates.keyComma = false;
+                    break;
+                case sf::Keyboard::Backspace:
+                    keyStates.keyBackSpace = false;
+                    break;
+                case sf::Keyboard::Space:
+                    keyStates.keySpace = false;
+                    break;
                 case sf::Keyboard::Up:
                     keyStates.keyUp = false;
                     break;
@@ -301,7 +396,49 @@ void Application::pollEvents() {
                 case sf::Keyboard::Hyphen:
                     keyStates.keyHyphen = false;
                     break;
+                case sf::Keyboard::LShift:
+                    keyStates.keyShift = false;
+                    break;
+                case sf::Keyboard::RShift:
+                    keyStates.keyShift = false;
+                    break;
             }
+            break;
+        case sf::Event::MouseButtonPressed:
+            switch (event.mouseButton.button) {
+                case sf::Mouse::Right:
+                    keyStates.mouse2press = true;
+                    keyStates.clickposx = event.mouseButton.x;
+                    keyStates.clickposy = event.mouseButton.y;
+                    break;
+                case sf::Mouse::Left:
+                    keyStates.mouse1press = true;
+                    keyStates.clickposx = event.mouseButton.x;
+                    keyStates.clickposy = event.mouseButton.y;
+                    break;
+                case sf::Mouse::Middle:
+                    keyStates.mouse3press = true;
+                    keyStates.clickposx = event.mouseButton.x;
+                    keyStates.clickposy = event.mouseButton.y;
+                    break;
+            }
+            break;
+        case sf::Event::MouseButtonReleased:
+            switch (event.mouseButton.button) {
+                case sf::Mouse::Right:
+                    keyStates.mouse2press = false;
+                    break;
+                case sf::Mouse::Left:
+                    keyStates.mouse1press = false;
+                    break;
+                case sf::Mouse::Middle:
+                    keyStates.mouse3press = false;
+                    break;
+            }
+            break;
+        case sf::Event::MouseWheelScrolled:
+            mouseScrollThisFrame = true;
+            keyStates.mousescrolldelta = event.mouseWheelScroll.delta;
             break;
         }
     }
@@ -309,8 +446,16 @@ void Application::pollEvents() {
 
 void Application::update() {
     pollEvents();
-    graph->updateGraph(keyStates);
-    gui->updateGui();
+    graph->updateGraph(keyStates, inputMode);
+    gui->updateGui(keyStates, inputMode);
+    
+    if (mouseScrollThisFrame) {
+        keyStates.mousescrolldelta = 0;
+        mouseScrollThisFrame = false;
+    }
+    if (inputMode == 1) {
+        resetKeyStates();
+    }
 }
 
 void Application::render()

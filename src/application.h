@@ -18,11 +18,18 @@ private:
     Graph* graph;
     Gui* gui;
 
+    //! Boolean to stop mouse scroll if not scrolled
+    bool mouseScrollThisFrame;
+    //! Mode for text input (graph (0) or gui (1))
+    int inputMode;
+
     // Private Member Functions
     //! Initialzie member variables
     void initializeVariables();
     //! Initialize window member variable
     void initializeWindow();
+    //! Reset keystates to default (off)
+    void resetKeyStates();
 public:
     // Constructors / Destructors
     //! Default Constructor

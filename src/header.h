@@ -22,25 +22,22 @@ const float WINDOW_WIDTH = 1920;
 const float WINDOW_HEIGHT = 1080;
 
 //! Default Min X Value for Graphing
-const float DEFAULT_X_MIN = -2;
+const float DEFAULT_X_MIN = -10;
 //! Default Max X Value for Graphing
-const float DEFAULT_X_MAX = 2;
+const float DEFAULT_X_MAX = 10;
 //! Default Min Y Value for Graphing
-const float DEFAULT_Y_MIN = -2;
+const float DEFAULT_Y_MIN = -5.625;
 //! Default Max Y Value for Graphing
-const float DEFAULT_Y_MAX = 2;
+const float DEFAULT_Y_MAX = 5.625;
 
 //! Default Min Width Position for Graphing
-const float DEFAULT_W_MIN = 760;
+const float DEFAULT_W_MIN = 0;
 //! Default Max Width Position for Graphing
-const float DEFAULT_W_MAX = 1560;
+const float DEFAULT_W_MAX = 1920;
 //! Default Min Height Position for Graphing
-const float DEFAULT_H_MIN = 140;
+const float DEFAULT_H_MIN = 0;
 //! Default Max Height Position for Graphing
-const float DEFAULT_H_MAX = 940;
-
-//! Default Zero Threshold, values below are zero
-const float DEFAULT_ZERO_THRESH = 0.01f;
+const float DEFAULT_H_MAX = 1080;
 
 //! Default Graph Axis Tick Marker Length in pixels
 const int DEFAULT_AXIS_TICK_LENGTH = 10;

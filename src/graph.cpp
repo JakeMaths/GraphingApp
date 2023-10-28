@@ -134,6 +134,14 @@ void Graph::moveY(float y)
     yMin += y*dy;
 }
 
+void Graph::resetGraph()
+{
+    xMin = DEFAULT_X_MIN;
+    xMax = DEFAULT_X_MAX;
+    yMin = DEFAULT_Y_MIN;
+    yMax = DEFAULT_Y_MAX;
+}
+
 Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange)
 {
     xMin = xRange.x;
@@ -153,7 +161,7 @@ Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::
 
     background.setSize(sf::Vector2f(wMax-wMin, hMax-hMin));
     background.setPosition(sf::Vector2f(wMin, hMin));
-    background.setFillColor(sf::Color(100, 100, 100, 255));
+    background.setFillColor(sf::Color(193, 154, 107, 255));
 
     font.loadFromFile("res/arial.ttf");
     text.setFont(font);
@@ -170,35 +178,46 @@ void Graph::setGraphMode(int i)
     return;
 }
 
-void Graph::updateGraph(const KeyStates &keyStates)
+void Graph::updateGraph(const KeyStates &keyStates, int &inputMode)
 {
-    if (keyStates.keyUp || keyStates.keyW)
-        moveY(1);
-    if (keyStates.keyDown || keyStates.keyS)
-        moveY(-1);
-    if (keyStates.keyRight || keyStates.keyD)
-        moveX(1);
-    if (keyStates.keyLeft || keyStates.keyA)
-        moveX(-1);
-    if (keyStates.key1)
-        setGraphMode(1);
-    if (keyStates.key2)
-        setGraphMode(2);
-    if (keyStates.key3)
-        setGraphMode(3);
-    if (keyStates.key4)
-        setGraphMode(4);
-    if (keyStates.key5)
-        setGraphMode(5);
-    if (keyStates.key6)
-        setGraphMode(6);
-    if (keyStates.key7)
-        setGraphMode(7);
-    if (keyStates.keyEqual)
-        zoomIn();
-    if (keyStates.keyHyphen)
-        zoomOut();
-
+    if (inputMode == 0) {
+        if (keyStates.keyUp || keyStates.keyW)
+            moveY(1);
+        if (keyStates.keyDown || keyStates.keyS)
+            moveY(-1);
+        if (keyStates.keyRight || keyStates.keyD)
+            moveX(1);
+        if (keyStates.keyLeft || keyStates.keyA)
+            moveX(-1);
+        if (keyStates.key1)
+            setGraphMode(1);
+        if (keyStates.key2)
+            setGraphMode(2);
+        if (keyStates.key3)
+            setGraphMode(3);
+        if (keyStates.key4)
+            setGraphMode(4);
+        if (keyStates.key5)
+            setGraphMode(5);
+        if (keyStates.key6)
+            setGraphMode(6);
+        if (keyStates.key7)
+            setGraphMode(7);
+        if (keyStates.keyEqual)
+            zoomIn();
+        if (keyStates.keyHyphen)
+            zoomOut();
+        if (keyStates.mousescrolldelta > 0) {
+            zoomIn();
+        }
+        if (keyStates.mousescrolldelta < 0) {
+            zoomOut();
+        }
+        if (keyStates.keyR) {
+            resetGraph();
+        }
+    }
+    
     gridVector.clear();
     textVector.clear();
     graphsToDraw.clear();

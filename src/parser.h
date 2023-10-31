@@ -50,13 +50,17 @@ private:
         input = replacement;
     }
 
-    // I chose the easy way out
-    // This returns exactly 4.44 if you input for example, 4.44.32.45
-    // but it doesn't flag inputting that wrong number as an error.
     double parseNumber() {
         std::string num;
         char currentChar = getNextToken();
+        bool decimalSeen = false;
         while (isdigit(currentChar) || currentChar == '.') {
+            if (currentChar == '.') {
+                if (decimalSeen) {
+                    throw std::runtime_error("Number with multiple decimal points");
+                }
+                decimalSeen = true;
+            }
             num += currentChar;
             currentChar = getNextToken();
         }
@@ -106,16 +110,19 @@ private:
     double parseTerm() {
         double left = parseFactor();
         char currentChar = getNextToken();
-        while (currentChar == '*' || currentChar == '/') {
+        while (currentChar == '*' || currentChar == '/' || currentChar == '(') {
             if (currentChar == '*') {
                 left *= parseFactor();
-            } else {
+            } else if (currentChar == '/') {
                 double divisor = parseFactor();
                 if (divisor != 0) {
                     left /= divisor;
                 } else {
                     throw std::runtime_error("Division by zero");
                 }
+            } else {
+                pos--;
+                left*= parseExpression();
             }
             currentChar = getNextToken();
         }

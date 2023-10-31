@@ -53,5 +53,6 @@ public:
     void updateGui(const KeyStates &keyStates, int &inputMode);
     //! Draw Gui to a window
     void drawToWindow(sf::RenderWindow* window);
-
+    //! Get function string from gui
+    std::string getFunctionString() const;
 };

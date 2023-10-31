@@ -3,6 +3,7 @@
 #include "header.h"
 #include "keystates.h"
 #include "test_funcs.h"
+#include "parser.h"
 
 /// Manages the graph area on screen.
 ///
@@ -47,6 +48,8 @@ private:
     sf::Font font;
     //! Display debug information
     bool showDebug;
+    //! String representation of function to be graphed
+    std::string functionString;
 
     //! Temp variable for declaring graph type
     int graphMode;
@@ -85,4 +88,6 @@ public:
     void updateGraph(const KeyStates &keyStates, int &inputMode);
     //! Draw gridVector to a window
     void drawToWindow(sf::RenderWindow* window);
+    //! Set function string
+    void setFunctionString(std::string funcStr);
 };

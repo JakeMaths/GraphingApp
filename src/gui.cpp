@@ -394,3 +394,7 @@ void Gui::drawToWindow(sf::RenderWindow* window) {
     }
     return;
 }
+
+std::string Gui::getFunctionString() const {
+    return inputText.getString();
+}

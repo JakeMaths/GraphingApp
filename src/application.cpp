@@ -456,6 +456,9 @@ void Application::update() {
     if (inputMode == 1) {
         resetKeyStates();
     }
+
+    std::string functionString = gui->getFunctionString();
+    graph->setFunctionString(functionString);
 }
 
 void Application::render()

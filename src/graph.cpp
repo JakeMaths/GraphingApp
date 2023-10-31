@@ -41,37 +41,17 @@ std::vector<sf::VertexArray> Graph::functionLines()
         float fx = 0;
         float fx2 = 0;
         // determine the function 
-        switch (graphMode)
-        {
-            case 1:
-                fx = funcA(x);
-                fx2 = funcA(x2);
-                break;
-            case 2:
-                fx = funcB(x);
-                fx2 = funcB(x2);
-                break;
-            case 3:
-                fx = funcC(x);
-                fx2 = funcC(x2);
-                break;
-            case 4:
-                fx = funcD(x);
-                fx2 = funcD(x2);
-                break;
-            case 5:
-                fx = funcE(x);
-                fx2 = funcE(x2);
-                break;
-            case 6:
-                fx = funcF(x);
-                fx2 = funcF(x2);
-                break;
-            case 7:
-                fx = funcG(x);
-                fx2 = funcG(x2);
-                break;
+
+        try {
+            Parser p1(functionString, x);
+            Parser p2(functionString, x2);
+            fx = p1.parse();
+            fx2 = p2.parse();
+        } catch (const std::exception& e) {
+            std::cout << e.what() << std::endl;
+            return lines;
         }
+                
         if (std::abs(fx-fx2) < yMax - yMin)
         {
             if (fx <= yMax && fx >= yMin && fx2 <= yMax && fx2 >= yMin)
@@ -363,5 +343,10 @@ void Graph::drawToWindow(sf::RenderWindow* window)
     {
         window->draw(t);
     }
+    return;
+}
+
+void Graph::setFunctionString(std::string funcStr) {
+    functionString = funcStr;
     return;
 }

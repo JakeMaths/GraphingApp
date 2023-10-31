@@ -22,7 +22,7 @@ private:
     char getNextToken() {
         if (pos < input.size()) {
             return input[pos++];
-        }
+        } 
         return '\0';
     }
 
@@ -69,7 +69,7 @@ private:
         if (isdigit(currentChar) || currentChar == '-') {
             pos--;
             return parseNumber();
-        } else if (currentChar == '(') {
+        } else if (currentChar == '(' && pos < input.size()) {
             double result = parseExpression();
             if (getNextToken() != ')') {
                 throw std::runtime_error("Expected closing parenthesis");

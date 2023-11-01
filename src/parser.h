@@ -120,9 +120,12 @@ private:
                 } else {
                     throw std::runtime_error("Division by zero");
                 }
-            } else {
-                pos--;
-                left*= parseExpression();
+            } else if (currentChar == '(' && pos < input.size()) {
+                double result = parseExpression();
+                if (getNextToken() != ')') {
+                    throw std::runtime_error("Expected closing parentheses");
+                }
+                left*= result;
             }
             currentChar = getNextToken();
         }

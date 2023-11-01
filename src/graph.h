@@ -51,9 +51,6 @@ private:
     //! String representation of function to be graphed
     std::string functionString;
 
-    //! Temp variable for declaring graph type
-    int graphMode;
-
     // Private Member Functions
 
     // Conversions
@@ -82,10 +79,8 @@ private:
 public:
     //! Default Constructor
     Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::Vector2f hRange);
-    //! Set graphMode
-    void setGraphMode(int i);
     //! Update gridVector based on graphMode
-    void updateGraph(const KeyStates &keyStates, int &inputMode);
+    void updateGraph(KeyStates &keyStates, int &inputMode);
     //! Draw gridVector to a window
     void drawToWindow(sf::RenderWindow* window);
     //! Set function string

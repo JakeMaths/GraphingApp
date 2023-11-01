@@ -135,7 +135,6 @@ Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::
     gridRows = hMax-hMin;
     gridCols = wMax-wMin;
     axisTickLength = DEFAULT_AXIS_TICK_LENGTH;
-    graphMode = 1;
 
     gridVector.setPrimitiveType(sf::Points);
 
@@ -152,13 +151,7 @@ Graph::Graph(sf::Vector2f xRange, sf::Vector2f yRange, sf::Vector2f wRange, sf::
     showDebug = true;
 }
 
-void Graph::setGraphMode(int i)
-{
-    graphMode = i;
-    return;
-}
-
-void Graph::updateGraph(const KeyStates &keyStates, int &inputMode)
+void Graph::updateGraph(KeyStates &keyStates, int &inputMode)
 {
     if (inputMode == 0) {
         if (keyStates.keyUp || keyStates.keyW)
@@ -169,20 +162,10 @@ void Graph::updateGraph(const KeyStates &keyStates, int &inputMode)
             moveX(1);
         if (keyStates.keyLeft || keyStates.keyA)
             moveX(-1);
-        if (keyStates.key1)
-            setGraphMode(1);
-        if (keyStates.key2)
-            setGraphMode(2);
-        if (keyStates.key3)
-            setGraphMode(3);
-        if (keyStates.key4)
-            setGraphMode(4);
-        if (keyStates.key5)
-            setGraphMode(5);
-        if (keyStates.key6)
-            setGraphMode(6);
-        if (keyStates.key7)
-            setGraphMode(7);
+        if (keyStates.keyG) {
+            keyStates.keyG = 0;
+            showDebug ^= 1;
+        }
         if (keyStates.keyEqual)
             zoomIn();
         if (keyStates.keyHyphen)

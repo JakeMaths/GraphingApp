@@ -48,8 +48,8 @@ private:
     sf::Font font;
     //! Display debug information
     bool showDebug;
-    //! String representation of function to be graphed
-    std::string functionString;
+    //! Vector of String representations of functions to be graphed
+    std::vector<std::string> functionStrings;
 
     // Private Member Functions
 
@@ -63,7 +63,7 @@ private:
 
     // Graphics Generation
     //! Create lines for a function
-    std::vector<sf::VertexArray> functionLines();
+    std::vector<sf::VertexArray> functionLines(std::string funcString, int color);
 
     // Transformations
     //! Transform xMax, xMin, yMax, yMin to zoom in
@@ -84,5 +84,5 @@ public:
     //! Draw gridVector to a window
     void drawToWindow(sf::RenderWindow* window);
     //! Set function string
-    void setFunctionString(std::string funcStr);
+    void setFunctionStrings(std::vector<std::string> funcStrings);
 };

@@ -446,6 +446,15 @@ void Application::pollEvents() {
 
 void Application::update() {
     pollEvents();
+
+    std::vector<std::string> functionStrings;
+    functionStrings.push_back(gui->getFunctionString(1));
+    functionStrings.push_back(gui->getFunctionString(2));
+    functionStrings.push_back(gui->getFunctionString(3));
+    functionStrings.push_back(gui->getFunctionString(4));
+    functionStrings.push_back(gui->getFunctionString(5));
+    graph->setFunctionStrings(functionStrings);
+
     graph->updateGraph(keyStates, inputMode);
     gui->updateGui(keyStates, inputMode);
     
@@ -453,12 +462,9 @@ void Application::update() {
         keyStates.mousescrolldelta = 0;
         mouseScrollThisFrame = false;
     }
-    if (inputMode == 1) {
+    if (inputMode != 0) {
         resetKeyStates();
     }
-
-    std::string functionString = gui->getFunctionString();
-    graph->setFunctionString(functionString);
 }
 
 void Application::render()

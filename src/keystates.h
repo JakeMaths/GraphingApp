@@ -1,5 +1,7 @@
 #pragma once
 
+#include "header.h"
+
 struct KeyStates {
     bool keyA = false;
     bool keyB = false;
@@ -56,3 +58,5 @@ struct KeyStates {
     float clickposy = 0;
     float mousescrolldelta = 0;
 };
+
+void addKeyToText(KeyStates keyStates, sf::Text& inputText);

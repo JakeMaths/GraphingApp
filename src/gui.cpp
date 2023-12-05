@@ -2,15 +2,15 @@
 
 Gui::Gui() {
     ibwMin = 0;
-    ibwMax = 500;
+    ibwMax = GUI_PANE_WIDTH;
     ibhMin = 0;
-    ibhMax = 1080;
+    ibhMax = WINDOW_HEIGHT;
 
     inputBackground.setSize(sf::Vector2f(ibwMax-ibwMin, ibhMax-ibhMin));
     inputBackground.setPosition(sf::Vector2f(ibwMin, ibhMin));
     inputBackground.setFillColor(sf::Color::White);
 
-    toggleButton.setSize(sf::Vector2f(50, 50));
+    toggleButton.setSize(sf::Vector2f(GUI_TOP_OFFSET, GUI_TOP_OFFSET));
     toggleButton.setPosition(sf::Vector2f(ibwMax, ibhMin));
     toggleButton.setFillColor(sf::Color(100, 100, 100, 255));
     tbwMin = ibwMax;
@@ -32,22 +32,42 @@ Gui::Gui() {
     inputText.setFillColor(sf::Color::Black);
     inputText.setPosition(sf::Vector2f(100, 100));
 
-    borderTop.setSize(sf::Vector2f(ibwMax-ibwMin, 1));
-    borderTop.setPosition(sf::Vector2f(ibwMin, ibhMin + 50));
-    borderTop.setFillColor(sf::Color::Black);
+    inputText2.setFont(font);
+    inputText2.setCharacterSize(24);
+    inputText2.setFillColor(sf::Color::Black);
+    inputText2.setPosition(sf::Vector2f(100, 200));
 
-    borderBottom.setSize(sf::Vector2f(ibwMax-ibwMin, 1));
-    borderBottom.setPosition(sf::Vector2f(ibwMin, ibhMin + 150));
-    borderBottom.setFillColor(sf::Color::Black);
+    inputText3.setFont(font);
+    inputText3.setCharacterSize(24);
+    inputText3.setFillColor(sf::Color::Black);
+    inputText3.setPosition(sf::Vector2f(100, 300));
+
+    inputText4.setFont(font);
+    inputText4.setCharacterSize(24);
+    inputText4.setFillColor(sf::Color::Black);
+    inputText4.setPosition(sf::Vector2f(100, 400));
+
+    inputText5.setFont(font);
+    inputText5.setCharacterSize(24);
+    inputText5.setFillColor(sf::Color::Black);
+    inputText5.setPosition(sf::Vector2f(100, 500));
+
+    border.setSize(sf::Vector2f(ibwMax-ibwMin, 1));
+    border.setFillColor(sf::Color::Black);
 }
 
 void Gui::updateGui(const KeyStates &keyStates, int &inputMode) {
     if (keyStates.mouse1press && enabled) {
         if (keyStates.clickposx >= ibwMin
         &&  keyStates.clickposx <= ibwMax
-        &&  keyStates.clickposy >= 50
-        &&  keyStates.clickposy <= 150) {
-            inputMode = 1;
+        &&  keyStates.clickposy >= GUI_TOP_OFFSET
+        &&  keyStates.clickposy <= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * NUM_INPUT_BOXES) {
+            for (int i=0; i<NUM_INPUT_BOXES; i++) {
+                if (keyStates.clickposy >= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * i
+                &&  keyStates.clickposy <= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * (i+1)) {
+                    inputMode = i+1;
+                }
+            }
         } else {
             inputMode = 0;
         }
@@ -80,303 +100,19 @@ void Gui::updateGui(const KeyStates &keyStates, int &inputMode) {
     }
 
     if (inputMode == 1) {
-        if (keyStates.keyA) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'A');
-            } else {
-                inputText.setString(inputText.getString() + 'a');
-            }
-        }
-        if (keyStates.keyB) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'B');
-            } else {
-                inputText.setString(inputText.getString() + 'b');
-            }
-        }
-        if (keyStates.keyC) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'C');
-            } else {
-                inputText.setString(inputText.getString() + 'c');
-            }
-        }
-        if (keyStates.keyD) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'D');
-            } else {
-                inputText.setString(inputText.getString() + 'd');
-            }
-        }
-        if (keyStates.keyE) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'E');
-            } else {
-                inputText.setString(inputText.getString() + 'e');
-            }
-        }
-        if (keyStates.keyF) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'F');
-            } else {
-                inputText.setString(inputText.getString() + 'f');
-            }
-        }
-        if (keyStates.keyG) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'G');
-            } else {
-                inputText.setString(inputText.getString() + 'g');
-            }
-        }
-        if (keyStates.keyH) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'H');
-            } else {
-                inputText.setString(inputText.getString() + 'h');
-            }
-        }
-        if (keyStates.keyI) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'I');
-            } else {
-                inputText.setString(inputText.getString() + 'i');
-            }
-        }
-        if (keyStates.keyJ) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'J');
-            } else {
-                inputText.setString(inputText.getString() + 'j');
-            }
-        }
-        if (keyStates.keyK) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'K');
-            } else {
-                inputText.setString(inputText.getString() + 'k');
-            }
-        }
-        if (keyStates.keyL) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'L');
-            } else {
-                inputText.setString(inputText.getString() + 'l');
-            }
-        }
-        if (keyStates.keyM) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'M');
-            } else {
-                inputText.setString(inputText.getString() + 'm');
-            }
-        }
-        if (keyStates.keyN) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'N');
-            } else {
-                inputText.setString(inputText.getString() + 'n');
-            }
-        }
-        if (keyStates.keyO) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'O');
-            } else {
-                inputText.setString(inputText.getString() + 'o');
-            }
-        }
-        if (keyStates.keyP) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'P');
-            } else {
-                inputText.setString(inputText.getString() + 'p');
-            }
-        }
-        if (keyStates.keyQ) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'Q');
-            } else {
-                inputText.setString(inputText.getString() + 'q');
-            }
-        }
-        if (keyStates.keyR) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'R');
-            } else {
-                inputText.setString(inputText.getString() + 'r');
-            }
-        }
-        if (keyStates.keyS) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'S');
-            } else {
-                inputText.setString(inputText.getString() + 's');
-            }
-        }
-        if (keyStates.keyT) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'T');
-            } else {
-                inputText.setString(inputText.getString() + 't');
-            }
-        }
-        if (keyStates.keyU) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'U');
-            } else {
-                inputText.setString(inputText.getString() + 'u');
-            }
-        }
-        if (keyStates.keyV) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'V');
-            } else {
-                inputText.setString(inputText.getString() + 'v');
-            }
-        }
-        if (keyStates.keyW) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'W');
-            } else {
-                inputText.setString(inputText.getString() + 'w');
-            }
-        }
-        if (keyStates.keyX) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'X');
-            } else {
-                inputText.setString(inputText.getString() + 'x');
-            }
-        }
-        if (keyStates.keyY) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'Y');
-            } else {
-                inputText.setString(inputText.getString() + 'y');
-            }
-        }
-        if (keyStates.keyZ) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + 'Z');
-            } else {
-                inputText.setString(inputText.getString() + 'z');
-            }
-        }
-        if (keyStates.key0) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + ')');
-            } else {
-                inputText.setString(inputText.getString() + '0');
-            }
-        }
-        if (keyStates.key1) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '!');
-            } else {
-                inputText.setString(inputText.getString() + '1');
-            }
-        }
-        if (keyStates.key2) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '@');
-            } else {
-                inputText.setString(inputText.getString() + '2');
-            }
-        }
-        if (keyStates.key3) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '#');
-            } else {
-                inputText.setString(inputText.getString() + '3');
-            }
-        }
-        if (keyStates.key4) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '$');
-            } else {
-                inputText.setString(inputText.getString() + '4');
-            }
-        }
-        if (keyStates.key5) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '%');
-            } else {
-                inputText.setString(inputText.getString() + '5');
-            }
-        }
-        if (keyStates.key6) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '^');
-            } else {
-                inputText.setString(inputText.getString() + '6');
-            }
-        }
-        if (keyStates.key7) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '&');
-            } else {
-                inputText.setString(inputText.getString() + '7');
-            }
-        }
-        if (keyStates.key8) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '*');
-            } else {
-                inputText.setString(inputText.getString() + '8');
-            }
-        }
-        if (keyStates.key9) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '(');
-            } else {
-                inputText.setString(inputText.getString() + '9');
-            }
-        }
-        if (keyStates.keyPeriod) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '>');
-            } else {
-                inputText.setString(inputText.getString() + '.');
-            }
-        }
-        if (keyStates.keySlash) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '?');
-            } else {
-                inputText.setString(inputText.getString() + '/');
-            }
-        }
-        if (keyStates.keyComma) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '<');
-            } else {
-                inputText.setString(inputText.getString() + ',');
-            }
-        }
-        if (keyStates.keyBackSpace) {
-            sf::String prev = inputText.getString();
-            if (prev.getSize() > 0) {
-                prev.erase(prev.getSize() - 1);
-                inputText.setString(prev);
-            }
-        }
-        if (keyStates.keySpace) {
-            inputText.setString(inputText.getString() + ' ');
-        }
-        if (keyStates.keyEqual) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '+');
-            } else {
-                inputText.setString(inputText.getString() + '=');
-            }
-        }
-        if (keyStates.keyHyphen) {
-            if (keyStates.keyShift) {
-                inputText.setString(inputText.getString() + '_');
-            } else {
-                inputText.setString(inputText.getString() + '-');
-            }
-        }
+        addKeyToText(keyStates, inputText);
+    }
+    if (inputMode == 2) {
+        addKeyToText(keyStates, inputText2);
+    }
+    if (inputMode == 3) {
+        addKeyToText(keyStates, inputText3);
+    }
+    if (inputMode == 4) {
+        addKeyToText(keyStates, inputText4);
+    }
+    if (inputMode == 5) {
+        addKeyToText(keyStates, inputText5);
     }
 
     return;
@@ -388,13 +124,48 @@ void Gui::drawToWindow(sf::RenderWindow* window) {
 
     if (enabled) {
         window->draw(inputBackground);
-        window->draw(borderTop);
-        window->draw(borderBottom);
+
         window->draw(inputText);
+        window->draw(inputText2);
+        window->draw(inputText3);
+        window->draw(inputText4);
+        window->draw(inputText5);
+
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 2));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 3));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 4));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 5));
+        window->draw(border);
+
     }
     return;
 }
 
-std::string Gui::getFunctionString() const {
-    return inputText.getString();
+std::string Gui::getFunctionString(int i) const {
+    std::string out;
+    switch (i) {
+        case 1:
+            out = inputText.getString();
+            break;
+        case 2:
+            out = inputText2.getString();
+            break;
+        case 3:
+            out = inputText3.getString();
+            break;
+        case 4:
+            out = inputText4.getString();
+            break;
+        case 5:
+            out = inputText5.getString();
+            break;
+    }
+    return out;
 }

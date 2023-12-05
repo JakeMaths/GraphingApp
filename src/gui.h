@@ -39,13 +39,20 @@ private:
 
     //! Input Text for GUI
     sf::Text inputText;
+    //! Input Text for GUI
+    sf::Text inputText2;
+    //! Input Text for GUI
+    sf::Text inputText3;
+    //! Input Text for GUI
+    sf::Text inputText4;
+    //! Input Text for GUI
+    sf::Text inputText5;
     //! Font for drawing text
     sf::Font font;
 
-    //! Input Region Border Top
-    sf::RectangleShape borderTop;
-    //! Input Region Border Bottom
-    sf::RectangleShape borderBottom;
+    //! Input Region Border
+    sf::RectangleShape border;
+
 public:
     //! Default Constructor
     Gui();
@@ -54,5 +61,5 @@ public:
     //! Draw Gui to a window
     void drawToWindow(sf::RenderWindow* window);
     //! Get function string from gui
-    std::string getFunctionString() const;
+    std::string getFunctionString(int i) const;
 };

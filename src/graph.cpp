@@ -24,7 +24,7 @@ sf::Vector2f Graph::graphToScreen(sf::Vector2f graph_pos)
     return screen_pos;
 }
 
-std::vector<sf::VertexArray> Graph::functionLines()
+std::vector<sf::VertexArray> Graph::functionLines(std::string funcString, int color)
 {
     std::vector<sf::VertexArray> lines;
     for (int i=0; i<gridCols-1; i++)
@@ -43,12 +43,12 @@ std::vector<sf::VertexArray> Graph::functionLines()
         // determine the function 
 
         try {
-            Parser p1(functionString, x);
-            Parser p2(functionString, x2);
+            Parser p1(funcString, x);
+            Parser p2(funcString, x2);
             fx = p1.parse();
             fx2 = p2.parse();
         } catch (const std::exception& e) {
-            std::cout << e.what() << std::endl;
+            //std::cout << e.what() << std::endl;
             return lines;
         }
                 
@@ -59,7 +59,23 @@ std::vector<sf::VertexArray> Graph::functionLines()
                 screenC = graphToScreen(sf::Vector2f(x, fx));
                 screenC2 = graphToScreen(sf::Vector2f(x2, fx2));
                 sf::Vertex vertex;
-                vertex.color = sf::Color::Red;
+                switch (color) {
+                    case 1:
+                        vertex.color = sf::Color::Red;
+                        break;
+                    case 2:
+                        vertex.color = sf::Color::Blue;
+                        break;
+                    case 3:
+                        vertex.color = sf::Color::Green;
+                        break;
+                    case 4:
+                        vertex.color = sf::Color::Black;
+                        break;
+                    case 5:
+                        vertex.color = sf::Color::Yellow;
+                        break;
+                }
                 vertex.position = screenC;
                 buffer.append(vertex);
                 vertex.position = screenC2;
@@ -186,7 +202,11 @@ void Graph::updateGraph(KeyStates &keyStates, int &inputMode)
     graphsToDraw.clear();
 
     // add graphs to graphsToDraw
-    graphsToDraw.push_back(functionLines());
+    graphsToDraw.push_back(functionLines(functionStrings.at(0), 1));
+    graphsToDraw.push_back(functionLines(functionStrings.at(1), 2));
+    graphsToDraw.push_back(functionLines(functionStrings.at(2), 3));
+    graphsToDraw.push_back(functionLines(functionStrings.at(3), 4));
+    graphsToDraw.push_back(functionLines(functionStrings.at(4), 5));
 
     text.setFillColor(sf::Color::Black);
 
@@ -329,7 +349,10 @@ void Graph::drawToWindow(sf::RenderWindow* window)
     return;
 }
 
-void Graph::setFunctionString(std::string funcStr) {
-    functionString = funcStr;
+void Graph::setFunctionStrings(std::vector<std::string> funcStrings) {
+    functionStrings.clear();
+    for(int i=0; i<funcStrings.size(); i++) {
+        functionStrings.push_back(funcStrings.at(i));
+    }
     return;
 }

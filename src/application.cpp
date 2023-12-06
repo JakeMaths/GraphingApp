@@ -455,7 +455,18 @@ void Application::update() {
     functionStrings.push_back(gui->getFunctionString(5));
     graph->setFunctionStrings(functionStrings);
 
+    graph->setVectorString(1, gui->getVectorString(1));
+    graph->setVectorString(2, gui->getVectorString(2));
+
     graph->updateGraph(keyStates, inputMode);
+
+    lastDraw = clock.getElapsedTime();
+    if (lastDraw.asSeconds() > 1)
+    {
+        graph->generateGraphs();    
+        clock.restart();
+    }
+    
     gui->updateGui(keyStates, inputMode);
     
     if (mouseScrollThisFrame) {

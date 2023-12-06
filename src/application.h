@@ -22,6 +22,10 @@ private:
     bool mouseScrollThisFrame;
     //! Mode for text input (graph (0) or gui (1))
     int inputMode;
+    //! Time since last graph draw
+    sf::Time lastDraw;
+    //! Clock for keeping time
+    sf::Clock clock;
 
     // Private Member Functions
     //! Initialzie member variables

@@ -24,6 +24,81 @@ sf::Vector2f Graph::graphToScreen(sf::Vector2f graph_pos)
     return screen_pos;
 }
 
+sf::VertexArray Graph::functionPoints(std::string funcString, int color)
+{
+    sf::VertexArray vertices;
+    vertices.setPrimitiveType(sf::Points);
+    sf::Vertex vertex;
+
+    float resolution = 0.25;
+
+    std::vector<float> basis1;
+    std::vector<float> basis2;
+    try {
+        basis1 = vector_parser(vectorString1);
+        basis2 = vector_parser(vectorString2);
+    } catch (const std::exception& e) {
+        std::cout << e.what() << std::endl;
+        return vertices;
+    }
+
+    int dimension = basis1.size();
+    if (basis2.size() != dimension)
+    {
+        return vertices;
+    }
+    std::vector<float> x;
+
+    for (int i=0; i<gridCols*resolution; i++)
+    {
+        for (int j=0; j<gridRows*resolution; j++)
+        {
+            sf::Vector2f screenC = gridToScreen(sf::Vector2u(i/resolution,j/resolution));
+            sf::Vector2f graphC = screenToGraph(screenC);
+
+            x.clear();
+            for (int k=0; k<dimension; k++)
+            {
+                x.push_back(basis1.at(k) * graphC.x + basis2.at(k) * graphC.y);
+            }
+            float fx = 0;
+
+            try {
+                Parser p(funcString, x);
+                fx = p.parse();
+            } catch (const std::exception& e) {
+                //std::cout << e.what() << std::endl;
+                return vertices;
+            }
+
+            if (std::abs(x.at(dimension-1)-fx) < 0.01 * (yMax-yMin))
+            {
+                switch (color)
+                {
+                    case 1:
+                        vertex.color = sf::Color::Red;
+                        break;
+                    case 2:
+                        vertex.color = sf::Color::Blue;
+                        break;
+                    case 3:
+                        vertex.color = sf::Color::Green;
+                        break;
+                    case 4:
+                        vertex.color = sf::Color::Black;
+                        break;
+                    case 5:
+                        vertex.color = sf::Color::Yellow;
+                        break;
+                }
+                vertex.position = screenC;
+                vertices.append(vertex);
+            }            
+        }
+    }
+    return vertices;
+}
+
 std::vector<sf::VertexArray> Graph::functionLines(std::string funcString, int color)
 {
     std::vector<sf::VertexArray> lines;
@@ -43,14 +118,16 @@ std::vector<sf::VertexArray> Graph::functionLines(std::string funcString, int co
         // determine the function 
 
         try {
-            Parser p1(funcString, x);
-            Parser p2(funcString, x2);
-            fx = p1.parse();
-            fx2 = p2.parse();
+            //Parser p1(funcString, x);
+            //Parser p2(funcString, x2);
+            //fx = p1.parse();
+            //fx2 = p2.parse();
         } catch (const std::exception& e) {
             //std::cout << e.what() << std::endl;
             return lines;
         }
+
+        
                 
         if (std::abs(fx-fx2) < yMax - yMin)
         {
@@ -85,6 +162,19 @@ std::vector<sf::VertexArray> Graph::functionLines(std::string funcString, int co
         }
     }
     return lines;
+}
+
+void Graph::generateGraphs()
+{
+    graphsToDraw.clear();
+
+    // add graphs to graphsToDraw
+    graphsToDraw.push_back(functionPoints(functionStrings.at(0), 1));
+    graphsToDraw.push_back(functionPoints(functionStrings.at(1), 2));
+    graphsToDraw.push_back(functionPoints(functionStrings.at(2), 3));
+    graphsToDraw.push_back(functionPoints(functionStrings.at(3), 4));
+    graphsToDraw.push_back(functionPoints(functionStrings.at(4), 5));
+    return;
 }
 
 void Graph::zoomIn()
@@ -199,14 +289,6 @@ void Graph::updateGraph(KeyStates &keyStates, int &inputMode)
     
     gridVector.clear();
     textVector.clear();
-    graphsToDraw.clear();
-
-    // add graphs to graphsToDraw
-    graphsToDraw.push_back(functionLines(functionStrings.at(0), 1));
-    graphsToDraw.push_back(functionLines(functionStrings.at(1), 2));
-    graphsToDraw.push_back(functionLines(functionStrings.at(2), 3));
-    graphsToDraw.push_back(functionLines(functionStrings.at(3), 4));
-    graphsToDraw.push_back(functionLines(functionStrings.at(4), 5));
 
     text.setFillColor(sf::Color::Black);
 
@@ -336,10 +418,7 @@ void Graph::drawToWindow(sf::RenderWindow* window)
 
     for (auto graph: graphsToDraw)
     {
-        for (auto line: graph)
-        {
-            window->draw(line);
-        }
+        window->draw(graph);
     }
 
     for (auto t: textVector)
@@ -353,6 +432,20 @@ void Graph::setFunctionStrings(std::vector<std::string> funcStrings) {
     functionStrings.clear();
     for(int i=0; i<funcStrings.size(); i++) {
         functionStrings.push_back(funcStrings.at(i));
+    }
+    return;
+}
+
+void Graph::setVectorString(int i, std::string vectorString)
+{
+    switch (i)
+    {
+        case 1:
+            vectorString1 = vectorString;
+            break;
+        case 2:
+            vectorString2 = vectorString;
+            break;
     }
     return;
 }

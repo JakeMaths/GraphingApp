@@ -52,6 +52,16 @@ Gui::Gui() {
     inputText5.setFillColor(sf::Color::Black);
     inputText5.setPosition(sf::Vector2f(100, 500));
 
+    inputVector1.setFont(font);
+    inputVector1.setCharacterSize(24);
+    inputVector1.setFillColor(sf::Color::Black);
+    inputVector1.setPosition(sf::Vector2f(100, 600));
+
+    inputVector2.setFont(font);
+    inputVector2.setCharacterSize(24);
+    inputVector2.setFillColor(sf::Color::Black);
+    inputVector2.setPosition(sf::Vector2f(100, 700));
+
     border.setSize(sf::Vector2f(ibwMax-ibwMin, 1));
     border.setFillColor(sf::Color::Black);
 }
@@ -61,8 +71,8 @@ void Gui::updateGui(const KeyStates &keyStates, int &inputMode) {
         if (keyStates.clickposx >= ibwMin
         &&  keyStates.clickposx <= ibwMax
         &&  keyStates.clickposy >= GUI_TOP_OFFSET
-        &&  keyStates.clickposy <= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * NUM_INPUT_BOXES) {
-            for (int i=0; i<NUM_INPUT_BOXES; i++) {
+        &&  keyStates.clickposy <= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * (NUM_INPUT_BOXES+2)) {
+            for (int i=0; i<NUM_INPUT_BOXES+2; i++) {
                 if (keyStates.clickposy >= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * i
                 &&  keyStates.clickposy <= GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * (i+1)) {
                     inputMode = i+1;
@@ -114,6 +124,12 @@ void Gui::updateGui(const KeyStates &keyStates, int &inputMode) {
     if (inputMode == 5) {
         addKeyToText(keyStates, inputText5);
     }
+    if (inputMode == 6) {
+        addKeyToText(keyStates, inputVector1);
+    }
+    if (inputMode == 7) {
+        addKeyToText(keyStates, inputVector2);
+    }
 
     return;
 }
@@ -130,6 +146,8 @@ void Gui::drawToWindow(sf::RenderWindow* window) {
         window->draw(inputText3);
         window->draw(inputText4);
         window->draw(inputText5);
+        window->draw(inputVector1);
+        window->draw(inputVector2);
 
         border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET));
         window->draw(border);
@@ -142,6 +160,10 @@ void Gui::drawToWindow(sf::RenderWindow* window) {
         border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 4));
         window->draw(border);
         border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 5));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 6));
+        window->draw(border);
+        border.setPosition(sf::Vector2f(ibwMin, ibhMin + GUI_TOP_OFFSET + GUI_INPUT_HEIGHT * 7));
         window->draw(border);
 
     }
@@ -165,6 +187,19 @@ std::string Gui::getFunctionString(int i) const {
             break;
         case 5:
             out = inputText5.getString();
+            break;
+    }
+    return out;
+}
+
+std::string Gui::getVectorString(int i) const {
+    std::string out;
+    switch (i) {
+        case 1:
+            out = inputVector1.getString();
+            break;
+        case 2:
+            out = inputVector2.getString();
             break;
     }
     return out;

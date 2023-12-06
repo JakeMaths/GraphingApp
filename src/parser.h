@@ -3,10 +3,19 @@
 #include <iostream>
 #include <cmath>
 #include <cctype>
+#include <vector>
+#include <string>
+
+std::vector<float> vector_parser(const std::string& expression);
 
 class Parser {
 public:
-    Parser(const std::string& expression, const double x) : input(expression), pos(0), input_value(x) {}
+    Parser(const std::string& expression, const std::vector<float> x)
+    {
+        input = expression;
+        pos = 0;
+        input_value = x;
+    }
 
     double parse() {
         trimWhiteSpace();
@@ -17,7 +26,7 @@ public:
 private:
     std::string input;
     std::size_t pos;
-    double input_value;
+    std::vector<float> input_value;
 
     char getNextToken() {
         if (pos < input.size()) {
@@ -41,7 +50,19 @@ private:
         for (int i=0; i<input.length(); i++) {
             if (input[i] == 'x') {
                 replacement += '(';
-                replacement += std::to_string(input_value);
+                replacement += std::to_string(input_value.at(0));
+                replacement += ')';
+            } else if (input[i] == 'y') {
+                replacement += '(';
+                replacement += std::to_string(input_value.at(1));
+                replacement += ')';
+            } else if (input[i] == 'z') {
+                replacement += '(';
+                replacement += std::to_string(input_value.at(2));
+                replacement += ')';
+            } else if (input[i] == 'w') {
+                replacement += '(';
+                replacement += std::to_string(input_value.at(3));
                 replacement += ')';
             } else {
                 replacement += input[i];

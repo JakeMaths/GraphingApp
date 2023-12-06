@@ -36,8 +36,13 @@ private:
     int axisTickLength;
     //! Collection of points to be drawn (axes, tick marks)
     sf::VertexArray gridVector;
-    //! Vector: each element is a vector of lines to be drawn
-    std::vector<std::vector<sf::VertexArray>> graphsToDraw;
+
+    ////! Vector: each element is a vector of lines to be drawn
+    //std::vector<std::vector<sf::VertexArray>> graphsToDraw;
+
+    //! Vector: each element is vertex to be drawn
+    std::vector<sf::VertexArray> graphsToDraw;
+
     //! Background rectangle
     sf::RectangleShape background;
     //! Text for drawing on graph
@@ -50,6 +55,10 @@ private:
     bool showDebug;
     //! Vector of String representations of functions to be graphed
     std::vector<std::string> functionStrings;
+    //! String representation of basis vector 1
+    std::string vectorString1;
+    //! String representation of basis vector 2
+    std::string vectorString2;
 
     // Private Member Functions
 
@@ -62,6 +71,8 @@ private:
     sf::Vector2f graphToScreen(sf::Vector2f graph_pos);
 
     // Graphics Generation
+    //! Create points for a function
+    sf::VertexArray functionPoints(std::string funcString, int color);
     //! Create lines for a function
     std::vector<sf::VertexArray> functionLines(std::string funcString, int color);
 
@@ -85,4 +96,8 @@ public:
     void drawToWindow(sf::RenderWindow* window);
     //! Set function string
     void setFunctionStrings(std::vector<std::string> funcStrings);
+    //! Updates graphsToDraw
+    void generateGraphs();
+    //! Set vector strings
+    void setVectorString(int i, std::string vectorString);
 };

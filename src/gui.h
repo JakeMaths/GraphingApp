@@ -47,6 +47,10 @@ private:
     sf::Text inputText4;
     //! Input Text for GUI
     sf::Text inputText5;
+    //! Input Text for GUI
+    sf::Text inputVector1;
+    //! Input Text for GUI
+    sf::Text inputVector2;
     //! Font for drawing text
     sf::Font font;
 
@@ -62,4 +66,6 @@ public:
     void drawToWindow(sf::RenderWindow* window);
     //! Get function string from gui
     std::string getFunctionString(int i) const;
+    //! Get vector string from gui
+    std::string getVectorString(int i) const;
 };

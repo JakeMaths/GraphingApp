@@ -12,6 +12,8 @@ std::vector<float> vector_parser(const std::string& expression)
         }
     }
     int state = 0;
+    std::string current;
+    bool seen_decimal = false;
     for (int i=0; i<trimmed.length(); i++)
     {
         switch (state)
@@ -27,28 +29,43 @@ std::vector<float> vector_parser(const std::string& expression)
                 }
                 break;
             case 1:
-                if (isdigit(trimmed[i]))
+                if (trimmed[i] == '-')
                 {
-                    parsed.push_back(trimmed[i] - '0');
+                    current += trimmed[i];
                     state = 2;
                 }
-                else
-                {
-                    throw std::runtime_error("Number expected");
+                else {
+                    i--;
+                    state = 2;
                 }
                 break;
             case 2:
-                if (trimmed[i] == ',')
+                if (isdigit(trimmed[i]))
                 {
-                    state = 1;
+                    current += trimmed[i];
+                }
+                else if (trimmed[i] == '.' && ! seen_decimal)
+                {
+                    current += trimmed[i];
+                    seen_decimal = true;
+                }
+                else if (trimmed[i] == ',')
+                {
+                    parsed.push_back(std::stof(current));
+                    current = "";
+                    seen_decimal = false;
                 }
                 else if (trimmed[i] == ')')
                 {
-                    state = 3;
+                    parsed.push_back(std::stof(current));
+                    current = "";
+                    seen_decimal = false;
+                }
+                else
+                {
+                    throw std::runtime_error("Vector Number Input Error");
                 }
                 break;
-            case 3:
-                throw std::runtime_error(") found too early");
         }
     }
     return parsed;
